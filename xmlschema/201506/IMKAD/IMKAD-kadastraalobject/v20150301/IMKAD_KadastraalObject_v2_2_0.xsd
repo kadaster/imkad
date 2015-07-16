@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ko="http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject/v20150301"
+           xmlns:nen="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+           xmlns:a-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20150301"
+           xmlns:h="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+           xmlns:ko-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject-ref/v20150301"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak-ref/v20150301"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject/v20150301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-kadastraalobject/v20150301/IMKAD_KadastraalObject_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van objecten (onroerende zaken en registergoederen).</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+              schemaLocation="../../../NEN3610/v20110301/NEN3610_NEN3610_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20150301"
+              schemaLocation="../../IMKAD-adres-ref/v20150301/IMKAD_AdresRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+              schemaLocation="../../IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject-ref/v20150301"
+              schemaLocation="../../IMKAD-kadastraalobject-ref/v20150301/IMKAD_KadastraalObjectRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak-ref/v20150301"
+              schemaLocation="../../IMKAD-onroerendezaak-ref/v20150301/IMKAD_OnroerendeZaakRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="_KadastraalObject"
+               type="ko:_KadastraalObject"
+               abstract="true"/>
+   <xs:complexType name="_KadastraalObject" abstract="true">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="nen:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. 
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Kadastraal object wordt door het Kadaster uniek geïdentificeerd door identificatie met waarde.
+
+Definitie
+identificatieis een unieke door het Kadaster toegekende logische identificatie van een kadastraal object</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="LocatieKadastraalObject"
+               type="ko:LocatieKadastraalObject"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een Locatie kadastraal object is een aanduiding voor de locatie van het Kadastraal object in Nederland.
+
+
+Toelichting
+Bij onroerende zaken betreft dit de locatie waar de Onroerende zaak is gelegen. 
+Bij Teboekgestelde zaken wordt locatie gebruikt voor het zogenaamde waladres. 
+Leidingnetwerken kennen geen locatie kadastraal object.
+De Locatie van een kadastraal object wordt bepaald aan de hand van gegevens die:
+
+ de gemeente verstrekt (Basisregistratie Adressen en Gebouwen);
+ in het openbaar register zijn vermeld; 
+</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="LocatieKadastraalObject" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="h:_Voorkomen">
+            <xs:sequence>
+               <xs:element name="cultuurBebouwd"
+                           type="t:Waardelijst"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/CultuurBebouwd</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+De locatie van een kadastraal object kent cultuuraanduiding voor het bebouwde gedeelte met waarde
+
+Definitie
+AardCultuurbebouwd is een aanduiding voor de cultuur van het bebouwde gedeelte van een locatie kadastraal object  zoals omschreven in het Openbaar register bij de laatst bekende overdracht van het belangrijkste zakelijk recht van het object.
+
+Definitie van het juridisch begrip Cultuurcode: brk.kadaster.nl/doc/begrip/Cultuurcode
+
+Toelichting:
+AardCultuurbebouwd wordt in de BRK gewijzigd op basis van hetgeen in de akte van overdracht is vermeld. Als bij een object een nieuwe koopsom wordt vermeld wordt ook de AardCultuurbebouwd van de locatie van dat object conform die akte gewijzigd. De AardCultuurbebouwd wordt daarna niet meer aangepast totdat er op grond van een nieuwe akte een nieuwe koopsom wordt geregistreerd. Waarnemingen van de landmeter, een verzoek van de eigenaar en informatie uit andere bronnen zoals WOZ en BAG leiden niet tot aanpassing van de AardCultuurbebouwd in de BRK.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="koppelingswijze"
+                           type="t:Waardelijst"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/koppelingswijze</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Beschrijving van de manier waarop de koppeling tussen het kadastraalobject met ObjectlocatieBinnenland bepaald is. De koppeling kan adminstratief worden bepaald op basis van overeenkomstige adresgegevens en of geometrisch worden bepaald op basis van overeenkomstige geometrie.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="betreft" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="a-ref:ObjectlocatieBinnenlandRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="heeft" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="ko-ref:_KadastraalObjectRef"/>
+                        <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                        <xs:element ref="oz-ref:AppartementsrechtRef"/>
+                        <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                        <xs:element ref="oz-ref:PerceelRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

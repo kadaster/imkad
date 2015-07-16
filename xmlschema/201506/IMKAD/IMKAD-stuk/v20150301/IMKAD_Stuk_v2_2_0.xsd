@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:s="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk/v20150301"
+           xmlns:nen="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+           xmlns:h="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+           xmlns:s-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20150301"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk/v20150301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-stuk/v20150301/IMKAD_Stuk_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van kadastrale stukken.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+              schemaLocation="../../../NEN3610/v20110301/NEN3610_NEN3610_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+              schemaLocation="../../IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20150301"
+              schemaLocation="../../IMKAD-stuk-ref/v20150301/IMKAD_StukRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="Bijlage" type="s:Bijlage" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie:
+Een bijlage is een document dat toegevoegd aan een akte is opgenomen in de openbare registers. 
+
+Toelichting
+Voorbeelden zijn een complex tekening bij appartemenstrechten, een tekening bij overdracht van een gedeelte van een perceel, hypotheek voorwaarden.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Bijlage" abstract="false">
+      <xs:sequence>
+         <xs:element name="aard" type="t:Waardelijst" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardBijlage</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk is van een bepaalde soort
+
+Definitie
+Omschrijving van het soort bewijsstuk.
+
+</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="tijdstipAanbiedingBijlage"
+                     type="xs:dateTime"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Tijdstip waarop een bijlage is ontvangen met in achtneming van de openingstijden en -dagen van het Kadaster.  </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="KadasterVerzoek" type="s:KadasterVerzoek" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een Kadasterverzoek is een Rectificatieverzoek, een Verzoek tot verbetering of een Attendering op niet inschrijving
+
+</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="KadasterVerzoek" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="nen:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Unieke door het Kadaster toegekende logische identificatie.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk wordt door het Kadaster uniek geïdentificeerd door nummer met waarde
+
+Definitie
+Identificatie is een unieke door het Kadaster toegekende identificatie van een Bewijsstuk.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aard" type="t:Waardelijst" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardKadasterverzoek</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk is van een bepaalde soort
+
+Definitie
+Omschrijving van het soort bewijsstuk.
+
+</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="auditTrail" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de status van de registratie van dit voorkomen.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:AuditTrail" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorie" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="heeft" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="s:RedenVerzoek" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Kadasterstuk" type="s:Kadasterstuk" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een Kadaster-stuk is een niet in de openbare registers inschrijfbaar document waaruit wijzigen in de BRK blijkt.
+
+Toelichting
+Het betreft mededelingen van belanghebbende, interne correctie stukken, relazen van bevindingen van landmeters en scheepsinspecteurs, matenplannen,  e.d. 
+
+</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Kadasterstuk" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="s:_Stuk">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="nen:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Unieke door het Kadaster toegekende logische identificatie.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk wordt door het Kadaster uniek geïdentificeerd door nummer met waarde
+
+Definitie
+Identificatie is een unieke door het Kadaster toegekende identificatie van een Bewijsstuk.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="indicatieCorrectie"
+                           type="xs:boolean"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="acgIdentificatie"
+                           type="s:AcgID"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Ambtelijk correctie gegeven identificatie</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Ondertekenaar" type="s:Ondertekenaar" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+De gegevens van de ondertekenaar van een aangeboden stuk.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Ondertekenaar" abstract="false">
+      <xs:sequence>
+         <xs:element name="voornamen" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De verzameling van een of meer naamgegevens, ter onderscheiding van personen met dezelfde achternaam, (rechtens) aan een persoon gegeven of -indien hiervan sprake is- door hem gekozen.  </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="voorvoegsels" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+De verzameling van een of meer voorzetsels en/of lidwoorden die aan de geslachtsnaam vooraf gaat en daarmee de gezamenlijk de achternaam vormt.  </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="geslachtsnaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De naamgegevens van een natuurlijk persoon, met uitzondering van de voornamen en eventuele voorvoegsels. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="standplaats" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Adres of standplaats/plaats van vestiging van de ondertekenaar.  </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="RedenVerzoek" type="s:RedenVerzoek" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+De reden voor het versturen van een Kadaster verzoek naar de aanbieder van een T.i.a stuk.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="RedenVerzoek" abstract="false">
+      <xs:sequence>
+         <xs:element name="reden" type="t:Waardelijst" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/RedenNietInschrijving</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De reden om een stuk niet in te schrijven of om verbetering te vragen. 
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stuk wordt niet ingeschreven of vergt verbetering om reden met waarde
+
+Definitie
+De omschrijving van de reden om een stuk niet in te schrijven of om verbetering te vragen.
+
+</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="redenOmschrijving" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+De omschrijving van de reden voor een Kadaster verzoek die afwijkt van de standaard redenen die bij reden kunnen worden opgegeven. Bij reden is voor 'overig' gekozen.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_Stuk" type="s:_Stuk" abstract="true"/>
+   <xs:complexType name="_Stuk" abstract="true">
+      <xs:sequence>
+         <xs:element name="auditTrail" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de status van de registratie van dit voorkomen.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:AuditTrail" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorie" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="heeftBijlage" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="s:Bijlage" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="omvat" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Stukdeel" type="s:Stukdeel" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een stukdeel is een rechtsfeit of een overige feit, vermeld in een Stuk.
+
+Toelichting
+Een Stuk omvat vaak meerdere stukdelen.
+Voorbeelden zijn:
+- een levering van een object en een doorhaling van een eerder ingeschreven koopovereenkomst
+- een hypotheek en een rangwisseling
+- 2 hypotheken
+
+Stukdelen kunnen na inschrijving afzonderlijk worden aangevuld door een later ingeschreven stuk(deel), worden doorgehaald, ed.. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Stukdeel" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="h:_Voorkomen">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="nen:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Unieke door het Kadaster toegekende logische identificatie.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk wordt door het Kadaster uniek geïdentificeerd door nummer met waarde
+
+Definitie
+Identificatie is een unieke door het Kadaster toegekende identificatie van een Bewijsstuk.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="aard" type="t:Waardelijst" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardStukdeel</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk is van een bepaalde soort
+
+Definitie
+Omschrijving van het soort bewijsstuk.
+
+</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="aardBeslag"
+                           type="t:Waardelijst"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardBeslag</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stukdeel betreft een beslag met een aardaanduiding 
+
+Definitie
+Aard beslag is een aanduiding voor de aard van het beslag.
+
+Toelichting
+Mogelijke waarden zijn Conservatoir, Executoriaal, etc.
+</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="bedragErfpachtscanon"
+                           type="t:Bedrag"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Het bedrag dat de erfpachter periodiek verschuldigd is voor uitoefening van het erfpachtsrecht op 1 of meer kadastrale objecten
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Stukdeel betreft een uitgifte erfpacht voor een bedrag met waarde.
+
+Defintie
+brk.kadaster.nl/doc/begrip/Erfpachtcanon
+Toelichting
+Het bedrag dat de erfpachter periodiek verschuldigd is voor uitoefening van het erfpachtsrecht op 1 of meer kadastrale objecten</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="bedragTransactiesomLevering"
+                           type="t:Bedrag"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stukdeel betreft een overdracht van zakelijke rechten voor een  bedrag met waarde.
+
+Definitie:
+Een transactiesom is het bedrag dat vermeld staat in het ter inschrijving aangeboden stuk, dat als tegenprestatie geldt met betrekking tot een transactie of overdracht van een zakelijk recht van een object (of samen met meerdere objecten) en dat de verkrijger aan de vervreemder verschuldigd is. Dit bedrag hebben verkrijger en vervreemder onderling met elkaar afgesproken en wordt door een notaris opgenomen in de akte. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="bedragVorderingsbeslag"
+                           type="t:Bedrag"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Het bedrag waarvoor beslag is gelegd. Indien bij een beslag verschillende bedragen voorkomen, dan worden deze bedragen getotaliseerd. Dit is dan aangegeven in het aard attribuut van Bedrag. 
+
+Bestaat uit bedrag vordering, met bedrag en valutasoort, en indicatie verschillende bedragen. 
+
+De vordering is bij het stukdeel (en dus het rechtsfeit) opgenomen en niet bij het beslag omdat het gegeven geldt per feit. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="bedragZekerheidsstellingHypotheek"
+                           type="t:Bedrag"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stukdeel betreft een hypotheek voor een bedrag met waarde.
+
+Definitie
+Het bedrag waarvoor hypothecaire zekerheid is gegeven. De vermelde hoofdsom is het bedrag waarvoor het recht van Hypotheek is gevestigd (dus niet het bedrag van de geldlening).
+
+Toelichting
+De hoofdsom wordt getotaliseerd vermeld
+</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="indicatieBijwerkingOpgeschort"
+                           type="xs:boolean"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stukdeel is al dan niet (geheel) verwerkt
+
+Definitie
+Indicatie geeft aan of de bijwerking van het stukdeel is opgeschort.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="omschrijvingGekozenWoonplaats" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stukdeel beschrijft de gekozen woonplaats van hypotheekhouders en beslagleggers.
+
+Definitie
+Een omschrijving van de locatie die een hypotheekhouder of beslaglegger als woonplaats heeft gekozen. 
+
+Zie de definitie van het juridisch begrip Gekozen woonplaats: brk.kadaster.nl/doc/begrip/Gekozen_woonplaats</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="omschrijvingKadastraleObjecten" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stukdeel bevat een beschrijving van de vermelde kadastrale objecten
+
+Definitie
+Omschrijving Kadastrale objecten is een nadere omschrijving van de feitelijke gesteldheid van een of meerdere Kadastrale objecten, betrokken bij het rechtsfeit dat in het stukdeel is opgenomen.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="omschrijvingTopografischeMutatie" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De beschrijving van de Topografische mutatie zoals in het Stuk vermeld.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="isAanvullingOp" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="s-ref:StukdeelRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="TerInschrijvingAangebodenStuk"
+               type="s:TerInschrijvingAangebodenStuk"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een ter inschrijving aangeboden stuk is een document, ter inschrijving in de Openbare registers aangeboden, waaruit een wijziging in de BRK blijkt.
+
+Synoniem:
+- Afschrift Akte
+- Inschrijving
+
+Toelichting
+Door middel van de formele status OR wordt aangegeven of het stuk ingeschreven, geweigerd dan wel door de aanbieder weer ingetrokken is.
+
+Het Ter inschrijving aangeboden stuk kan een aantekening van de Bewaarder bevatten. Het betreft een door de bewaarder gestelde aantekening op het ter inschrijving aangeboden stuk. (art, 7 van de Kadasterregeling).
+
+
+Indicatie omvang
+Initieel 15.000.000 
+Groei per jaar 60.000</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TerInschrijvingAangebodenStuk" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="s:_Stuk">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="nen:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Unieke door het Kadaster toegekende logische identificatie.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk wordt door het Kadaster uniek geïdentificeerd door nummer met waarde
+
+Definitie
+Identificatie is een unieke door het Kadaster toegekende identificatie van een Bewijsstuk.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="aard" type="t:Waardelijst" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardAangebodenStuk</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Bewijsstuk is van een bepaalde soort
+
+Definitie
+Omschrijving van het soort bewijsstuk.
+
+</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="deelEnNummer"
+                           type="s:TypeDeelEnNummer"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Ter inschrijving aangeboden stuk is door het Kadaster binnen een openbaar register uniek geïdentificeerd met een deel en nummer
+
+Definitie
+Deel en nummer is de logische identificatie van een ter inschrijving aangeboden stuk binnen een openbaar register van het Kadaster.
+
+Toelichting
+Het deel en nummer bestaat uit:
+
+ Registercode
+ Deel
+ Nummer
+ Reeksaanduiding
+
+Het deel en nummer wordt aangevuld met een reeksaanduiging als verwijzing naar de oorspronkelijke (inmiddels vervallen) Kadastervestiging waar het stuk oorspronkelijk is ingeschreven. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="bewaardersverklaring" minOccurs="0" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="indicatieVerbeteringGewenst"
+                           type="xs:boolean"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Ter inschrijving aangeboden stuk moet al dan niet door aanbieder worden aangevuld.
+
+Definitie
+Geeft aan of er nog nadere gegevens van de aanbieder gewenst zijn om de inschrijving te voltooien en het stuk toe te passen in de kadastrale registratie.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="tijdstipAanbieding"
+                           type="xs:dateTime"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Stuk is aangeboden bij het Kadaster op tijdstip.
+
+Definitie
+Het tijdstip waarop een T.i.a. stuk is ontvangen met in achtneming van de openingstijden en -dagen van het Kadaster.
+Synonien:
+Tijdstip van inschrijving
+
+Toelichting
+Als tijdstip van inschrijving geldt het tijdstip van aanbieding van de voor de inschrijving vereiste stukken.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="tijdstipOndertekening"
+                           type="xs:dateTime"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Ter inschrijving aangeboden stuk is ondertekend op tijdstip.
+
+Definitie
+Tijdstip ondertekening is het tijdstip waarop het oorspronkelijke stuk is ondertekend.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="statusStukOR"
+                           type="t:Waardelijst"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/StatusStukOR</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Ter inschrijving aangeboden stuk heeft juridische status met waarde
+
+Definitie
+Geeft aan wat de juridische status is van een ter inschrijving aangeboden stuk.
+
+Toelichting
+Mogelijke waarden zijn ingeschreven, geweigerd, ingetrokken, etc.
+</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="heeft" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="s-ref:KadasterVerzoekRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="isEquivalentieverklaarderVan" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="s:Ondertekenaar" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="isOpmakerVan" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="s:Ondertekenaar" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AcgID" type="s:AcgID" abstract="false"/>
+   <xs:complexType name="AcgID" abstract="false">
+      <xs:sequence>
+         <xs:element name="akrRegistercode"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AKRRegistercode</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Unieke identificatie van het soort AKR/HYP-register, waarbinnen stukken worden genummerd. Welke nog gehanteerd wordt zolang de registratie in AKR plaatsvindt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="akrStukdeel1" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+
+Toelichting
+Hoewel er nu alleen nog numerieke waarden worden toegekend, moet het domeintype Tekst blijven omdat er in het verleden alfanumerieke waarden zijn toegekend. Bij conversie vanuit AKR naar KVS zullen we bijvoorbeeld deel 1000A nr. 1 aantreffen.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="akrStukdeel2" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+
+Toelichting
+Hoewel er nu alleen nog numerieke waarden worden toegekend, moet het domeintype Tekst blijven omdat er in het verleden alfanumerieke waarden zijn toegekend. Bij conversie vanuit AKR naar KVS zullen we bijvoorbeeld deel 1000 nr. 1A aantreffen. NB. In de landelijke stukkenregistratie is stukdeel-2 niet uniek identificerend binnen een register, omdat tijdig ingediende verbeteringen hetzelfde volgnummer krijgen als het oorspronkelijke stuk.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="akrStukdeel3" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De unieke identificatie van de reeks van een stuk binnen een register welke nog gehanteerd wordt zolang de registratie in AKR plaatsvindt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="volgnummerStaat75"
+                     type="xs:integer"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TypeDeelEnNummer" type="s:TypeDeelEnNummer" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Bevat de door het Kadaster vastgestelde unieke identificatie van alle ter inschrijving aangeboden stukken. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeDeelEnNummer" abstract="false">
+      <xs:sequence>
+         <xs:element name="deel" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Identificatie van het stuk binnen zijn soort.
+
+Hoewel er nu alleen nog numerieke waarden worden toegekend, moet het domeintype Tekst blijven omdat er in het verleden alfanumerieke waarden zijn toegekend. 
+
+Geen voorloopnullen</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="5"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="nummer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Volgnummer van het stuk.
+
+In de landelijke stukkenregistratie is dit nummer niet uniek identificerend binnen een register, omdat tijdig ingediende verbeteringen hetzelfde volgnummer krijgen als het oorspronkelijke stuk. 
+
+Geen voorloopnullen.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="5"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="reeks" type="t:Waardelijst" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/Reekscode</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Verwijzing naar de oorspronkelijke (mogelijk tussentijds vervallen) Kadastervestiging waar het stuk oorspronkelijk is ingeschreven. 
+De waarden zijn opgenomen in een waardenlijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="registercode"
+                     type="t:Waardelijst"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/Registercode</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Het soort register, aangeduid met een code. 
+De waarden zijn opgenomen in een waardenlijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="soortRegister"
+                     type="t:Waardelijst"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/SoortRegister</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Aanduiding soort Register bepaalt de hoofdcategorie van een ter inschrijving aangeboden stuk. Bijvoorbeeld Hypotheekakten, Transportakten.
+De waarden zijn opgenomen in een waardenlijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

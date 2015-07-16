@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:KIMBRPAdres="http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres/v20150201"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_KIMBRPAdres_v1_0_0">
+   <Title>This is a context/value association file for the XML schema at http://www.imvertor.org/schema/KIMBRP-Adres/v20150201/IMKAD_KIMBRPAdres_v1_0_0.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="BRPLand"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/BRPLand"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="KIMBRPAdres:land"
+               scope="KIMBRPAdres:AdresBuitenland"
+               values="BRPLand"/>
+   </Contexts>
+</cva:ContextValueAssociation>

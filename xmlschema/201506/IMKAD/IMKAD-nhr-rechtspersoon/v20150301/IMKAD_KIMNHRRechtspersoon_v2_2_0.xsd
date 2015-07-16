@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimnhrr="http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon/v20150301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-nhr-rechtspersoon/v20150301/IMKAD_KIMNHRRechtspersoon_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van NHR rechtspersonen.</xs:documentation>
+   </xs:annotation>
+   <xs:element name="Rechtspersoon" type="kimnhrr:Rechtspersoon" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een Rechtspersoon is een subject opgenomen in de NHR
+
+Zie de definitie van het juridisch begrip Rechtspersoon: brk.kadaster.nl/doc/begrip/Rechtspersoon
+
+Toelichting:
+Het betreft of een rechtspersoon of een samenwerkingsverband</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Rechtspersoon" abstract="false">
+      <xs:sequence>
+         <xs:element name="rSIN" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Rechtspersoon (en samenwerkingsverband) wordt door de KvK geïdentificeerd door RSIN met waarde.
+
+Definitie
+RSIN is een door de overheid aan een rechtspersoon c.q. samenwerkingsverband toegekende identificatie.
+
+Alle rechtspersonen en samenwerkingsverbanden, zoals bv’s, verenigingen, stichtingen, vof’s en maatschappen krijgen bij inschrijving bij de KvK naast een KvK-nummer ook een Rechtspersonen en Samenwerkingsverbanden Informatienummer (RSIN).  </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="9"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="kvKNummer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Rechtspersoon wordt door de KvK geïdentificeerd door een KvKnummer met waarde
+
+Definitie
+KvKnummer is een door de overheid (KvK) aan een rechtspersoon toegekende identificatie.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="8"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+</xs:schema>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:p="http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon/v20150301"
+           xmlns:nen="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+           xmlns:a-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20150301"
+           xmlns:kimbrpp-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon-ref/v20150201"
+           xmlns:h="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+           xmlns:kimnhrr-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon-ref/v20150301"
+           xmlns:s-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20150301"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon/v20150301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-persoon/v20150301/IMKAD_Persoon_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van personen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+              schemaLocation="../../../NEN3610/v20110301/NEN3610_NEN3610_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20150301"
+              schemaLocation="../../IMKAD-adres-ref/v20150301/IMKAD_AdresRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon-ref/v20150201"
+              schemaLocation="../../IMKAD-brp-persoon-ref/v20150201/IMKAD_KIMBRPPersoonRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+              schemaLocation="../../IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon-ref/v20150301"
+              schemaLocation="../../IMKAD-nhr-rechtspersoon-ref/v20150301/IMKAD_KIMNHRRechtspersoonRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20150301"
+              schemaLocation="../../IMKAD-stuk-ref/v20150301/IMKAD_StukRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="GekozenWoonplaats"
+               type="p:GekozenWoonplaats"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Locatie die een persoon als woonplaats heeft gekozen. 
+
+Personen kunnen domicilie kiezen; dit moet een woonplaats zijn binnen Nederland. Wanneer een persoon geen feitelijke woonplaats in Nederland heeft, kiest zij ter zake van de inschrijving domicilie in Nederland. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GekozenWoonplaats" abstract="false">
+      <xs:sequence>
+         <xs:element name="aard" type="t:Waardelijst" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardDomiciliekeuze</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Keuzelijst waarin wordt aangegeven of de persoon domicilie kiest ten kantore van het kadaster, de notaris, schuldeiser of deurwaarder, of op een overige locatie. 
+De waarden zijn opgenomen in een waardenlijst..</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="adres" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Vrij veld waarin de omschrijving van de woonplaatskeuze kan worden opgenomen. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="400"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="NaamOpenbaarRegister"
+               type="p:NaamOpenbaarRegister"
+               abstract="false"/>
+   <xs:complexType name="NaamOpenbaarRegister" abstract="false">
+      <xs:sequence>
+         <xs:element name="naam" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="320"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="NatuurlijkPersoon"
+               type="p:NatuurlijkPersoon"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie:
+In Natuurlijk persoon is een in de Basisregistratie Personen geregistreerd persoon
+
+Definitie van het juridisch begrip Natuurlijk Persoon: brk.kadaster.nl/doc/begrip/Natuurlijk_persoon
+
+
+Toelichting:
+In het huidige bijhoudingsproces van de BRK worden de gegevens van een Natuurlijk persoon initieel geregistreerd conform de Openbare registers. Kort daarna worden deze persoonsgegevens vervangen door de BRP-gegevens van die persoon en wordt o.m. het BSN toegevoegd.
+
+In uitzonderlijke situaties kunnen de BRP-gegevens niet worden overgenomen. Dergelijke situatie worden teruggemeld aan de BRP.
+
+Ingeval de gegevens van een persoon (nog) niet zijn overgenomen van de BRP kan het voorkomen dat het bij het Kadaster bekend is dat de persoon is overleden zonder dat de datum van overlijden bekend is. Dit wordt met een indicatieOverlijden aangegeven. 
+Ook kan het voorkomen dan bekend is dat een persoon aangeschreven wil worden met de naam van de partner zonder dat de verdere gegevens van die partner bekend is. De naam van de partner wordt dan vermeld als voernaam. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="NatuurlijkPersoon" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="p:_Persoon">
+            <xs:sequence>
+               <xs:element name="indicatieOverleden"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Natuurlijk persoon is al dan niet overleden en is niet gekoppeld aan de BRP.
+Definitie
+Indicatie Overleden is een indicatie of de persoon al dan niet overleden is. 
+Toelichting
+Deze indicatie is enkel van belang als de gegevens uit de BRP niet beschikbaar zijn
+De datum van overlijden is soms niet bekend, maar wel dat iemand overleden is.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:extension base="xs:boolean">
+                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                        </xs:extension>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="indicatieAfschermingPersoonsgegevens"
+                           type="xs:boolean"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Persoon heeft het Kadaster al dan niet verzocht zijn/haar gegevens vanwege privacy-redenen af te schermen voor derden.
+
+Definitie:
+De gegevens van deze persoon worden volgens het Kadaster al dan niet afgeschermd</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="betreft" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="kimbrpp-ref:GeregistreerdPersoonRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="NietNatuurlijkPersoon"
+               type="p:NietNatuurlijkPersoon"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een Niet natuurlijk persoon is òf een rechtspersoon òf een samenwerkingsverband waarvan de gegevens zijn vermeld in de openbare registers van het Kadaster
+
+Definitie van het juridisch begrip Natuurlijk Persoon: brk.kadaster.nl/doc/begrip/Niet-natuurlijk_persoon
+
+Toelichting:
+In het huidige bijhoudingsproces van de BRK worden de gegevens van een Niet natuurlijk persoon geregistreerd conform de openbare registers. 
+De persoon wordt vervolgens d.m.v. RSIN en KvKnummer gerelateerd aan een NHRrechtspersoon. De overige gegevens uit het NHR worden niet overgenomen.
+
+In sommige situaties kan de verwijzing het handelsregister niet plaatsvinden. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="NietNatuurlijkPersoon" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="p:_Persoon">
+            <xs:sequence>
+               <xs:element name="statutaireNaam" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Niet natuurlijk persoon heeft naam met waarde
+
+Definitie
+De formele naam van de niet natuurlijk persoon</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="200"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="rechtsvorm"
+                           type="t:Waardelijst"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/Rechtsvorm</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Niet Natuurlijk persoon heeft een rechtsvorm met omschrijving
+
+Definitie
+Aanduiding voor de aard van een Niet Natuurlijk persoon. 
+
+Toelichting:
+Bij een eenmanszaak wordt Rechtsvorm niet gevuld</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="statutaireZetel" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Niet Natuurlijk persoon is statutair gevestigd in plaats met naam
+
+Definitie
+De formele plaats van vestiging van de Niet Natuurlijk persoon
+
+Toelichting:
+Ingeval van een zetel in het Buitenland bevat de zetel zowel de plaatsnaam en de landnaam</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="24"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="betreft" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="kimnhrr-ref:RechtspersoonRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="_Persoon" type="p:_Persoon" abstract="true"/>
+   <xs:complexType name="_Persoon" abstract="true">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="nen:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De Kadaster identificatie is een door het Kadaster toegekende landelijk uniek nummer aan dit object binnen de kadastrale registratie. 
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Persoon wordt door het Kadaster uniek geïdentificeerd door identificatie met waarde.
+
+Definitie
+Identificatie is een unieke door het Kadaster toegekende logische identificatie van een persoon</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beschikkingsbevoegdheid"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/Beschikkingsbevoegdheid</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Persoon is volgens de openbare registers van het Kadaster beschikkingsonbevoegd om reden met waarde
+
+Definitie
+Beschikkinsbevoegdheid geeft aan om welke reden een persoon beschikkingsonbevoegd is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="auditTrail" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de status van de registratie van dit voorkomen.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:AuditTrail" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorie" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="metNaamOpenbaarRegister" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="p:NaamOpenbaarRegister" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="gekozenWoonplaatsIsVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="gekozenWoonplaats" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="p:GekozenWoonplaats" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="postlocatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:annotation>
+                  <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Postadres.</xs:documentation>
+               </xs:annotation>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="a-ref:_AdresLocatieRef"/>
+                  <xs:element ref="a-ref:_ObjectlocatieRef"/>
+                  <xs:element ref="a-ref:ObjectlocatieBinnenlandRef"/>
+                  <xs:element ref="a-ref:ObjectlocatieBuitenlandRef"/>
+                  <xs:element ref="a-ref:PostbusLocatieRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="woonlocatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:annotation>
+                  <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Toelichting:
+Bij een Persoon is de woonlocatie altijd gevuld, tenzij een persoon vertrokken is naar het buitenland en het buitenlandse adres onbekend is. Dan is in GeregistreerdPersoon landWaarNaarVertrokken gevuld. </xs:documentation>
+               </xs:annotation>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="a-ref:_ObjectlocatieRef"/>
+                  <xs:element ref="a-ref:ObjectlocatieBinnenlandRef"/>
+                  <xs:element ref="a-ref:ObjectlocatieBuitenlandRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+</xs:schema>

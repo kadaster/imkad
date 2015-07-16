@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimbrpa="http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres/v20150201"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres/v20150201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.0.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">KIMBRP-Adres/v20150201/IMKAD_KIMBRPAdres_v1_0_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van BRP buitenlandse adressen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="AdresBuitenland"
+               type="kimbrpa:AdresBuitenland"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Een adres wordt overgenomen van de BRP (tabel 08.13). Als het Kadaster van BRP een mutatiemelding krijgt met enkel een land, dan wordt dat geregistreerd als adresBuitenland. 
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Adresbuitenland is een locatie in het buitenland, aangeduid met authentieke gegevens uit de BasisRegistratiePersonen 
+
+Toelichting:
+In het huidige bijhoudingsproces van de BRK worden de gegevens van AdresBuitenland initieel geregistreerd conform de Openbare registers. Kort daarna worden deze gegevens vervangen door de BRP-gegevens.
+Wanneer AdresBuitenland nog niet conform de BRP is vermeld, dan is geen identificatie toegekend</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AdresBuitenland" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+AdresBuitenland wordt door de gemeente uniek geïdentificeerd door identificatie met waarde
+
+Definitie
+Identiticatie is de door de gemeente toegekende unieke identificatie van een AdresBuitenland</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="kimbrpa:Adresnummer">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="adres" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Bevat straatnaam en huisnummer</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="50"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="woonplaats" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Bevat postcode en woonplaats</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="regio" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Het district: de staat of provincie of regio</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="39"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="land" type="t:Waardelijst" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPLand</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+De naam van het land
+</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:simpleType name="Adresnummer">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Uniek adresaanduiding, bestaande uit 16 cijfers.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="[0-9]{16}"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

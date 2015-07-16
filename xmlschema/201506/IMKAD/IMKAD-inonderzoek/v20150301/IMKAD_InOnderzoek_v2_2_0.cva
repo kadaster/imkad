@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:InOnderzoek="http://www.kadaster.nl/schemas/IMKAD/IMKAD-inonderzoek/v20150301"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_InOnderzoek_v2_2_0">
+   <Title>This is a context/value association file for the XML schema at http://www.imvertor.org/schema/IMKAD-inonderzoek/v20150301/IMKAD_InOnderzoek_v2_2_0.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="GegevenInOnderzoek"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/GegevenInOnderzoek"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="InOnderzoek:authentiekGegeven"
+               scope="InOnderzoek:InOnderzoek"
+               values="GegevenInOnderzoek"/>
+   </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imvert:schemas xmlns:imvert="http://www.imvertor.org/schema/system">
+   <imvert:exporter>Enterprise Architect v 2.5</imvert:exporter>
+   <imvert:schema-exported>2015-06-10T13:26:49Z</imvert:schema-exported>
+   <imvert:schema-filter-version>Id: XMI1Imvert.xsl 7041 2015-03-04 11:50:06Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2canonical-BP.xsl 6904 2014-10-20 14:36:18Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2domain.xsl 7025 2015-02-11 20:11:40Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2application.xsl 7025 2015-02-11 20:11:40Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2copydown.xsl 6904 2014-10-20 14:36:18Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2ref.xsl 6904 2014-10-20 14:36:18Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2concreteSchema.xsl 7061 2015-04-08 12:57:28Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2localSchema.xsl 6904 2014-10-20 14:36:18Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2expanddoc.xsl 7027 2015-02-17 09:35:34Z arjan </imvert:schema-filter-version>
+   <imvert:schema-filter-version>Id: Imvert2embellish.xsl 6950 2014-12-11 11:02:18Z arjan </imvert:schema-filter-version>
+   <imvert:latest-svn-revision>$Id$</imvert:latest-svn-revision>
+   <imvert:schema>
+      <imvert:name original="AanvullendeProcesInfo">AanvullendeProcesInfo</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-AanvullendeProcesInfo/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-AanvullendeProcesInfo/v20150301/IMKAD_AanvullendeProcesInfo_v1_0_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-AanvullendeProcesInfo/v20150301/IMKAD_AanvullendeProcesInfo_v1_0_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="Adres">Adres</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-adres/v20150301/IMKAD_Adres_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-adres/v20150301/IMKAD_Adres_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>AdresRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-adres-ref/v20150301/IMKAD_AdresRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-adres-ref/v20150301/IMKAD_AdresRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="Historie">Historie</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>HistorieRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-historie-ref/v20150301/IMKAD_HistorieRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-historie-ref/v20150301/IMKAD_HistorieRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="InOnderzoek">InOnderzoek</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-inonderzoek/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-inonderzoek/v20150301/IMKAD_InOnderzoek_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-inonderzoek/v20150301/IMKAD_InOnderzoek_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>InOnderzoekRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-inonderzoek-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-inonderzoek-ref/v20150301/IMKAD_InOnderzoekRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-inonderzoek-ref/v20150301/IMKAD_InOnderzoekRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="KIMBAG-Adres">KIMBAGAdres</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/KIMBAG-Adres/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>KIMBAG-Adres/v20150301/IMKAD_KIMBAGAdres_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/KIMBAG-Adres/v20150301/IMKAD_KIMBAGAdres_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>KIMBAGAdresRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/KIMBAG-Adres-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>KIMBAG-Adres-ref/v20150301/IMKAD_KIMBAGAdresRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/KIMBAG-Adres-ref/v20150301/IMKAD_KIMBAGAdresRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="KIMBRP-Adres">KIMBRPAdres</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres/v20150201</imvert:namespace>
+      <imvert:result-file-subpath>KIMBRP-Adres/v20150201/IMKAD_KIMBRPAdres_v1_0_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/KIMBRP-Adres/v20150201/IMKAD_KIMBRPAdres_v1_0_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>KIMBRPAdresRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>KIMBRP-Adres-ref/v20150301/IMKAD_KIMBRPAdresRef_v1_0_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/KIMBRP-Adres-ref/v20150301/IMKAD_KIMBRPAdresRef_v1_0_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="KIMBRP-Persoon">KIMBRPPersoon</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon/v20150201</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-brp-persoon/v20150201/IMKAD_KIMBRPPersoon_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-brp-persoon/v20150201/IMKAD_KIMBRPPersoon_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>KIMBRPPersoonRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon-ref/v20150201</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-brp-persoon-ref/v20150201/IMKAD_KIMBRPPersoonRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-brp-persoon-ref/v20150201/IMKAD_KIMBRPPersoonRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="KIMNHR-Rechtspersoon">KIMNHRRechtspersoon</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-nhr-rechtspersoon/v20150301/IMKAD_KIMNHRRechtspersoon_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-nhr-rechtspersoon/v20150301/IMKAD_KIMNHRRechtspersoon_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>KIMNHRRechtspersoonRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-nhr-rechtspersoon-ref/v20150301/IMKAD_KIMNHRRechtspersoonRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-nhr-rechtspersoon-ref/v20150301/IMKAD_KIMNHRRechtspersoonRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="KadastraalObject">KadastraalObject</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-kadastraalobject/v20150301/IMKAD_KadastraalObject_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-kadastraalobject/v20150301/IMKAD_KadastraalObject_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>KadastraalObjectRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-kadastraalobject-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-kadastraalobject-ref/v20150301/IMKAD_KadastraalObjectRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-kadastraalobject-ref/v20150301/IMKAD_KadastraalObjectRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="OnroerendeZaak">OnroerendeZaak</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-onroerendezaak/v20150301/IMKAD_OnroerendeZaak_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-onroerendezaak/v20150301/IMKAD_OnroerendeZaak_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>OnroerendeZaakRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-onroerendezaak-ref/v20150301/IMKAD_OnroerendeZaakRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-onroerendezaak-ref/v20150301/IMKAD_OnroerendeZaakRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="Persoon">Persoon</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-persoon/v20150301/IMKAD_Persoon_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-persoon/v20150301/IMKAD_Persoon_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>PersoonRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon-ref/v20120508</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-persoon-ref/v20120508/IMKAD_PersoonRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-persoon-ref/v20120508/IMKAD_PersoonRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="Recht">Recht</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-recht/v20150301/IMKAD_Recht_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-recht/v20150301/IMKAD_Recht_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>RechtRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-recht-ref/v20150301/IMKAD_RechtRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-recht-ref/v20150301/IMKAD_RechtRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="Stuk">Stuk</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-stuk/v20150301/IMKAD_Stuk_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-stuk/v20150301/IMKAD_Stuk_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name>StukRef</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-stuk-ref/v20150301/IMKAD_StukRef_v2_2_0.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-stuk-ref/v20150301/IMKAD_StukRef_v2_2_0.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+   <imvert:schema>
+      <imvert:name original="Typen">Typen</imvert:name>
+      <imvert:namespace>http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301</imvert:namespace>
+      <imvert:result-file-subpath>IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd</imvert:result-file-subpath>
+      <imvert:xsd-path>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/</imvert:xsd-path>
+      <imvert:result-file-fullpath>file:/z:/Models/brk-interfaces-data/Imvertor-output/applications/imkad/IMKAD/20150301/xsd/IMKAD/IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd</imvert:result-file-fullpath>
+   </imvert:schema>
+</imvert:schemas>

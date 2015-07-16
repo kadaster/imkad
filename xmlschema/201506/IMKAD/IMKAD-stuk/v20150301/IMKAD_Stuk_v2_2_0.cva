@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:Stuk="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk/v20150301"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_Stuk_v2_2_0">
+   <Title>This is a context/value association file for the XML schema at http://www.imvertor.org/schema/IMKAD-stuk/v20150301/IMKAD_Stuk_v2_2_0.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="AardBijlage"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardBijlage"
+                 key="Code"/>
+      <ValueList xml:id="AardKadasterverzoek"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardKadasterverzoek"
+                 key="Code"/>
+      <ValueList xml:id="RedenNietInschrijving"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/RedenNietInschrijving"
+                 key="Code"/>
+      <ValueList xml:id="AardStukdeel"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardStukdeel"
+                 key="Code"/>
+      <ValueList xml:id="AardBeslag"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardBeslag"
+                 key="Code"/>
+      <ValueList xml:id="AardAangebodenStuk"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardAangebodenStuk"
+                 key="Code"/>
+      <ValueList xml:id="StatusStukOR"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/StatusStukOR"
+                 key="Code"/>
+      <ValueList xml:id="AKRRegistercode"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AKRRegistercode"
+                 key="Code"/>
+      <ValueList xml:id="Reekscode"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/Reekscode"
+                 key="Code"/>
+      <ValueList xml:id="Registercode"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/Registercode"
+                 key="Code"/>
+      <ValueList xml:id="SoortRegister"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/SoortRegister"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="Stuk:aard" scope="Stuk:Bijlage" values="AardBijlage"/>
+      <Context item="Stuk:aard"
+               scope="Stuk:KadasterVerzoek"
+               values="AardKadasterverzoek"/>
+      <Context item="Stuk:reden"
+               scope="Stuk:RedenVerzoek"
+               values="RedenNietInschrijving"/>
+      <Context item="Stuk:aard" scope="Stuk:Stukdeel" values="AardStukdeel"/>
+      <Context item="Stuk:aardBeslag" scope="Stuk:Stukdeel" values="AardBeslag"/>
+      <Context item="Stuk:aard"
+               scope="Stuk:TerInschrijvingAangebodenStuk"
+               values="AardAangebodenStuk"/>
+      <Context item="Stuk:statusStukOR"
+               scope="Stuk:TerInschrijvingAangebodenStuk"
+               values="StatusStukOR"/>
+      <Context item="Stuk:akrRegistercode"
+               scope="Stuk:AcgID"
+               values="AKRRegistercode"/>
+      <Context item="Stuk:reeks" scope="Stuk:TypeDeelEnNummer" values="Reekscode"/>
+      <Context item="Stuk:registercode"
+               scope="Stuk:TypeDeelEnNummer"
+               values="Registercode"/>
+      <Context item="Stuk:soortRegister"
+               scope="Stuk:TypeDeelEnNummer"
+               values="SoortRegister"/>
+   </Contexts>
+</cva:ContextValueAssociation>

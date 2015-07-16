@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:io="http://www.kadaster.nl/schemas/IMKAD/IMKAD-inonderzoek/v20150301"
+           xmlns:nen="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+           xmlns:h="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak-ref/v20150301"
+           xmlns:r-ref="http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht-ref/v20150301"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-inonderzoek/v20150301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-inonderzoek</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-inonderzoek/v20150301/IMKAD_InOnderzoek_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van onderzoek dat nog plaatsvindt op objecten en personen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+              schemaLocation="../../../NEN3610/v20110301/NEN3610_NEN3610_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+              schemaLocation="../../IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak-ref/v20150301"
+              schemaLocation="../../IMKAD-onroerendezaak-ref/v20150301/IMKAD_OnroerendeZaakRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht-ref/v20150301"
+              schemaLocation="../../IMKAD-recht-ref/v20150301/IMKAD_RechtRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="InOnderzoek" type="io:InOnderzoek" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Geeft aan welk gegeven in onderzoek is. Indien twijfel bestaat omtrent de juistheid van de geregistreerde gegevens worden deze in onderzoek geplaatst.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="InOnderzoek" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="nen:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="authentiekGegeven"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/GegevenInOnderzoek</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Geeft aan welk gegeven van de onroerende zaak in onderzoek is. De waarden zijn opgenomen in eenwaardenlijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="auditTrail" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:AuditTrail" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorie" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="vanKadastraleGrens" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="oz-ref:KadastraleGrensRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="vanOnroerendeZaak" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="vanTenaamstelling" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:TenaamstellingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="vanZakelijkRecht" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:ZakelijkRechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="vanZekerheidsstelling" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:_ZekerheidsstellingRef"/>
+                  <xs:element ref="r-ref:BeslagRef"/>
+                  <xs:element ref="r-ref:HypotheekRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

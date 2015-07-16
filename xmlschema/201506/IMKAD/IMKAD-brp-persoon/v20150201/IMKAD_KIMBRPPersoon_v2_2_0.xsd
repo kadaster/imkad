@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimbrpp="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon/v20150201"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon/v20150201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-brp-persoon/v20150201/IMKAD_KIMBRPPersoon_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat alle klassen die behoren bij de representatie van binnen BRP geregistreerde personen.
+
+Voor meer informatie tav. BRP: http://www.moderniseringgba.nl/nederlands/Basisregistratie_Personen_BRP</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="Geboorte" type="kimbrpp:Geboorte" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens over de geboorte van de persoon.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Geboorte" abstract="false">
+      <xs:sequence>
+         <xs:element name="geboortedatum"
+                     type="t:TypeOnvolledigeDatum"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De geboortedatum. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geboorteplaats" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De plaatsnaam van de plaats waar de persoon geboren is. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="geboorteland"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPLand</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Het land waar de persoon geboren is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GeregistreerdPersoon"
+               type="kimbrpp:GeregistreerdPersoon"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Een Geregistreerd persoon heeft in principe een BSN. Dit is zo wanneer de persoon in de BRP bekend is. Geregistreerde personen zonder BSN zijn niet geregistreerd in de BRP c.q. worden alleen in de BRK geregisteerd. 
+
+Voor het Kadaster is het verschil tussen ingezetene en niet-ingezetene niet relevant, behalve voor de inschrijvingseis dat een niet ingezetene domicilie moet kiezen in Nederland. Een geregistreerd persoon is een niet ingezetene in de BRP als deze een AdresBuitenland heeft als woonlocatie. 
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie
+Een geregistreerd persoon is een in de GBA geregistreerd persoon. Het betreft of een ingezetene of een niet ingezetene.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GeregistreerdPersoon" abstract="false">
+      <xs:sequence>
+         <xs:element name="bSN" minOccurs="1" maxOccurs="1" nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Geregistreerde Persoon wordt door de gemeente uniek geïdentificeerd door BSN met waarde.
+
+Definitie:
+Het burgerservicenummer, bedoeld in artikel 1.1 van de Wet algemene
+bepalingen burgerservicenummer
+
+Toelichting
+Het BSN is een uniek nummer dat gelijk is aan het sofi-nummer. </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="kimbrpp:Basetype_GeregistreerdPersoon_bSN">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="naam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Indien BSN bij _GeregistreerdPersoon niet is gevuld is, dan is de bron van de naam de naam zoals opgegeven in de akte. Indien de BSN wel gevuld is, dan is de bron van de naam het BRP.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon wordt geïdentificeerd door naam
+
+Definitie
+Gegevens over de naam van een persoon. </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Naam" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="geslacht" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon is van geslacht met waarde
+
+Definitie
+Gegevens over het geslacht van de persoon inclusief de aanspreekvorm</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Geslacht" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="adellijkeTitelOfPredikaat"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AdellijkeTitelOfPredikaat</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon heeft aanspreektitel met waarde
+Definitie
+Een door BZK vastgestelde aanduiding die aangeeft welke titel of welk predikaat behoort tot de naam (bij adellijke titel geslachtsnaam, bij predikaat voornaam).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aanduidingNaamgebruik"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPAanduidingNaamgebruik</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon gebruikt voernaam en geslachtnaam in een aangeduide volgorde met waarde.
+Definitie
+Aanduiding naamgebruik is een aanduiding op basis waarvan de juiste naamgeving voor correspondentie kan worden bepaald wanneer een voernaam bij de persoon aanwezig is. 
+
+Toelichting:
+Als de persoon gehuwd is of een geregistreerd partner heeft, kan hij/zij ervoor kiezen de naam van de partner voor, na, of in plaats van zijn/haar eigen geslachtsnaam te gebruiken.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geboorte" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon is geboren op dag in plaats van land met waarden
+
+Definitie
+De gegevens over de geboorte van een persoon.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Geboorte" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="landWaarnaarVertrokken"
+                     type="t:Waardelijst"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPLand</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Als we van BRP een mutatiemelding krijgen met enkel een land dat wordt dat geregistreerd als landWaarnaarVertrokken. Worden ook andere adresgegevens ontvangen, minimaal woonplaats, dan wordt dit als buitenlandsadres geregistreerd.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Niet ingezetene is vanuit Nederland vertrokken naar een land, aangeduid met een naam met waarde.
+
+Definitie:
+Land waarnaar vertrokken is een code die het land aangeeft dat de ingeschrevene opgeeft bij vertrek naar het buitenland.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="overlijden" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon is overleden.
+
+Definitie:
+Overlijden geeft aan dat een Geregistreerde persoon is overleden.
+
+Toelichting:
+De datum van overlijden is niet altijd bekend.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Overlijden" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+               <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="inOnderzoek" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Geregistreerde persoon kent een terugmelding waarbij de juistheid van 1 of meer persoonsgegevens in twijfel is gebracht.
+
+Definitie
+De juistheid van de geregistreerde gegevens van de Geregistreerde persoon worden onderzocht. </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Procedure" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+               <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="indicatieGeheim"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPIndicatieGeheim</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Geregistreerde persoon heeft aangegeven dat zijn verblijfsgegevens slechts aan daartoe bevoegde personen mag worden verstrekt.
+
+Definitie:
+Een indicatie geheim is een aanduiding die aangeeft dat de adreslocatie van de geregistreerde persoon wel of niet afgeschermd moeten worden voor onbevoegden</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="xs:boolean">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="heeftPartnerschap" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Partnerschap" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Geslacht" type="kimbrpp:Geslacht" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+De aanduiding van het geslacht van de persoon.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Geslacht" abstract="false">
+      <xs:sequence>
+         <xs:element name="geslachtsaanduiding"
+                     type="t:Waardelijst"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPAanduidingGeslacht</xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Het geslacht van de persoon (man, vrouw, of onbekend). </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geslachtsaanduidingAanschrijving"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De geslachtsaanduiding waarmee de persoon wordt aangeschreven.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="kimbrpp:Basetype_Geslacht_geslachtsaanduidingAanschrijving">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Naam" type="kimbrpp:Naam" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+De geslachtsnaam, voorletters en voornamen die men wil gebruiken bij aanschrijving. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Naam" abstract="false">
+      <xs:sequence>
+         <xs:element name="geslachtsnaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De achternaam, exclusief voorvoegsels.  </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="voornamen" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De voornamen van de persoon. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="voorvoegselsgeslachtsnaam" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Voorvoegsels bij de geslachtsnaam.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Overlijden" type="kimbrpp:Overlijden" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens over het overlijden van de persoon.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Overlijden" abstract="false">
+      <xs:sequence>
+         <xs:element name="datumOverlijden"
+                     type="t:TypeOnvolledigeDatum"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De datum waarop de persoon overleden is.  </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Partnerschap" type="kimbrpp:Partnerschap" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Vastlegging van een geregistreerd partnerschap.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Partnerschap" abstract="false">
+      <xs:sequence>
+         <xs:element name="naamPartner" minOccurs="1" maxOccurs="1" nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Naam van de partner.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Naam" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+               <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="datumSluiting"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Datum huwelijkssluiting/aangaan geregistreerd partnerschap</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="t:TypeOnvolledigeDatum">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="datumOntbinding"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Datum ontbinding huwelijk/geregistreerd partnerschap</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="t:TypeOnvolledigeDatum">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Procedure" type="kimbrpp:Procedure" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Indien bij GBA twijfel bestaat omtrent de juistheid van de geregistreerde gegevens worden deze in onderzoek geplaatst ("Procedure").</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Procedure" abstract="false">
+      <xs:sequence>
+         <xs:element name="aanduidingGegevensInOnderzoek" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+Geeft aan welke gegevens in onderzoek zijn: 
+- Indien voor één gegeven een onderzoek loopt, wordt het elementnummer ingevuld.
+- Indien bij meerdere gegevens uit een groep een onderzoek loopt, wordt het betreffende categorienummer, aangevuld met 0000 ingevuld.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="6"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="datumIngang" type="xs:date" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De datum waarop een gegeven in onderzoek is genomen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datumEinde" type="xs:date" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="Basetype_GeregistreerdPersoon_bSN">
+      <xs:annotation>
+         <xs:documentation>Generated class. Introduced because the identified attribute is voidable and is a restriction of a simple type.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:integer">
+         <xs:totalDigits value="9"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Basetype_Geslacht_geslachtsaanduidingAanschrijving">
+      <xs:annotation>
+         <xs:documentation>Generated class. Introduced because the identified attribute is voidable and is a restriction of a simple type.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="75"/>
+         <xs:pattern value="\S.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

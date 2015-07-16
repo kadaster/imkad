@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:a="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres/v20150301"
+           xmlns:nen="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+           xmlns:h="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+           xmlns:t="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+           xmlns:kimbaga-ref="http://www.kadaster.nl/schemas/IMKAD/KIMBAG-Adres-ref/v20150301"
+           xmlns:kimbrpa-ref="http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres-ref/v20150301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres/v20150301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2015-06-10 13:27:00</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMKAD-adres/v20150301/IMKAD_Adres_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+            This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+        </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Dit package bevat uitbreidingen ihkv. conversie AKR.
+
+Dit package bevat alle klassen die behoren bij de representatie van adressen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+              schemaLocation="../../../NEN3610/v20110301/NEN3610_NEN3610_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20150301"
+              schemaLocation="../../IMKAD-historie/v20150301/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20150301"
+              schemaLocation="../../IMKAD-typen/v20150301/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/KIMBAG-Adres-ref/v20150301"
+              schemaLocation="../../KIMBAG-Adres-ref/v20150301/IMKAD_KIMBAGAdresRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/KIMBRP-Adres-ref/v20150301"
+              schemaLocation="../../KIMBRP-Adres-ref/v20150301/IMKAD_KIMBRPAdresRef_v1_0_0.xsd"/>
+   <xs:element name="_AdresLocatie" type="a:_AdresLocatie" abstract="true"/>
+   <xs:complexType name="_AdresLocatie" abstract="true">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="nen:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---CDMKAD (20150201)---
+De Kadaster identificatie is een door het Kadaster toegekende landelijk uniek nummer aan dit object binnen de kadastrale registratie.
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis
+Adreslocatie wordt door het Kadaster uniek geïdentificeerd door Identificatie met waarde.
+
+Definitie
+Identificatie is een door het Kadaster toegekende logische identificatie van een Adreslocatie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="auditTrail" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de status van de registratie van dit voorkomen.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:AuditTrail" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+
+---CDMKAD (20150201)---
+Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorie" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="_Objectlocatie" type="a:_Objectlocatie" abstract="true"/>
+   <xs:complexType name="_Objectlocatie" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="a:_AdresLocatie"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="ObjectlocatieBinnenland"
+               type="a:ObjectlocatieBinnenland"
+               abstract="false"/>
+   <xs:complexType name="ObjectlocatieBinnenland" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="a:_Objectlocatie">
+            <xs:sequence>
+               <xs:element name="adresgegevens" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="kimbaga-ref:NummeraanduidingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="ObjectlocatieBuitenland"
+               type="a:ObjectlocatieBuitenland"
+               abstract="false"/>
+   <xs:complexType name="ObjectlocatieBuitenland" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="a:_Objectlocatie">
+            <xs:sequence>
+               <xs:element name="adresgegevens" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="kimbrpa-ref:AdresBuitenlandRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="PostbusLocatie" type="a:PostbusLocatie" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Definitie:
+Een PostbusLocatie is een aanduiding van de locatie van een postbus. 
+Een postbus is een in een gebouw aanwezige afgesloten ruimte die bestemd is voor de aflevering van de voor de gebruiker daarvan bestemde poststukken. (Bron:Postwet 2009)</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="PostbusLocatie" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="a:_AdresLocatie">
+            <xs:sequence>
+               <xs:element name="postbusnummer" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Postbuslocatie wordt door Post.nl aangeduid met een postbusnummer met waarde
+
+Definitie:
+Postbusnummer is de numerieke aanduiding voor een postlocatie, zoals deze door de Post.nl is vastgesteld.  </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="7"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="postcode"
+                           type="t:TypePostcode"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">
+---Bedrijfsobjectenmodel_Kadaster (20141001)---
+Betekenis:
+Postbuslocatie wordt door Post.nl aangeduid met een postcode met waarde
+
+Definitie:
+Postcode is de officiële Nederlandse Post.nl codering, bestaande uit een numerieke woonplaatscode en een alfabetische lettercode.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="woonplaatsNaam" minOccurs="0" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>
