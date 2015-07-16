@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/gmx" version="0.1"><!--
+This schema is provided by Kadaster as a local copy, as a convenience to the user. This schema may itself reference a local copy of the schema originally referenced by URI. The local reference takes the form of a relative path, and is introduced by Kadaster.
+-->
+	<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 03-15-2005 09:14:50 ====== </xs:documentation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/gmd.xsd"/>
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================= -->
+	<!-- ........................................................................ -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="CT_CodelistValue_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:CodeDefinition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="CT_Codelist_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:CodeListDictionary"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="CodeDefinition_Type">
+		<xs:complexContent>
+			<xs:extension base="gml:DefinitionType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="CodeDefinition" substitutionGroup="gml:Definition" type="gmx:CodeDefinition_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="CodeDefinition_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:CodeDefinition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="CodeListDictionary_Type">
+		<xs:annotation>
+			<xs:documentation>Constraints: - 1) metadataProperty.card = 0 - 2) dictionaryEntry.card = 0</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gml:DictionaryType">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="codeEntry" type="gmx:CodeDefinition_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="CodeListDictionary" substitutionGroup="gml:Dictionary" type="gmx:CodeListDictionary_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="CodeListDictionary_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:CodeListDictionary"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="ML_CodeDefinition_Type">
+		<xs:complexContent>
+			<xs:extension base="gmx:CodeDefinition_Type">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="alternativeExpression" type="gmx:CodeAlternativeExpression_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="ML_CodeDefinition" substitutionGroup="gmx:CodeDefinition" type="gmx:ML_CodeDefinition_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="ML_CodeDefinition_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:ML_CodeDefinition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="ML_CodeListDictionary_Type">
+		<xs:annotation>
+			<xs:documentation>Constraint: codeEntry.type = ML_CodeListDefinition</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmx:CodeListDictionary_Type">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="alternativeExpression" type="gmx:ClAlternativeExpression_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="ML_CodeListDictionary" substitutionGroup="gmx:CodeListDictionary" type="gmx:ML_CodeListDictionary_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="ML_CodeListDictionary_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:ML_CodeListDictionary"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!--===================== Alternative Expresssion type ===============================-->
+	<xs:complexType name="ClAlternativeExpression_Type">
+		<xs:annotation>
+			<xs:documentation>XML attributes contraints: - 1) Id is mandatory - 2) codeSpace (type xsd:anyURI) is mandatory</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gml:DefinitionType">
+				<xs:sequence>
+					<xs:element name="locale" type="gmd:PT_Locale_PropertyType"/>
+				</xs:sequence>
+				<xs:attribute name="codeSpace" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="ClAlternativeExpression" type="gmx:ClAlternativeExpression_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="ClAlternativeExpression_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:ClAlternativeExpression"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<xs:complexType name="CodeAlternativeExpression_Type">
+		<xs:annotation>
+			<xs:documentation>XML attributes contraints: - 1) Id is mandatory - 2) codeSpace (type xsd:anyURI) is mandatory</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gml:DefinitionType">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="locale" type="gmd:PT_Locale_PropertyType"/>
+				</xs:sequence>
+				<xs:attribute name="codeSpace" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="CodeAlternativeExpression" type="gmx:CodeAlternativeExpression_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="CodeAlternativeExpression_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmx:CodeAlternativeExpression"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!--===End Of File===-->
+</xs:schema>

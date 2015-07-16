@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:RechtRef="http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht-ref/v20120508"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht-ref/v20120508"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.1.1-3">
+   <xs:annotation>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-recht-ref</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/version">2.1.1</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/phase">3</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/release">20120508</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/file-location">IMKAD-recht-ref/v20120508/IMKAD_RechtRef_v2_1_1.xsd</xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/conversion">
+        Dit schema is samengesteld in overeenstemming met de codeerregels vastgelegd in  
+        "ISO 19118: Text of 19118 Geographic information - Encoding, as sent to the ISO Central 
+        Secretariat for publication"
+    </xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated schema)</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+              schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="AantekeningRef" type="RechtRef:AantekeningRef" abstract="false"/>
+   <xs:complexType name="AantekeningRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_AppartementsrechtSplitsingRef"
+               type="RechtRef:_AppartementsrechtSplitsingRef"
+               abstract="false"/>
+   <xs:complexType name="_AppartementsrechtSplitsingRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="BeslagRef" type="RechtRef:BeslagRef" abstract="false"/>
+   <xs:complexType name="BeslagRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="GezamenlijkAandeelRef" type="RechtRef:GezamenlijkAandeelRef"
+               abstract="false"/>
+   <xs:complexType name="GezamenlijkAandeelRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="HoofdSplitsingRef" type="RechtRef:HoofdSplitsingRef" abstract="false"/>
+   <xs:complexType name="HoofdSplitsingRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="HypotheekRef" type="RechtRef:HypotheekRef" abstract="false"/>
+   <xs:complexType name="HypotheekRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="MandeligheidRef" type="RechtRef:MandeligheidRef" abstract="false"/>
+   <xs:complexType name="MandeligheidRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="OndersplitsingRef" type="RechtRef:OndersplitsingRef" abstract="false"/>
+   <xs:complexType name="OndersplitsingRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_PersoonsgebondenRechtRef" type="RechtRef:_PersoonsgebondenRechtRef"
+               abstract="false"/>
+   <xs:complexType name="_PersoonsgebondenRechtRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="SplitsingAfkoopErfpachtRef" type="RechtRef:SplitsingAfkoopErfpachtRef"
+               abstract="false"/>
+   <xs:complexType name="SplitsingAfkoopErfpachtRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="TenaamstellingRef" type="RechtRef:TenaamstellingRef" abstract="false"/>
+   <xs:complexType name="TenaamstellingRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="ZakelijkRechtRef" type="RechtRef:ZakelijkRechtRef" abstract="false"/>
+   <xs:complexType name="ZakelijkRechtRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_ZekerheidsrechtRef" type="RechtRef:_ZekerheidsrechtRef" abstract="false"/>
+   <xs:complexType name="_ZekerheidsrechtRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

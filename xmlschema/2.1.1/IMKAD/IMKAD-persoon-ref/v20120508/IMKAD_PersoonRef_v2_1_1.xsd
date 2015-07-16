@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:PersoonRef="http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon-ref/v20120508"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon-ref/v20120508"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.1.1-3">
+   <xs:annotation>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon-ref</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/version">2.1.1</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/phase">3</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/release">20120508</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/file-location">IMKAD-persoon-ref/v20120508/IMKAD_PersoonRef_v2_1_1.xsd</xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/conversion">
+        Dit schema is samengesteld in overeenstemming met de codeerregels vastgelegd in  
+        "ISO 19118: Text of 19118 Geographic information - Encoding, as sent to the ISO Central 
+        Secretariat for publication"
+    </xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated schema)</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+              schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="KADNatuurlijkPersoonRef" type="PersoonRef:KADNatuurlijkPersoonRef"
+               abstract="false"/>
+   <xs:complexType name="KADNatuurlijkPersoonRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="KADNietNatuurlijkPersoonRef"
+               type="PersoonRef:KADNietNatuurlijkPersoonRef"
+               abstract="false"/>
+   <xs:complexType name="KADNietNatuurlijkPersoonRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_NatuurlijkPersoonRef" type="PersoonRef:_NatuurlijkPersoonRef"
+               abstract="false"/>
+   <xs:complexType name="_NatuurlijkPersoonRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_NietNatuurlijkPersoonRef" type="PersoonRef:_NietNatuurlijkPersoonRef"
+               abstract="false"/>
+   <xs:complexType name="_NietNatuurlijkPersoonRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_PersoonRef" type="PersoonRef:_PersoonRef" abstract="false"/>
+   <xs:complexType name="_PersoonRef" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">(Generated class)</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

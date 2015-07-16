@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/gmd" version="0.1"><!--
+This schema is provided by Kadaster as a local copy, as a convenience to the user. This schema may itself reference a local copy of the schema originally referenced by URI. The local reference takes the form of a relative path, and is introduced by Kadaster.
+-->
+	<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 01-26-2005 12:40:00 ====== </xs:documentation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd"/>
+	<xs:include schemaLocation="../gmd/spatialRepresentation.xsd"/>
+	<xs:include schemaLocation="../gmd/metadataExtension.xsd"/>
+	<xs:include schemaLocation="../gmd/content.xsd"/>
+	<xs:include schemaLocation="../gmd/metadataApplication.xsd"/>
+	<xs:include schemaLocation="../gmd/applicationSchema.xsd"/>
+	<xs:include schemaLocation="../gmd/portrayalCatalogue.xsd"/>
+	<xs:include schemaLocation="../gmd/dataQuality.xsd"/>
+	<xs:include schemaLocation="../gmd/freeText.xsd"/>
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================= -->
+	<xs:complexType name="MD_Metadata_Type">
+		<xs:annotation>
+			<xs:documentation>Information about the metadata</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="fileIdentifier" type="gco:CharacterString_PropertyType"/>
+					<xs:element minOccurs="0" name="language" type="gco:CharacterString_PropertyType"/>
+					<xs:element minOccurs="0" name="characterSet" type="gmd:MD_CharacterSetCode_PropertyType"/>
+					<xs:element minOccurs="0" name="parentIdentifier" type="gco:CharacterString_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="hierarchyLevel" type="gmd:MD_ScopeCode_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="hierarchyLevelName" type="gco:CharacterString_PropertyType"/>
+					<xs:element maxOccurs="unbounded" name="contact" type="gmd:CI_ResponsibleParty_PropertyType"/>
+					<xs:element name="dateStamp" type="gco:Date_PropertyType"/>
+					<xs:element minOccurs="0" name="metadataStandardName" type="gco:CharacterString_PropertyType"/>
+					<xs:element minOccurs="0" name="metadataStandardVersion" type="gco:CharacterString_PropertyType"/>
+					<xs:element minOccurs="0" name="dataSetURI" type="gco:CharacterString_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="locale" type="gmd:PT_Locale_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="spatialRepresentationInfo" type="gmd:MD_SpatialRepresentation_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="referenceSystemInfo" type="gmd:MD_ReferenceSystem_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="metadataExtensionInfo" type="gmd:MD_MetadataExtensionInformation_PropertyType"/>
+					<xs:element maxOccurs="unbounded" name="identificationInfo" type="gmd:MD_Identification_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="contentInfo" type="gmd:MD_ContentInformation_PropertyType"/>
+					<xs:element minOccurs="0" name="distributionInfo" type="gmd:MD_Distribution_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="dataQualityInfo" type="gmd:DQ_DataQuality_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="gmd:MD_PortrayalCatalogueReference_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="gmd:MD_Constraints_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="gmd:MD_ApplicationSchemaInformation_PropertyType"/>
+					<xs:element minOccurs="0" name="metadataMaintenance" type="gmd:MD_MaintenanceInformation_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="series" type="gmd:DS_Aggregate_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="describes" type="gmd:DS_DataSet_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="propertyType" type="gco:ObjectReference_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="featureType" type="gco:ObjectReference_PropertyType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="featureAttribute" type="gco:ObjectReference_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MD_Metadata" type="gmd:MD_Metadata_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MD_Metadata_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmd:MD_Metadata"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+</xs:schema>

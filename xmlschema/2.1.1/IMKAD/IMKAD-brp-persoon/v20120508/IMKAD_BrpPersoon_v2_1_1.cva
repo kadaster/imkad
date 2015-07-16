@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:BrpPersoon="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon/v20120508"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_BrpPersoon_v2_1_1">
+   <Title>This is a context/value association file for the XML schema at http://www.kadaster.nl/schemas/IMKAD-brp-persoon/v20120508/IMKAD_BrpPersoon_v2_1_1.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="BRPLand" uri="http://www.kadaster.nl/schemas/waardelijsten/BRPLand"
+                 key="Code"/>
+      <ValueList xml:id="AdellijkeTitelOfPredikaat"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AdellijkeTitelOfPredikaat"
+                 key="Code"/>
+      <ValueList xml:id="BRPAanduidingNaamgebruik"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/BRPAanduidingNaamgebruik"
+                 key="Code"/>
+      <ValueList xml:id="BRPIndicatieGeheim"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/BRPIndicatieGeheim"
+                 key="Code"/>
+      <ValueList xml:id="BRPAanduidingGeslacht"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/BRPAanduidingGeslacht"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="BrpPersoon:land" scope="BrpPersoon:BuitenlandsAdres" values="BRPLand"/>
+      <Context item="BrpPersoon:geboorteland" scope="BrpPersoon:Geboorte" values="BRPLand"/>
+      <Context item="BrpPersoon:adellijkeTitelOfPredikaat"
+               scope="BrpPersoon:_GeregistreerdPersoon"
+               values="AdellijkeTitelOfPredikaat"/>
+      <Context item="BrpPersoon:aanduidingNaamgebruik"
+               scope="BrpPersoon:_GeregistreerdPersoon"
+               values="BRPAanduidingNaamgebruik"/>
+      <Context item="BrpPersoon:indicatieGeheim" scope="BrpPersoon:_GeregistreerdPersoon"
+               values="BRPIndicatieGeheim"/>
+      <Context item="BrpPersoon:geslachtsaanduiding" scope="BrpPersoon:Geslacht"
+               values="BRPAanduidingGeslacht"/>
+      <Context item="BrpPersoon:landWaarnaarVertrokken" scope="BrpPersoon:NietIngezetene"
+               values="BRPLand"/>
+   </Contexts>
+</cva:ContextValueAssociation>

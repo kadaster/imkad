@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:OnroerendeZaak="http://www.kadaster.nl/schemas/IMKAD/IMKAD-onroerendezaak/v20120508"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_OnroerendeZaak_v2_1_1">
+   <Title>This is a context/value association file for the XML schema at http://www.kadaster.nl/schemas/IMKAD-onroerendezaak/v20120508/IMKAD_OnroerendeZaak_v2_1_1.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="TypeGrens" uri="http://www.kadaster.nl/schemas/waardelijsten/TypeGrens"
+                 key="Code"/>
+      <ValueList xml:id="AardLeidingnetwerk"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardLeidingnetwerk"
+                 key="Code"/>
+      <ValueList xml:id="CultuurcodeOnbebouwd"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd"
+                 key="Code"/>
+      <ValueList xml:id="CultuurBebouwd"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/CultuurBebouwd"
+                 key="Code"/>
+      <ValueList xml:id="AardFliatie"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AardFliatie"
+                 key="Code"/>
+      <ValueList xml:id="SoortGrootte"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/SoortGrootte"
+                 key="Code"/>
+      <ValueList xml:id="AKRKadastraleGemeenteCode"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/AKRKadastraleGemeenteCode"
+                 key="Code"/>
+      <ValueList xml:id="KadastraleGemeente"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/KadastraleGemeente"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="OnroerendeZaak:type" scope="OnroerendeZaak:KadastraleGrens"
+               values="TypeGrens"/>
+      <Context item="OnroerendeZaak:aard" scope="OnroerendeZaak:Leidingnetwerk"
+               values="AardLeidingnetwerk"/>
+      <Context item="OnroerendeZaak:aardCultuurOnbebouwd"
+               scope="OnroerendeZaak:_OnroerendeZaak"
+               values="CultuurcodeOnbebouwd"/>
+      <Context item="OnroerendeZaak:aardCultuurBebouwd" scope="OnroerendeZaak:_OnroerendeZaak"
+               values="CultuurBebouwd"/>
+      <Context item="OnroerendeZaak:aard" scope="OnroerendeZaak:OnroerendeZaakFiliatie"
+               values="AardFliatie"/>
+      <Context item="OnroerendeZaak:soortGrootte" scope="OnroerendeZaak:Perceel"
+               values="SoortGrootte"/>
+      <Context item="OnroerendeZaak:AKRKadastraleGemeenteCode"
+               scope="OnroerendeZaak:TypeKadastraleAanduiding"
+               values="AKRKadastraleGemeenteCode"/>
+      <Context item="OnroerendeZaak:kadastraleGemeente"
+               scope="OnroerendeZaak:TypeKadastraleAanduiding"
+               values="KadastraleGemeente"/>
+   </Contexts>
+</cva:ContextValueAssociation>

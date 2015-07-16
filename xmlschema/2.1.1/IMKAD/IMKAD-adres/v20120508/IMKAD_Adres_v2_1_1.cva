@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:Adres="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres/v20120508"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_Adres_v2_1_1">
+   <Title>This is a context/value association file for the XML schema at http://www.kadaster.nl/schemas/IMKAD-adres/v20120508/IMKAD_Adres_v2_1_1.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="BijOfTegenover"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/BijOfTegenover"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="Adres:bijOfTegenover" scope="Adres:KADBinnenlandsAdres"
+               values="BijOfTegenover"/>
+   </Contexts>
+</cva:ContextValueAssociation>

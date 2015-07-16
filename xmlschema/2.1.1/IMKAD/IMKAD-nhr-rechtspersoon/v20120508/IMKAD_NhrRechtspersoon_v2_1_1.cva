@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:NhrRechtspersoon="http://www.kadaster.nl/schemas/IMKAD/IMKAD-nhr-rechtspersoon/v20120508"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_NhrRechtspersoon_v2_1_1">
+   <Title>This is a context/value association file for the XML schema at http://www.kadaster.nl/schemas/IMKAD-nhr-rechtspersoon/v20120508/IMKAD_NhrRechtspersoon_v2_1_1.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="NHRRechtsvorm"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/NHRRechtsvorm"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="NhrRechtspersoon:rechtsvorm" scope="NhrRechtspersoon:Rechtspersoon"
+               values="NHRRechtsvorm"/>
+   </Contexts>
+</cva:ContextValueAssociation>

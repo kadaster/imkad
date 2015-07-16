@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:TeboekgesteldeZaak="http://www.kadaster.nl/schemas/IMKAD/IMKAD-teboekgesteldezaak/v20120508"
+                             queryBinding="xslt"
+                             name="rules-IMKAD_TeboekgesteldeZaak_v2_1_1">
+   <Title>This is a context/value association file for the XML schema at http://www.kadaster.nl/schemas/IMKAD-teboekgesteldezaak/v20120508/IMKAD_TeboekgesteldeZaak_v2_1_1.xsd.</Title>
+   <ValueLists>
+      <ValueList xml:id="RubriekBrandmerk"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/RubriekBrandmerk"
+                 key="Code"/>
+      <ValueList xml:id="PlaatsBrandmerk"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/PlaatsBrandmerk"
+                 key="Code"/>
+      <ValueList xml:id="StatusBrandmerk"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/StatusBrandmerk"
+                 key="Code"/>
+      <ValueList xml:id="CodeAndereRegistratie"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/CodeAndereRegistratie"
+                 key="Code"/>
+      <ValueList xml:id="StatusSchip"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/StatusSchip"
+                 key="Code"/>
+      <ValueList xml:id="SoortSchip"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/SoortSchip"
+                 key="Code"/>
+      <ValueList xml:id="InhoudEenheid"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/InhoudEenheid"
+                 key="Code"/>
+      <ValueList xml:id="VermogenEenheid"
+                 uri="http://www.kadaster.nl/schemas/waardelijsten/VermogenEenheid"
+                 key="Code"/>
+   </ValueLists>
+   <Contexts>
+      <Context item="TeboekgesteldeZaak:rubriek" scope="TeboekgesteldeZaak:BrandmerkSchip"
+               values="RubriekBrandmerk"/>
+      <Context item="TeboekgesteldeZaak:plaats" scope="TeboekgesteldeZaak:BrandmerkSchip"
+               values="PlaatsBrandmerk"/>
+      <Context item="TeboekgesteldeZaak:status" scope="TeboekgesteldeZaak:BrandmerkSchip"
+               values="StatusBrandmerk"/>
+      <Context item="TeboekgesteldeZaak:code"
+               scope="TeboekgesteldeZaak:KenmerkAndereRegistratie"
+               values="CodeAndereRegistratie"/>
+      <Context item="TeboekgesteldeZaak:status" scope="TeboekgesteldeZaak:Schip"
+               values="StatusSchip"/>
+      <Context item="TeboekgesteldeZaak:soortCode" scope="TeboekgesteldeZaak:Schip"
+               values="SoortSchip"/>
+      <Context item="TeboekgesteldeZaak:eenheid" scope="TeboekgesteldeZaak:TypeInhoud"
+               values="InhoudEenheid"/>
+      <Context item="TeboekgesteldeZaak:eenheid" scope="TeboekgesteldeZaak:TypeVermogen"
+               values="VermogenEenheid"/>
+   </Contexts>
+</cva:ContextValueAssociation>

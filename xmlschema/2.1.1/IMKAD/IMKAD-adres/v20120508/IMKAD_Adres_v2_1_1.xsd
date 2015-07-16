@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:Adres="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres/v20120508"
+           xmlns:Typen="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20111122"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres/v20120508"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.1.1-3">
+   <xs:annotation>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/version">2.1.1</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/phase">3</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/release">20120508</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/file-location">IMKAD-adres/v20120508/IMKAD_Adres_v2_1_1.xsd</xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/conversion">
+        Dit schema is samengesteld in overeenstemming met de codeerregels vastgelegd in  
+        "ISO 19118: Text of 19118 Geographic information - Encoding, as sent to the ISO Central 
+        Secretariat for publication"
+    </xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Dit package bevat alle klassen die behoren bij de representatie van adressen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20111122"
+              schemaLocation="../../IMKAD-typen/v20111122/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="KADBinnenlandsAdres" type="Adres:KADBinnenlandsAdres" abstract="false"
+               substitutionGroup="Adres:_ObjectlocatieBinnenland"/>
+   <xs:complexType name="KADBinnenlandsAdres" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Locatie wordt aangeduid door adresgegevens in Nederland volgens het Kadaster.
+De locatie is niet gekoppeld aan de authentieke registratie BAG.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Adres:_ObjectlocatieBinnenland">
+            <xs:sequence>
+               <xs:element name="openbareRuimteNaam" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een naam die aan een OPENBARE RUIMTE is toegekend in een daartoe strekkend formeel gemeentelijk besluit. 
+
+Conform BAG.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="huisLetter" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een door of namens het gemeentebestuur ten aanzien
+van een adresseerbaar object toegekende toevoeging
+aan een huisnummer in de vorm van een alfanumeriek
+teken. 
+
+Conform BAG.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="huisNummer" type="xs:integer" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering.
+
+Conform BAG.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="huisNummerToevoeging" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een door of namens het gemeentebestuur ten aanzien van een
+adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.
+
+Conform BAG.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="postcode" type="Typen:TypePostcode" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De door TNT Post vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.
+
+Conform BAG.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="woonplaatsNaam" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De woonplaatsen worden vastgesteld door de gemeenten. De vastgestelde woonplaatsen worden door een beheerder van een landelijke woonplaatsentabel voorzien van een unieke aanduiding, te vergelijken met de gemeentecode volgens GBA tabel 33.
+
+Conform BAG.
+
+Omdat plaatsen moeten kunnen worden geregistreerd die (nog) niet in BAG zijn opgenomen wordt geen waardelijst gehanteerd.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="bijOfTegenover" type="Typen:Waardelijst" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De woonlocatie kan gelegen zijn naast of tegenover een bepaalde locatie, die wordt aangeduid met een adres. 
+De mogelijke waarde is opgenomen in een waardenlijst.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="locatieOmschrijving" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Omschrijving van de locatie binnen deze woonlocatie. Hierin kan bijvoorbeeld het kamernummer in een bejaardentehuis of huisnummer van een bungalow op een bungalowpark worden aangegeven.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="KADBuitenlandsAdres" type="Adres:KADBuitenlandsAdres" abstract="false"
+               substitutionGroup="Adres:_ObjectlocatieBuitenland"/>
+   <xs:complexType name="KADBuitenlandsAdres" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Locatie wordt aangeduid door adresgegevens in het buitenland volgens het Kadaster.
+De locatie is niet gekoppeld aan de authentieke registratie RNI.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Adres:_ObjectlocatieBuitenland">
+            <xs:sequence>
+               <xs:element name="adres" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Bevat straatnaam en huisnummer. 
+
+Conform RNI.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="woonplaats" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Bevat postcode en woonplaats.
+
+Conform RNI.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="regio" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Het district: de staat of provincie of regio.
+
+Conform RNI.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="39"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="land" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Landnaam.
+
+Conform RNI.
+
+Omdat landen moeten kunnen worden geregistreerd die (nog) niet in BRP zijn opgenomen wordt geen waardelijst gehanteerd.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="_Locatie" type="Adres:_Locatie" abstract="true"/>
+   <xs:complexType name="_Locatie" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een locatie kan een binnenlandse locatie, een buitenlandse locatie of een postbusadres zijn. </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="identificatie" type="Typen:CompositeID" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekende landelijk uniek nummer aan dit object binnen de kadastrale registratie.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="_Objectlocatie" type="Adres:_Objectlocatie" abstract="true"
+               substitutionGroup="Adres:_Locatie"/>
+   <xs:complexType name="_Objectlocatie" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een woonlocatie (waar een persoon woont/gevestigd is) kan een binnenlandse locatie of een buitenlandse locatie zijn. </xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Adres:_Locatie">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="_ObjectlocatieBinnenland" type="Adres:_ObjectlocatieBinnenland"
+               abstract="true"
+               substitutionGroup="Adres:_Objectlocatie"/>
+   <xs:complexType name="_ObjectlocatieBinnenland" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Woonlocatie in binnenland. </xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Adres:_Objectlocatie">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="_ObjectlocatieBuitenland" type="Adres:_ObjectlocatieBuitenland"
+               abstract="true"
+               substitutionGroup="Adres:_Objectlocatie"/>
+   <xs:complexType name="_ObjectlocatieBuitenland" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Woonlocatie in buitenland.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Adres:_Objectlocatie">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="PostbusLocatie" type="Adres:PostbusLocatie" abstract="false"
+               substitutionGroup="Adres:_Locatie"/>
+   <xs:complexType name="PostbusLocatie" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De locatie waar een persoon post wenst te ontvangen kan een postbusaanduiding zijn. Een postbusaanduiding bestaat uit een woonplaatsnaam, postcode en postbusnummer.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Adres:_Locatie">
+            <xs:sequence>
+               <xs:element name="postbusnummer" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De numerieke aanduiding zoals deze door de Nederlandse TPG is vastgesteld voor postbusadressen. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="7"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="postcode" type="Typen:TypePostcode" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De officiële Nederlandse TPG codering, bestaande uit een numerieke woonplaatscode en een alfabetische lettercode. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="woonplaatsNaam" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De door de gemeente vastgestelde naam van een woonplaats. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:smil20="http://www.w3.org/2001/SMIL20/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/gml/3.2" version="3.2.1 2010-01-28"><!--
+This schema is provided by Kadaster as a local copy, as a convenience to the user. This schema may itself reference a local copy of the schema originally referenced by URI. The local reference takes the form of a relative path, and is introduced by Kadaster.
+-->
+	<annotation>
+		<appinfo source="urn:x-ogc:specification:gml:schema-xsd:gml:3.2.1">defaultStyle.xsd</appinfo>
+		<documentation>
+			GML is an OGC Standard.
+			Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
+			To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
+		</documentation>
+	</annotation>
+	<!-- ==============================================================
+       includes and imports
+	============================================================== -->
+	<include schemaLocation="measures.xsd"/>
+	<import namespace="http://www.w3.org/2001/SMIL20/" schemaLocation="../smil20/smil20.xsd"/>
+	<!-- ==============================================================
+      the Style property
+	============================================================== -->
+	<element name="defaultStyle" type="gml:DefaultStylePropertyType">
+		<annotation>
+			<documentation>Top-level property. Used in application schemas to "attach" the styling information to GML data. The link between the data and the style should be established through this property only.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="DefaultStylePropertyType">
+		<annotation>
+			<documentation>[complexType of] Top-level property. Used in application schemas to "attach" the styling information to GML data. The link between the data and the style should be established through this property only.</documentation>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" ref="gml:AbstractStyle"/>
+		</sequence>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- ==============================================================
+       the Style
+	============================================================== -->
+	<element abstract="true" name="AbstractStyle" substitutionGroup="gml:AbstractGML" type="gml:AbstractStyleType">
+		<annotation>
+			<documentation>The value of the top-level property. It is an abstract element. Used as the head element of the substitution group for extensibility purposes.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType abstract="true" name="AbstractStyleType">
+		<annotation>
+			<documentation>[complexType of] The value of the top-level property. It is an abstract element. Used as the head element of the substitution group for extensibility purposes.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:AbstractGMLType"/>
+		</complexContent>
+	</complexType>
+	<!-- =========================================================== -->
+	<element name="Style" substitutionGroup="gml:AbstractStyle" type="gml:StyleType">
+		<annotation>
+			<documentation>Predefined concrete value of the top-level property. Encapsulates all other styling information.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="StyleType">
+		<annotation>
+			<documentation>[complexType of] Predefined concrete value of the top-level property. Encapsulates all other styling information.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:AbstractStyleType">
+				<sequence>
+					<element maxOccurs="unbounded" ref="gml:featureStyle"/>
+					<element minOccurs="0" ref="gml:graphStyle"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ==============================================================
+      Feature Style Property
+	============================================================== -->
+	<element name="featureStyle" type="gml:FeatureStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="FeatureStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" ref="gml:FeatureStyle"/>
+		</sequence>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- ==============================================================
+      Feature Style
+	============================================================== -->
+	<element name="FeatureStyle" substitutionGroup="gml:AbstractGML" type="gml:FeatureStyleType">
+		<annotation>
+			<documentation>The style descriptor for features.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="FeatureStyleType">
+		<annotation>
+			<documentation>[complexType of] The style descriptor for features.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element minOccurs="0" name="featureConstraint" type="string"/>
+					<element maxOccurs="unbounded" minOccurs="0" ref="gml:geometryStyle"/>
+					<element maxOccurs="unbounded" minOccurs="0" ref="gml:topologyStyle"/>
+					<element minOccurs="0" ref="gml:labelStyle"/>
+				</sequence>
+				<attribute name="featureType" type="string" use="optional"/>
+				<attribute name="baseType" type="string" use="optional"/>
+				<attribute name="queryGrammar" type="gml:QueryGrammarEnumeration"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- =========================================================== -->
+	<simpleType name="QueryGrammarEnumeration">
+		<annotation>
+			<documentation>Used to specify the grammar of the feature query mechanism.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="xpath"/>
+			<enumeration value="xquery"/>
+			<enumeration value="other"/>
+		</restriction>
+	</simpleType>
+	<!-- ==============================================================
+       Base style descriptor type (for geometry, topology, label, graph)
+	============================================================== -->
+	<complexType name="BaseStyleDescriptorType">
+		<annotation>
+			<documentation>Base complex type for geometry, topology, label and graph styles.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element minOccurs="0" name="spatialResolution" type="gml:ScaleType"/>
+					<element maxOccurs="unbounded" minOccurs="0" name="styleVariation" type="gml:StyleVariationType"/>
+					<element maxOccurs="unbounded" minOccurs="0" ref="smil20:animate"/>
+					<element maxOccurs="unbounded" minOccurs="0" ref="smil20:animateMotion"/>
+					<element maxOccurs="unbounded" minOccurs="0" ref="smil20:animateColor"/>
+					<element maxOccurs="unbounded" minOccurs="0" ref="smil20:set"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ==============================================================
+       Geometry Style Property
+	============================================================== -->
+	<element name="geometryStyle" type="gml:GeometryStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="GeometryStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" ref="gml:GeometryStyle"/>
+		</sequence>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- ==============================================================
+       Geometry Style
+	============================================================== -->
+	<element name="GeometryStyle" substitutionGroup="gml:AbstractGML" type="gml:GeometryStyleType">
+		<annotation>
+			<documentation>The style descriptor for geometries of a feature.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="GeometryStyleType">
+		<annotation>
+			<documentation>[complexType of] The style descriptor for geometries of a feature.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:BaseStyleDescriptorType">
+				<sequence>
+					<choice>
+						<element ref="gml:symbol"/>
+						<element name="style" type="string">
+							<annotation>
+								<appinfo>deprecated</appinfo>
+								<documentation>Deprecated in GML version 3.1.0. Use symbol with inline content instead.</documentation>
+							</annotation>
+						</element>
+					</choice>
+					<element minOccurs="0" ref="gml:labelStyle"/>
+				</sequence>
+				<attribute name="geometryProperty" type="string"/>
+				<attribute name="geometryType" type="string"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ==============================================================
+       Topology Style Property
+	============================================================== -->
+	<element name="topologyStyle" type="gml:TopologyStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="TopologyStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" ref="gml:TopologyStyle"/>
+		</sequence>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- ==============================================================
+       Topology Style
+	============================================================== -->
+	<element name="TopologyStyle" substitutionGroup="gml:AbstractGML" type="gml:TopologyStyleType">
+		<annotation>
+			<documentation>The style descriptor for topologies of a feature. Describes individual topology elements styles.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="TopologyStyleType">
+		<annotation>
+			<documentation>[complexType of] The style descriptor for topologies of a feature. Describes individual topology elements styles.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:BaseStyleDescriptorType">
+				<sequence>
+					<choice>
+						<element ref="gml:symbol"/>
+						<element name="style" type="string">
+							<annotation>
+								<appinfo>deprecated</appinfo>
+								<documentation>Deprecated in GML version 3.1.0. Use symbol with inline content instead.</documentation>
+							</annotation>
+						</element>
+					</choice>
+					<element minOccurs="0" ref="gml:labelStyle"/>
+				</sequence>
+				<attribute name="topologyProperty" type="string"/>
+				<attribute name="topologyType" type="string"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ==============================================================
+       Label Style Property
+	============================================================== -->
+	<element name="labelStyle" type="gml:LabelStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="LabelStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" ref="gml:LabelStyle"/>
+		</sequence>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- ==============================================================
+       Label Style
+	============================================================== -->
+	<element name="LabelStyle" substitutionGroup="gml:AbstractGML" type="gml:LabelStyleType">
+		<annotation>
+			<documentation>The style descriptor for labels of a feature, geometry or topology.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="LabelStyleType">
+		<annotation>
+			<documentation>[complexType of] The style descriptor for labels of a feature, geometry or topology.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:BaseStyleDescriptorType">
+				<sequence>
+					<element name="style" type="string"/>
+					<element name="label" type="gml:LabelType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ==============================================================
+      Graph Style Property
+	============================================================== -->
+	<element name="graphStyle" type="gml:GraphStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="GraphStylePropertyType">
+		<annotation>
+			<documentation/>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" ref="gml:GraphStyle"/>
+		</sequence>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- ==============================================================
+      Graph Style
+	============================================================== -->
+	<element name="GraphStyle" substitutionGroup="gml:AbstractGML" type="gml:GraphStyleType">
+		<annotation>
+			<documentation>The style descriptor for a graph consisting of a number of features. Describes graph-specific style attributes.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="GraphStyleType">
+		<annotation>
+			<documentation>[complexType of] The style descriptor for a graph consisting of a number of features. Describes graph-specific style attributes.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:BaseStyleDescriptorType">
+				<sequence>
+					<element minOccurs="0" name="planar" type="boolean"/>
+					<element minOccurs="0" name="directed" type="boolean"/>
+					<element minOccurs="0" name="grid" type="boolean"/>
+					<element minOccurs="0" name="minDistance" type="double"/>
+					<element minOccurs="0" name="minAngle" type="double"/>
+					<element minOccurs="0" name="graphType" type="gml:GraphTypeType"/>
+					<element minOccurs="0" name="drawingType" type="gml:DrawingTypeType"/>
+					<element minOccurs="0" name="lineType" type="gml:LineTypeType"/>
+					<element maxOccurs="unbounded" minOccurs="0" name="aestheticCriteria" type="gml:AesheticCriteriaType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ==============================================================
+      Common elements
+	============================================================== -->
+	<element name="symbol" type="gml:SymbolType">
+		<annotation>
+			<documentation>The symbol property. Extends the gml:AssociationType to allow for remote referencing of symbols.</documentation>
+		</annotation>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="SymbolType">
+		<annotation>
+			<documentation>[complexType of] The symbol property. Allows for remote referencing of symbols.</documentation>
+		</annotation>
+		<sequence>
+			<any maxOccurs="unbounded" minOccurs="0" processContents="skip"/>
+		</sequence>
+		<attribute name="symbolType" type="gml:SymbolTypeEnumeration" use="required"/>
+		<attribute ref="gml:transform" use="optional"/>
+		<attribute name="about" type="anyURI" use="optional"/>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!-- =========================================================== -->
+	<simpleType name="SymbolTypeEnumeration">
+		<annotation>
+			<documentation>Used to specify the type of the symbol used.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="svg"/>
+			<enumeration value="xpath"/>
+			<enumeration value="other"/>
+		</restriction>
+	</simpleType>
+	<!-- =========================================================== -->
+	<complexType mixed="true" name="LabelType">
+		<annotation>
+			<documentation>Label is mixed -- composed of text and XPath expressions used to extract the useful information from the feature.</documentation>
+		</annotation>
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="LabelExpression" type="string"/>
+		</sequence>
+		<attribute ref="gml:transform" use="optional"/>
+	</complexType>
+	<!-- =========================================================== -->
+	<attribute name="transform" type="string">
+		<annotation>
+			<documentation>Defines the geometric transformation of entities. There is no particular grammar defined for this value.</documentation>
+		</annotation>
+	</attribute>
+	<!-- =========================================================== -->
+	<complexType name="StyleVariationType">
+		<annotation>
+			<documentation>Used to vary individual graphic parameters and attributes of the style, symbol or text.</documentation>
+		</annotation>
+		<simpleContent>
+			<extension base="string">
+				<attribute name="styleProperty" type="string" use="required"/>
+				<attribute name="featurePropertyRange" type="string" use="optional"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<!-- ==============================================================
+       Graph parameters types
+	============================================================== -->
+	<simpleType name="GraphTypeType">
+		<annotation>
+			<documentation>Graph-specific styling property.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="TREE"/>
+			<enumeration value="BICONNECTED"/>
+		</restriction>
+	</simpleType>
+	<!-- =========================================================== -->
+	<simpleType name="DrawingTypeType">
+		<annotation>
+			<documentation>Graph-specific styling property.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="POLYLINE"/>
+			<enumeration value="ORTHOGONAL"/>
+		</restriction>
+	</simpleType>
+	<!-- =========================================================== -->
+	<simpleType name="LineTypeType">
+		<annotation>
+			<documentation>Graph-specific styling property.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="STRAIGHT"/>
+			<enumeration value="BENT"/>
+		</restriction>
+	</simpleType>
+	<!-- =========================================================== -->
+	<simpleType name="AesheticCriteriaType">
+		<annotation>
+			<documentation>Graph-specific styling property.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="MIN_CROSSINGS"/>
+			<enumeration value="MIN_AREA"/>
+			<enumeration value="MIN_BENDS"/>
+			<enumeration value="MAX_BENDS"/>
+			<enumeration value="UNIFORM_BENDS"/>
+			<enumeration value="MIN_SLOPES"/>
+			<enumeration value="MIN_EDGE_LENGTH"/>
+			<enumeration value="MAX_EDGE_LENGTH"/>
+			<enumeration value="UNIFORM_EDGE_LENGTH"/>
+			<enumeration value="MAX_ANGULAR_RESOLUTION"/>
+			<enumeration value="MIN_ASPECT_RATIO"/>
+			<enumeration value="MAX_SYMMETRIES"/>
+		</restriction>
+	</simpleType>
+</schema>

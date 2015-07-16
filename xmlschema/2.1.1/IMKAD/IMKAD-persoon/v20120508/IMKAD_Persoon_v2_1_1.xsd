@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:Persoon="http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon/v20120508"
+           xmlns:NEN3610="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+           xmlns:AdresRef="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20120508"
+           xmlns:BagAdresRef="http://www.kadaster.nl/schemas/IMKAD/IMKAD-bag-adres-ref/v20111122"
+           xmlns:BrpPersoonRef="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon-ref/v20120508"
+           xmlns:Historie="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20120508"
+           xmlns:StukRef="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20120508"
+           xmlns:Typen="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20111122"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon/v20120508"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.1.1-3">
+   <xs:annotation>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/uri">http://www.kadaster.nl/schemas/IMKAD/IMKAD-persoon</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/version">2.1.1</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/phase">3</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/release">20120508</xs:appinfo>
+      <xs:appinfo source="http://www.kadaster.nl/schema-info/svn">$Id$</xs:appinfo>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/file-location">IMKAD-persoon/v20120508/IMKAD_Persoon_v2_1_1.xsd</xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/conversion">
+        Dit schema is samengesteld in overeenstemming met de codeerregels vastgelegd in  
+        "ISO 19118: Text of 19118 Geographic information - Encoding, as sent to the ISO Central 
+        Secretariat for publication"
+    </xs:documentation>
+      <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Dit package bevat alle klassen die behoren bij de representatie van personen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geonovum.nl/NEN3610/schemas/v20110301"
+              schemaLocation="../../../NEN3610/v20110301/NEN3610_NEN3610_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-adres-ref/v20120508"
+              schemaLocation="../../IMKAD-adres-ref/v20120508/IMKAD_AdresRef_v2_1_1.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-bag-adres-ref/v20111122"
+              schemaLocation="../../IMKAD-bag-adres-ref/v20111122/IMKAD_BagAdresRef_v2_1_1.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-brp-persoon-ref/v20120508"
+              schemaLocation="../../IMKAD-brp-persoon-ref/v20120508/IMKAD_BrpPersoonRef_v2_1_1.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-historie/v20120508"
+              schemaLocation="../../IMKAD-historie/v20120508/IMKAD_Historie_v2_1_1.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-stuk-ref/v20120508"
+              schemaLocation="../../IMKAD-stuk-ref/v20120508/IMKAD_StukRef_v2_1_1.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/IMKAD/IMKAD-typen/v20111122"
+              schemaLocation="../../IMKAD-typen/v20111122/IMKAD_Typen_v2_1_1.xsd"/>
+   <xs:element name="GekozenWoonplaats" type="Persoon:GekozenWoonplaats" abstract="false"/>
+   <xs:complexType name="GekozenWoonplaats" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Locatie die een persoon als woonplaats heeft gekozen. 
+
+Personen kunnen domicilie kiezen; dit moet een woonplaats zijn binnen Nederland. Wanneer een persoon geen feitelijke woonplaats in Nederland heeft, kiest zij ter zake van de inschrijving domicilie in Nederland. </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="aard" type="Typen:Waardelijst" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Keuzelijst waarin wordt aangegeven of de persoon domicilie kiest ten kantore van het kadaster, de notaris, schuldeiser of deurwaarder, of op een overige locatie. 
+De waarden zijn opgenomen in een waardenlijst..</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="adres" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Vrij veld waarin de omschrijving van de woonplaatskeuze kan worden opgenomen. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="400"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="StukRef:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="KADNatuurlijkPersoon" type="Persoon:KADNatuurlijkPersoon"
+               abstract="false"
+               substitutionGroup="Persoon:_NatuurlijkPersoon"/>
+   <xs:complexType name="KADNatuurlijkPersoon" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een natuurlijk persoon die geen bij GBA geregistreerde ingezetene en geen buitenlands persoon is.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Persoon:_NatuurlijkPersoon">
+            <xs:sequence>
+               <xs:element name="geslacht" type="Typen:Waardelijst" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De aanduiding die aangeeft dat Natuurlijk persoon een man, een vrouw is of dat het geslacht bij het Kadaster onbekend is. 
+De waarde is opgenomen in een waardenlijst.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="adellijkeTitelOfPredikaat" type="Typen:Waardelijst" minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een aanduiding,, voorkomend in BRP-tabel 38  Tabel Adellijke titel/predikaat, die aangeeft welke titel of welk predikaat behoort tot de naam (bij adellijke titel geslachtsnaam, bij predikaat voornaam).
+
+Voorbeelden zijn BS, Barones (Adellijke titel) en JH, Jonkheer(predikaat) </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="voornamen" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De verzameling van een of meer naamgegevens, ter onderscheiding van personen met dezelfde achternaam, (rechtens) aan een persoon gegeven of -indien hiervan sprake is- door hem gekozen.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="200"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="voorvoegselsGeslachtsnaam" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De verzameling van een of meer voorzetsels en/of lidwoorden die aan de geslachtsnaam vooraf gaat en daarmee de gezamenlijk de achternaam vormt.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="geslachtsnaam" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Geslachtsnaam van de persoon.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="200"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="aanduidingNaamgebruik" type="Typen:Waardelijst" minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Aanduiding op basis waarvan de juiste naamgeving voor correspondentie kan worden bepaald wanneer een voernaam bij de persoon aanwezig is. De mogelijke waarden zijn opgenomen in een waardenlijst.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geboorteplaats" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De geboorteplaats is een plaatsaanduiding, die aangeeft waar de natuurlijke persoon geboren is. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="geboorteland" type="Typen:Waardelijst" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Geboorteland is een aanduiding van het land waar de natuurlijke persoon geboren is. 
+De waarden zijn opgenomen in een waardenlijst.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geboortedatum" type="Typen:TypeOnvolledigeDatum" minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De datum waarop een natuurlijk persoon is geboren. Deze datum kan onvolledig zijn (alleen jaar, of alleen jaar en maand bekend).</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="indicatieOverleden" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Indicatie of de persoon al dan niet overleden is. De datum van overlijden is soms niet bekend, maar wel dat iemand overleden is. Dat is uit dit attribuut af te leiden. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="datumOverlijden" type="Typen:TypeOnvolledigeDatum" minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De overlijdensdatum is de datum waarop een natuurlijk persoon is overleden. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="partner" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="Persoon:KADPartner" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="KADNietNatuurlijkPersoon" type="Persoon:KADNietNatuurlijkPersoon"
+               abstract="false"
+               substitutionGroup="Persoon:_NietNatuurlijkPersoon"/>
+   <xs:complexType name="KADNietNatuurlijkPersoon" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een niet natuurlijk persoon die geen bij het nieuwe handelsregister (NHR) geregistreerde rechtspersoon is, maar een in het buitenland geregistreerde rechtspersoon. 
+Voor niet natuurlijke personen waarvan het FI nummer (identificatienummer NHR) niet bekend is in de Kadaster registratie, wordt ook KADNietNatuurlijkPersoon gebruikt.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Persoon:_NietNatuurlijkPersoon">
+            <xs:sequence>
+               <xs:element name="naam" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De naamgegevens van een Niet Natuurlijk persoon. 
+
+Hoewel het mogelijk is om diakrieten te registreren in de Persoonsregistratie, kunnen toch niet alle diakrieten geregistreerd worden. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="200"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="rechtsvorm" type="Typen:Waardelijst" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Aanduiding voor de aard van de niet natuurlijke persoon. De waarden voor de aard van de niet natuurlijke persoon zijn opgenomen in een waardenlijst.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="statutaireZetel" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De statutaire plaats van vestiging van de Niet Natuurlijk persoon.  </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="24"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="KADPartner" type="Persoon:KADPartner" abstract="false"/>
+   <xs:complexType name="KADPartner" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Gegevens van de partner binnen huwelijk/geregistreerd partnerschap</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="voorvoegselsGeslachtsnaam" minOccurs="0" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="geslachtsnaam" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_NatuurlijkPersoon" type="Persoon:_NatuurlijkPersoon" abstract="true"
+               substitutionGroup="Persoon:_Persoon"/>
+   <xs:complexType name="_NatuurlijkPersoon" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een natuurlijk persoon. </xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Persoon:_Persoon">
+            <xs:sequence>
+               <xs:element name="metNaamOpenbaarRegister" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="Persoon:NatuurlijkPersoonNaam" minOccurs="1" maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="NatuurlijkPersoonNaam" type="Persoon:NatuurlijkPersoonNaam"
+               abstract="false"/>
+   <xs:complexType name="NatuurlijkPersoonNaam" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De gegevens mbt. de naam van een natuurlijk persoon. </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="voornamen" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De verzameling van een of meer naamgegevens, ter onderscheiding van personen met dezelfde achternaam, (rechtens) aan een persoon gegeven of -indien hiervan sprake is- door hem gekozen. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="voorvoegselsGeslachtsnaam" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De verzameling van een of meer voorzetsels en/of lidwoorden die aan de geslachtsnaam vooraf gaat en daarmee de gezamenlijk de achternaam vormt.  </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="geslachtsnaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De naamgegevens van een natuurlijk persoon, met uitzondering van de voornamen en eventuele voorvoegsels. Afgeleid van NEN 1888 (het significante deel van de achternaam).
+
+De geslachtsnaam en eventuele voorvoegsels vormen gezamenlijk de achternaam van een persoon. De geslachtsnaam wordt in NEN 1888 aangeduid met een significant deel van de achternaam. Hoewel het mogelijk is om diakrieten te registreren in de Persoonsregistratie, kunnen toch niet alle diakrieten geregistreerd worden.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_NietNatuurlijkPersoon" type="Persoon:_NietNatuurlijkPersoon"
+               abstract="true"
+               substitutionGroup="Persoon:_Persoon"/>
+   <xs:complexType name="_NietNatuurlijkPersoon" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een niet-natuurlijk persoon is een groep van personen en vormt een juridische constructie waardoor de persoon, die rechten en plichten heeft, georganiseerd (als rechtssubject binnen de organisatie) of zelfstandig deel kan nemen aan het rechtsverkeer.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Persoon:_Persoon">
+            <xs:sequence>
+               <xs:element name="metNaamOpenbaarRegister" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="Persoon:RechtspersoonNaam" minOccurs="1" maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="_Persoon" type="Persoon:_Persoon" abstract="true"/>
+   <xs:complexType name="_Persoon" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Een persoon is een Natuurlijk persoon of een Niet Natuurlijk persoon.  
+- Een natuurlijk persoon is een individueel menselijk wezen (NEN 1888)
+- Een niet natuurlijk persoon is een bedrijf of een rechtspersoon
+
+Eén persoon kan verschillende rollen hebben. Een persoon kan bijvoorbeeld eigenaar zijn van een onroerende zaak, een hypotheekhouder van een Hypotheek, als partner betrokken bij de verkrijging van een recht, etc. 
+
+BRK gebruikt de gegevens van personen uit andere basisregistraties GBA, NHR, of RNI. Daarnaast kent het Kadaster gegevens van personen die niet als authentiek zijn opgenomen in andere basisregistraties
+In totaal worden vijf soorten personen onderscheiden: 
+- Ingezetene. Een ingezetene is een natuurlijk persoon die is geregistreerd bij GBA en die een BSN heeft. De attributen zijn gedefinieerd in de Catalogus GBA.
+- Niet ingezetene; een natuurlijk persoon die geen ingezetene in Nederland is (in de toekomst: geregistreerd bij RNI). Er is nog geen Catalogus RNI. BRK hanteert voorlopig de attributen van KAD natuurlijk persoon, aangevuld met gegevens omtrent de nationaliteit.
+- KAD natuurlijk persoon; een natuurlijk persoon die noch bij GBA, noch bij RNI geregistreerd staat.
+- Rechtspersoon. Een Nederlands rechtspersoon die geregistreerd is bij de NHR.  De attributen zijn gedefinieerd in de Catalogus NHR.
+- KAD niet natuurlijk persoon; een rechtspersoon die niet bij de NHR geregistreerd staat.
+
+De regels voor levering zijn dus als volgt. 
+Natuurlijke personen:
+- wanneer de persoon een BSN heeft: Ingezetene
+- wanneer de persoon een buitenlands adres heeft: NietIngezetene.
+- in alle andere gevallen KADNatuurlijkPersoon (restcategorie).
+Niet Natuurlijke personen:
+- wanneer de persoon een FI-nummer (bedrijvennummer) heeft: Rechtspersoon.
+- wanneer van de persoon het FI-nummer niet bekend is: KADNietNatuurlijkPersoon.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="identificatie" type="Typen:CompositeID" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekende landelijk uniek nummer aan dit object binnen de kadastrale registratie. 
+
+Dit is een composite ID, waarbij het namespace gedeelte is: NL.IMKAD.Persoon.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beschikkingsbevoegdheid" type="Typen:Waardelijst" minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Aanduiding van de beschikkingsbevoegdheid van een persoon. 
+De waarden zijn opgenomen in een waardenlijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="indicatieAfschermingPersoonsgegevens" type="xs:boolean" minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Indicatie of de gegevens van deze persoon zijn afgeschermd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="levensduur" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="NEN3610:Levensduur" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="historie" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="Historie:Historie" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="gekozenWoonplaats" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="Persoon:GekozenWoonplaats" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="postlocatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="AdresRef:_LocatieRef"/>
+                  <xs:element ref="AdresRef:KADBinnenlandsAdresRef"/>
+                  <xs:element ref="BagAdresRef:LigplaatsRef"/>
+                  <xs:element ref="BagAdresRef:StandplaatsRef"/>
+                  <xs:element ref="BagAdresRef:VerblijfsobjectRef"/>
+                  <xs:element ref="AdresRef:KADBuitenlandsAdresRef"/>
+                  <xs:element ref="BrpPersoonRef:BuitenlandsAdresRef"/>
+                  <xs:element ref="AdresRef:PostbusLocatieRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="woonlocatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="AdresRef:_ObjectlocatieRef"/>
+                  <xs:element ref="AdresRef:KADBinnenlandsAdresRef"/>
+                  <xs:element ref="BagAdresRef:LigplaatsRef"/>
+                  <xs:element ref="BagAdresRef:StandplaatsRef"/>
+                  <xs:element ref="BagAdresRef:VerblijfsobjectRef"/>
+                  <xs:element ref="AdresRef:KADBuitenlandsAdresRef"/>
+                  <xs:element ref="BrpPersoonRef:BuitenlandsAdresRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="toekomstigeWoonlocatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="AdresRef:_ObjectlocatieRef"/>
+                  <xs:element ref="AdresRef:KADBinnenlandsAdresRef"/>
+                  <xs:element ref="BagAdresRef:LigplaatsRef"/>
+                  <xs:element ref="BagAdresRef:StandplaatsRef"/>
+                  <xs:element ref="BagAdresRef:VerblijfsobjectRef"/>
+                  <xs:element ref="AdresRef:KADBuitenlandsAdresRef"/>
+                  <xs:element ref="BrpPersoonRef:BuitenlandsAdresRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="StukRef:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="RechtspersoonNaam" type="Persoon:RechtspersoonNaam" abstract="false"/>
+   <xs:complexType name="RechtspersoonNaam" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">Naam van een rechtspersoon zoals deze is (evt. als variant) is opgenomen in het OR. </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="naam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.kadaster.nl/schema-info/technical-documentation">De naam van de rechtspersoon.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="320"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>
