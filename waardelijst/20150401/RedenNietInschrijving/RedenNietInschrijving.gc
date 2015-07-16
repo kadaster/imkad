@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Crane-gc2html.xsl"?>
+<?Crane-gc2ods indentation Save with indentation?>
+<?Crane-gc2ods encoding UTF-8?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>WaardelijstRedenNietInschrijving</ShortName>
+      <LongName>WaardelijstRedenNietInschrijving</LongName>
+      <Version>2012-04-26</Version>
+      <CanonicalUri>WaardelijstRedenNietInschrijving</CanonicalUri>
+      <CanonicalVersionUri>WaardelijstRedenNietInschrijving2012-04-26</CanonicalVersionUri>
+      <LocationUri>www.kadaster.nl/waardelijsten/WaardelijstRedenNietInschrijving</LocationUri>
+   </Identification>
+   <ColumnSet>
+      <Column Id="Code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="Waarde" Use="required">
+         <ShortName>Waarde</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="DatumVanaf" Use="optional">
+         <ShortName>DatumVanaf</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="DatumTot" Use="optional">
+         <ShortName>DatumTot</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="Toelichting" Use="optional">
+         <ShortName>Toelichting</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Key Id="CodeKey">
+         <ShortName>key for column 'Code'</ShortName>
+         <ColumnRef Ref="Code"/>
+      </Key>
+      <Key Id="WaardeKey">
+         <ShortName>key for column 'Waarde'</ShortName>
+         <ColumnRef Ref="Waarde"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Aangeboden op verkeerd formulier c.q. in verkeerd register</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2008-05-25</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Bewijsstukken bij notariële verklaring ontbreken</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-11-17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Bij doorhaling ontbreekt oorspronkelijke kadaster vestiging</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Bij registerverklaring ontbreekt artikel 37 verklaring notaris</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>1998-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Bij registerverklaring ontbreken aangehechte stukken</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>1998-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Bij splitsingsakte ontbreekt verklaring huisvestingswet artikel 33</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>De vereiste WVG verklaring ontbreekt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Depotstuk niet gekoppeld met Web-ELAN</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-11-17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Eensluidendheid onder digitaal stuk ipv equivalentie</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-03-22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Equivalentieverklaring analoog stuk ipv eensluidendheidverklaring</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-03-22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Equivalentieverklaring verklaard depotstuk niet equivalent</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-03-22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geboortedatum ontbreekt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geen equivalentieverklaring onder stuk of bijlage</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geen inschrijfbaar feit</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geen kadastrale aanduiding</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geen verklaring van eensluidendheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geen verwijzing naar deel/nummer oorspronkelijke akte</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Geen woonplaats in NL gekozen (buitenlandse partij)</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Met toestemming van de bewaarders</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Nationaliteitsverklaring ontbreekt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Reden waardeloosheid ontbreekt in verklaring van waardeloosheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Splitsingstekening (niet depot) ontbreekt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-11-17</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Stuk of gedeelte van stuk in vreemde taal</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vennoten VOF, Maatschap of CV ontbreken</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-03-22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Verklaring van niet voltooiing ontbreekt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Voornaam ontbreekt in voetverklaring</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Waardeloosheid: de verkeerde verklaart waardeloos</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-05-12</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Waardeloosheid: ontbreekt verklaring notaris mbt rechtsgrond</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-03-22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Waardeloosheid: ontbreken aangehechte stukken</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>1998-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Zetel bij privaatrechtelijke rechtspersoon ontbreekt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2010-03-22</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Andere reden</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

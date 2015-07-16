@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Crane-gc2html.xsl"?>
+<?Crane-gc2ods indentation Save with indentation?>
+<?Crane-gc2ods encoding UTF-8?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>WaardelijstRedenDoorhalingTeboekstelling</ShortName>
+      <LongName>WaardelijstRedenDoorhalingTeboekstelling</LongName>
+      <Version>2012-04-26</Version>
+      <CanonicalUri>WaardelijstRedenDoorhalingTeboekstelling</CanonicalUri>
+      <CanonicalVersionUri>WaardelijstRedenDoorhalingTeboekstelling2012-04-26</CanonicalVersionUri>
+      <LocationUri>www.kadaster.nl/waardelijsten/WaardelijstRedenDoorhalingTeboekstelling</LocationUri>
+   </Identification>
+   <ColumnSet>
+      <Column Id="Code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="Waarde" Use="required">
+         <ShortName>Waarde</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="DatumVanaf" Use="optional">
+         <ShortName>DatumVanaf</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="DatumTot" Use="optional">
+         <ShortName>DatumTot</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="Toelichting" Use="optional">
+         <ShortName>Toelichting</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Key Id="CodeKey">
+         <ShortName>key for column 'Code'</ShortName>
+         <ColumnRef Ref="Code"/>
+      </Key>
+      <Key Id="WaardeKey">
+         <ShortName>key for column 'Waarde'</ShortName>
+         <ColumnRef Ref="Waarde"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Niet verplichte teboekstelling</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Gesloopt</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vergaan</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Ongeschikt voor drijven</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Verkoop buitenland</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Thans zeeschip</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Thans binnenschip</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Thans zeevisserijschip</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Niet meer ingeschreven in visserijregister</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Dubbele teboekstelling</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Ambtshalve doorhaling</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Abusievelijke teboekstelling</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Artikel 786, 1e lid, sub a, 2, Boek 8 BW</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Artikel 786, 1e lid, sub b, 5, Boek 8 BW</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Wordt teboekgesteld in niet-verdrag Staat</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Door rovers of vijanden genomen</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>6 maanden niets van het schip vernomen</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

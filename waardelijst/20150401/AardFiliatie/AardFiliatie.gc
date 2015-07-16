@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Crane-gc2html.xsl"?>
+<?Crane-gc2ods indentation Save with indentation?>
+<?Crane-gc2ods encoding UTF-8?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>WaardelijstAardFiliatie</ShortName>
+      <LongName>WaardelijstAardFiliatie</LongName>
+      <Version>2012-04-26</Version>
+      <CanonicalUri>WaardelijstAardFiliatie</CanonicalUri>
+      <CanonicalVersionUri>WaardelijstAardFiliatie2012-04-26</CanonicalVersionUri>
+      <LocationUri>www.kadaster.nl/waardelijsten/WaardelijstAardFiliatie</LocationUri>
+   </Identification>
+   <ColumnSet>
+      <Column Id="Code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="Waarde" Use="required">
+         <ShortName>Waarde</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="DatumVanaf" Use="optional">
+         <ShortName>DatumVanaf</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="DatumTot" Use="optional">
+         <ShortName>DatumTot</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="Toelichting" Use="optional">
+         <ShortName>Toelichting</ShortName>
+         <Data Type="string"/>
+      </Column>
+      <Key Id="CodeKey">
+         <ShortName>key for column 'Code'</ShortName>
+         <ColumnRef Ref="Code"/>
+      </Key>
+      <Key Id="WaardeKey">
+         <ShortName>key for column 'Waarde'</ShortName>
+         <ColumnRef Ref="Waarde"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Overgegaan in appartementsrechten/-objecten</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+			<SimpleValue>2011-01-01</SimpleValue>
+         </Value>		 
+		 <Value ColumnRef="DatumTot">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vernummering wijziging bewaringsgrenzen</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Overgegaan in complex</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+			<SimpleValue>2011-01-01</SimpleValue>
+         </Value>		 
+		 <Value ColumnRef="DatumTot">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Overgegaan in deelpercelen</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Beklemming</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+			<SimpleValue>2011-01-01</SimpleValue>
+         </Value>		 
+		 <Value ColumnRef="DatumTot">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Overgegaan in fysiek complex</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+			<SimpleValue>2011-01-01</SimpleValue>
+         </Value>		 
+		 <Value ColumnRef="DatumTot">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Opgeheven appartementsrecht/complex</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+			<SimpleValue>2011-01-01</SimpleValue>
+         </Value>		 
+		 <Value ColumnRef="DatumTot">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Herstel van fouten</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Kavelruil</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+			<SimpleValue>2011-01-01</SimpleValue>
+         </Value>		 
+		 <Value ColumnRef="DatumTot">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>Kavelruil is geen goede waarde, kavelruil is gewoon koop verkoop</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Herleving moederperceel</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Restdeelperceel nul</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vernummering uit ongenummerd</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Ruilverkaveling</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vernummering</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2011-01-01</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

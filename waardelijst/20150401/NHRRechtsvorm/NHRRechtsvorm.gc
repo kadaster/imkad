@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Crane-gc2html.xsl"?>
+<?Crane-gc2ods indentation Save with indentation?>
+<?Crane-gc2ods encoding UTF-8?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:doc="http://www.w3.org/1999/xhtml">
+   <Annotation>
+      <Description><doc:p>20140520 Bugfix: Begindatum bij "Besloten Vennootschap met beperkte aansprakelijkheid" stond verkeerd (22-05-2014 ipv 23-05-2014) </doc:p>
+	  <doc:p>20140225 Rechtsvormen gesynchroniseerd met codestelsel nav req 55331 in het kader van het project koppeling BRK – NHR. Omdat de lijst nog niet eerder is geimplementeerd hierbij afgeweken van de standaard dat oude in de lijst blijven staan met een einddatum. </doc:p></Description>
+   </Annotation>
+   <Identification>
+      <ShortName>NHRRechtsvorm</ShortName>
+      <LongName>NHRRechtsvorm</LongName>
+      <Version>2012-04-26</Version>
+      <CanonicalUri>NHRRechtsvorm</CanonicalUri>
+      <CanonicalVersionUri>NHRRechtsvorm2012-04-26</CanonicalVersionUri>
+      <LocationUri>www.kadaster.nl/schemas/waardelijsten/NHRRechtsvorm</LocationUri>
+   </Identification>
+   <ColumnSet>
+      <Column Id="Code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="Waarde" Use="required">
+         <ShortName>Waarde</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Column Id="DatumVanaf" Use="optional">
+         <ShortName>DatumVanaf</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="DatumTot" Use="optional">
+         <ShortName>DatumTot</ShortName>
+         <Data Type="date"/>
+      </Column>
+      <Column Id="Toelichting" Use="optional">
+         <ShortName>Toelichting</ShortName>
+         <Data Type="String"/>
+      </Column>
+      <Key Id="CodeKey">
+         <ShortName>key for column 'Code'</ShortName>
+         <ColumnRef Ref="Code"/>
+      </Key>
+      <Key Id="WaardeKey">
+         <ShortName>key for column 'Waarde'</ShortName>
+         <ColumnRef Ref="Waarde"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>1</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Buitenlands rechtspersoon</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 28</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>2</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Besloten vennootschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>3</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Coöperatieve vereniging</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 19</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>4</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Commanditaire vennootschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>5</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>De Staat</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>Naar 10</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>6</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Rechtspersoon in oprichting</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>7</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Kerkgenootschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 20</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>8</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Naamloze vennootschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>9</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Raadpleeg (ingeschreven) stuk</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>Dit is overige rechtsvormen</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>10</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Publiekrechtelijke rechtspersoon</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>11</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Stichting</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>12</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vereniging</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>13</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vereniging van eigenaren</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 21</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>14</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vennootschap onder firma </SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>15</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Mandeligheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 27</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>16</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Stuk, instantie of project</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>17</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Maatschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>18</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Rederij</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>19</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Coöperatie</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>20</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Kerkelijke organisatie</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>21</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Vereniging van eigenaars</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>22</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Europese coöperatieve vennootschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Europees economisch samenwerkingsverband</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>24</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Europese naamloze vennootschap</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>25</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Onderlinge waarborgmaatschappij</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>26</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Besloten Vennootschap met beperkte aansprakelijkheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>Blijft 2</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>27</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Betreft mandeligheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>28</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Rechtspersoon naar buitenlands recht</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2014-05-23</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>29</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Aanbieder</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>30</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Ambachtsheerlijkheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2005-05-18</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 9</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>31</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Beklemgroep</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>32</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Fundatie</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2005-05-18</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 9</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>33</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Beschikkingsbevoegdheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>34</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Instelling van weldadigheid</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2005-05-18</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 9</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>35</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Pensioen- en spaarfonds</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="Code">
+            <SimpleValue>36</SimpleValue>
+         </Value>
+         <Value ColumnRef="Waarde">
+            <SimpleValue>Samenwerkingsverband</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumVanaf">
+            <SimpleValue>2000-01-01</SimpleValue>
+         </Value>
+         <Value ColumnRef="DatumTot">
+            <SimpleValue>2005-05-18</SimpleValue>
+         </Value>
+         <Value ColumnRef="Toelichting">
+            <SimpleValue>naar 9</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>
