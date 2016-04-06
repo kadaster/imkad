@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd">
+	<Identification>
+		<ShortName>Koppelingswijze</ShortName>
+		<LongName>Koppelingswijze</LongName>
+		<Version>01-01-15</Version>
+		<CanonicalUri>Koppelingswijze</CanonicalUri>
+		<CanonicalVersionUri>Koppelingswijze2015-01-01</CanonicalVersionUri>
+		<LocationUri>www.kadaster.nl/waardelijsten/Koppelingswijze</LocationUri>
+	</Identification>
+	<ColumnSet>
+		<Column Id="Code" Use="required">
+			<ShortName>Code</ShortName>
+			<LongName xml:lang="en">Code</LongName>
+			<Data Type="string"/>
+		</Column>
+		<Column Id="Omschrijving" Use="required">
+			<ShortName>Omschrijving</ShortName>
+			<LongName xml:lang="en">Waarde</LongName>
+			<Data Type="string"/>
+		</Column>
+		<Column Id="DatumVanaf" Use="optional">
+			<ShortName>DatumVanaf</ShortName>
+			<LongName xml:lang="en">datum vanaf</LongName>
+			<Data Type="date"/>
+		</Column>
+		<Column Id="DatumTot" Use="optional">
+			<ShortName>DatumTot</ShortName>
+			<LongName xml:lang="en">datum tot</LongName>
+			<Data Type="date"/>
+		</Column>
+		<Key Id="CodeKey">
+			<ShortName>CodeKey</ShortName>
+			<ColumnRef Ref="Code"/>
+		</Key>
+	</ColumnSet>
+	<SimpleCodeList>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>ADM_GEO</SimpleValue>
+			</Value>
+			<Value ColumnRef="Omschrijving">
+				<SimpleValue>administratief en geometrisch</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>01-01-2015</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>ADM</SimpleValue>
+			</Value>
+			<Value ColumnRef="Omschrijving">
+				<SimpleValue>adminstratief</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>01-01-2015</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>GEO</SimpleValue>
+			</Value>
+			<Value ColumnRef="Omschrijving">
+				<SimpleValue>geometrisch</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>01-01-2015</SimpleValue>
+			</Value>
+		</Row>
+	</SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Crane-gc2html.xsl"?>
+<?Crane-gc2ods indentation Save without indentation?>
+<?Crane-gc2ods encoding UTF-8?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd">
+	<Annotation>
+		<Description>
+			<!-- 2012-07-04: BP-recht toegevoegd nav req 1720678 nav wijzigingen bij Voer  2016-03-09:  “Opstalrecht Nutsvoorzieningen" (14) vervangen door “Opstalrecht Nutsvoorzieningen op gedeelte van perceel”-->
+		</Description>
+	</Annotation>
+	<Identification>
+		<ShortName>AardZakelijkRecht</ShortName>
+		<LongName>AardZakelijkRecht</LongName>
+		<Version>2016-03-09</Version>
+		<CanonicalUri>AardZakelijkRecht</CanonicalUri>
+		<CanonicalVersionUri>AardZakelijkRecht09032016</CanonicalVersionUri>
+		<LocationUri>http://www.kadaster.nl/schemas/waardelijsten/AardZakelijkRecht/</LocationUri>
+	</Identification>
+	<ColumnSet>
+		<Column Id="Code" Use="required">
+			<ShortName>Code</ShortName>
+			<Data Type="String"/>
+		</Column>
+		<Column Id="Waarde" Use="required">
+			<ShortName>Waarde</ShortName>
+			<Data Type="String"/>
+		</Column>
+		<Column Id="DatumVanaf" Use="optional">
+			<ShortName>DatumVanaf</ShortName>
+			<Data Type="date"/>
+		</Column>
+		<Column Id="DatumTot" Use="optional">
+			<ShortName>DatumTot</ShortName>
+			<Data Type="date"/>
+		</Column>
+		<Column Id="Toelichting" Use="optional">
+			<ShortName>Toelichting</ShortName>
+			<Data Type="String"/>
+		</Column>
+		<Key Id="CodeKey">
+			<ShortName>key for column 'Code'</ShortName>
+			<ColumnRef Ref="Code"/>
+		</Key>
+		<Key Id="WaardeKey">
+			<ShortName>key for column 'Waarde'</ShortName>
+			<ColumnRef Ref="Waarde"/>
+		</Key>
+	</ColumnSet>
+	<SimpleCodeList>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>1</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Beklemrecht</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>2</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Eigendom (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>3</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Erfpacht (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>4</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Gebruik en bewoning (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>5</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Grondrente (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>6</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Huurrecht (zakelijk)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="Toelichting">
+				<SimpleValue>* alleen voor luchtvaartuigen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>7</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Opstal (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>8</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Optierecht (zakelijk)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="Toelichting">
+				<SimpleValue>* alleen voor luchtvaartuigen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>9</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Oud-vaderlandsrecht</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>10</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Privaatrechtelijke belemmering (als bedoeld in artikel 5, lid 3, onder b, Belemmeringenwet Privaatrecht)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>11</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Stadsmeierrecht</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>12</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Vruchtgebruik (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>13</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Erfpacht en Opstal (recht van)</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>14</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Opstalrecht Nutsvoorzieningen</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumTot">
+				<SimpleValue>2016-03-09</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>15</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Eigendom Telecommunicatienetwerk</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumTot">
+				<SimpleValue>2012-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="Toelichting">
+				<SimpleValue>Wordt niet meer geregistreerd en is geschoond in AKR</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>16</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Erfpachtrecht Telecommunicatienetwerk</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumTot">
+				<SimpleValue>2012-01-01</SimpleValue>
+			</Value>
+			<Value ColumnRef="Toelichting">
+				<SimpleValue>Wordt niet meer geregistreerd en is geschoond in AKR</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>17</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Vruchtgebruik Telecommunicatienetwerk</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>18</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Overige zakelijke rechten</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>19</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Voorrecht</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>20</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Zakelijk recht na twee of meer zakelijke belastingen</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>21</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Zakelijke belasting derde of volgende</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>22</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>BP-recht</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2011-01-01</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="Code">
+				<SimpleValue>23</SimpleValue>
+			</Value>
+			<Value ColumnRef="Waarde">
+				<SimpleValue>Opstalrecht Nutsvoorzieningen op gedeelte van perceel</SimpleValue>
+			</Value>
+			<Value ColumnRef="DatumVanaf">
+				<SimpleValue>2016-03-09</SimpleValue>
+			</Value>
+		</Row>
+	</SimpleCodeList>
+</gc:CodeList>
