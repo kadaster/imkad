@@ -1,0 +1,1 @@
+De Kadaster IMKAD waardelijsten worden regulier gepubliceerd via www.kadaster.nl/waardelijsten en via www.kadaster.nl/schemas/waardelijsten waar ze ook rechtstreeks te benaderen zijn. Eens in de drie maanden kunnen er updates zijn.
