@@ -1,0 +1,5 @@
+"Code","Waarde","DatumVanaf","DatumTot","Toelichting"
+"1","Toevoegen","2018-07-01",,"Een extra stukdeel toevoegen aan een eerder verwekt stuk"
+"2","Wijzigen","2018-07-01",,"De verwerking van een stukdeel bij een bepaald object wijzigen"
+"3","Ongedaan maken","2018-07-01",,"De verwerking van een stukdeel bij een bepaald object ongedaan maken (oude situatie weer actueel maken)"
+"4","Aanvullen","2018-07-01",,"Een extra object toevoegen aan een eerder verwerkt stukdeel"
