@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-typen</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit package bevat alle typen die gemeenschappelijk zijn binnen verschillende packages.</xs:documentation>
+   </xs:annotation>
+   <xs:element name="TypeOnvolledigeDatum"
+               type="t:TypeOnvolledigeDatum"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">TypeOnvolledigeDatum is een samengesteld datatype voor een mogelijk onvolledige datum waarbij jaar kan worden gevolgd door maand, en maand kan worden gevolgd door dag. Formaat is YYYY-MM-DD. Voorbeelden zijn: 1990, 1990-08, 1990-08-15.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeOnvolledigeDatum" abstract="false">
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element name="jaar" type="xs:gYear" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="jaarmaand"
+                     type="xs:gYearMonth"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="datum" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      </xs:choice>
+   </xs:complexType>
+   <xs:element name="Bedrag" type="t:Bedrag" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Bedrag is samengesteld datatype voor het vastleggen van een hoeveelheid geld in cijfers in een bepaalde valuta.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Bedrag" abstract="false">
+      <xs:sequence>
+         <xs:element name="som" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het bedrag. Dit is een waarde met max. 2 decimalen. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:totalDigits value="20"/>
+                  <xs:fractionDigits value="2"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="valuta" type="t:Valuta" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Aanduiding van de valutasoort. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="NEN3610ID" type="t:NEN3610ID" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">CompositeID is een samengesteld datatype gebruikt wordt de universeel unieke identificatie van een object binnen een registratie.De unieke identificatie wordt, anders dan binnen IMKAD applicaties, uitgedrukt als 1 string.Unieke identificatie door het Kadaster toegekend. De identificatie heeft een opbouw conform NEN3610:2011 maar namespaces zijn onder beheer van kadaster (CDMKAD, delen van IMKAD) of Geonovum/NEN3610 (IMKAD).De mogelijke waarde voor de identificatie namespace is uniek per specifiek domein. Deze domeinen zijn: &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.KadastraalObject&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Aantekening&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.AdresLocatie&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.KadastraleGrens&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.ZakelijkRecht&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Mandeligheid&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.AppartementsrechtSplitsing&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Tenaamstelling&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.GezamenlijkAandeel&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Zekerheidsstelling&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.TIAStuk&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Kadasterstuk&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.KadasterVerzoek&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Stukdeel&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Herverkaveling&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Persoon&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Erfpachtcanon&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;NL.IMKAD.Nummerreservering&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:simpleType name="NEN3610ID">
+      <xs:annotation>
+         <xs:documentation>This complex datatype is transformed to a simple type because a content pattern is defined.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="(NL\.IMKAD\.[A-Za-z]+\.[1-9][0-9]{0,14}(\.[0-9]+)?)|(NL\.IMKAD\.[A-Za-z]+(\.[A-Z0-9]{3,4})?\.[1-9][0-9]{0,14})"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="Valuta" type="t:Valuta" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/Valuta</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Waardelijst is een samengesteld datatype voor het weergeven van een gegeven binnen een extern beheerde referentielijst. Het datatye bestaat uit een code en een waarde. Bij attributen die van type Waardelijst zijn, word aangegeven welke referentielijst bedoeld is met de tagged value "data locatie" .</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Valuta" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Waardelijst" type="t:Waardelijst" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Waardelijst is een samengesteld datatype voor het weergeven van een gegeven binnen een extern beheerde referentielijst. Het datatye bestaat uit een code en een waarde. Bij attributen die van type Waardelijst zijn, word aangegeven welke referentielijst bedoeld is met de tagged value "data locatie" .</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Waardelijst" abstract="false">
+      <xs:sequence>
+         <xs:element name="code" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De code van deze waarde. De code is uniek binnen de Waardelijst en taalonafhankelijk. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="waarde" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De waarde zoals aangetroffen in de Waardelijst. het moment waarop de waarde geassocieerd is met de meegeleverde code is onbepaald.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Tijdstip" type="t:Tijdstip" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Tijdstip is een samengesteld datatype van een timestamp, een datum en tijd datatype, waarin de datum en de tijd apart worden vastgelegd en de tijd mogelijk geen waarde kan hebben. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Tijdstip" abstract="false">
+      <xs:sequence>
+         <xs:element name="datum" type="xs:date" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Datum is het datum deel van het tijdstip datatype.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="tijd"
+                     type="xs:time"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Tijd is het tijd deel van het tijdstip datatype.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="TypePostcode">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">TypePostcode is samengesteld datatype voor het vastleggen van een postcode. De officiële Nederlandse TPG codering, bestaande uit een numerieke woonplaatscode en een alfabetische lettercode.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="[1-9]{1}[0-9]{3}[A-Z]{2}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="AN">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gewone tekens die in Europa gangbaar zijn. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="\S.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

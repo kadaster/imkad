@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:hv="http://www.kadaster.nl/schemas/imkad/imkad-herverkaveling/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+           xmlns:h="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-herverkaveling/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-herverkaveling</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-herverkaveling/v20190201/IMKAD_HerVerkaveling_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-onroerendezaak-ref/v20120508/IMKAD_OnroerendeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+              schemaLocation="../../../imkad/imkad-historie/v20190201/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:element name="VerkavelObject" type="hv:VerkavelObject" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een VerkavelObject is een onroerende zaak die is betrokken bij een herverkaveling.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="VerkavelObject" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="h:_VoorkomenOR">
+            <xs:sequence>
+               <xs:element name="afwijkingLijstRechthebbenden"
+                           type="xs:boolean"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">afwijkingLijstRechthebbenden is een aanduiding van het feit dat er afwijkingen bestaan tussen de kadastrale registratie en de lijst van rechthebbenden, bedoeld in artikel 183, eerste lid, van de Landinrichtingswet, artikel 71, tweede lid, van de Wet inrichting landelijk gebied, artikel 68 van de Reconstructiewet Midden-Delfland, dan wel in artikel 53 van de Herinrichtingswet Oost-Groningen en de Gronings-Drentse Veenkoloniën.Zie ook: Uitvoeringsregeling Kadasterwet art. 14, lid 2 </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ligtIn" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="hv:Herverkavelingsgebied" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="betreft" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                        <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                        <xs:element ref="oz-ref:PerceelRef"/>
+                        <xs:element ref="oz-ref:AppartementsrechtRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Herverkavelingsgebied"
+               type="hv:Herverkavelingsgebied"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Herverkavelingsgebied is een gebied waarin onroerende zaken onder toepassing van de Wet inrichting landelijk Gebied worden samengevoegd, verkaveld en verdeeld.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Herverkavelingsgebied" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="h:_VoorkomenOR">
+            <xs:sequence>
+               <xs:element name="identifcatie"
+                           type="t:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door het Kadaster toegekend landelijk uniek nummer aan een object binnen de kadastrale registratie. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="bloknummer" type="xs:integer" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een bloknummer is een numerieke aanduiding van een blok in een [herverkaveling](http://tax.kadaster.nl/id/begrip/Herverkaveling). </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="naamHerverkavelingsproject" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">naamHerverkavelingsproject is de naam van een herverkavelingsproject.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="statusHerverkavelingsproject"
+                           type="t:Waardelijst"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/StatusHerverkavelingsproject/</xs:appinfo>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">statusHerverkavelingspoject is een indicator voor de fase waarin een herverkavelingsproject zich bevindt.Mogelijke waarden: "In voorbereiding"; "In uitvoering";""Ruilakte binnen 3 weken".</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

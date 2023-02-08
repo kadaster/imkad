@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>Value lists</title>
+      <style type="text/css">
+                    body {
+                    	background-color: #FFFFFF;
+                    	font-family: "Arial", sans-serif;
+                    }
+                    table {
+                        border-collapse: collapse; 
+                        border: #dcdcdc 1px solid;
+                        width: 100%;
+                    }
+                    tr.tableHeader td {
+                        background-color: #EEEEEE;
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                    td {
+                        border-collapse: collapse; 
+                        border: #dcdcdc 1px solid;
+                        padding: 0.15em;
+                        align: left;
+                        vertical-align: top;
+                    }
+                    td.vert_spacer {
+                        padding-top: 2em;
+                    }
+                    td.package {
+                        background-color: #CCCCCC;
+                    }
+                    td.class {
+                        background-color: #EEEEEE;
+                    }
+                    span.label {
+                        color: blue;
+                        font-style: italic;
+                    }
+                    span.value {
+                    }
+                    p.box {
+						border: 1px solid red;
+						padding:10px;
+						margin:10px;
+						clear:both;
+						font-size: 150%;
+                    }
+        </style>
+    </head>
+   <body>
+	  <h2>IMKAD 2.3 en IMAST Waardelijsten (Value lists)</h2>
+	  <p class="box">Januari 2022 release</p>
+      <div class="intro">
+		 <p>In onderstaande tabel treft u het overzicht aan van alle IMKAD waardenlijsten en waar deze worden gebruikt. Klik <a href="#IMAST">hier</a> voor de IMAST waardelijsten.</p>
+         <p>Per waardelijst is opgegeven:</p>
+         <ul>
+            <li>Attribuut welke met een waardelijst is geassocieerd, in de vorm van P::K.E waarbij P = package naam K = klassenaam E = attribuutnaam</li>
+            <li>URL; dit is de formele naam van de lijst en geeft toegang tot de (GeneriCode XML) lijstwaarden zelf.</li>
+			<li>*.gc: Een directe link naar het Genericode xml bestand (via Rechtermuisknop > Doel opslaan als...)</li>
+			<li>*.csv: Een directe link naar het Comma Separated Values tekst bestand (via Rechtermuisknop > Doel opslaan als...)</li>
+         </ul>
+		 <h3>Was/wordt-overzicht</h3>
+		 <p>De wijzigingen ten opzichte van de vorige release zijn te zien in het <a href="Z_VerschillenRapport/Report.html" ><b>verschillenrapport</b></a>.<br><br></p>
+      </div>
+      <table>
+         <tr class="tableHeader">
+            <td>attribuutnaam</td>
+            <td>URL van de waardelijst</td>
+			<td>*.gc (xml)</td>
+			<td>*.csv</td>
+         </tr>
+ <tr><td colspan="4" bgcolor="#EEEEEE"><strong>Herverkaveling</strong></td></tr>
+          <tr>
+            <td>HerVerkaveling::Herverkavelingsgebied.statusHerverkavelingsproject</td>
+            <td><a href="./StatusHerverkavelingsproject/index.html">StatusHerverkavelingsproject</a></td>
+			<td><a href="./StatusHerverkavelingsproject/StatusHerverkavelingsproject.gc">gc</a></td>
+			<td><a href="./StatusHerverkavelingsproject/StatusHerverkavelingsproject.csv">csv</a></td>
+         </tr>
+ <tr><td colspan="4" bgcolor="#EEEEEE"><strong>Historie en in onderzoek</strong></td></tr>
+         <tr>
+            <td>Historie::Historie.statusHistorie</td>
+            <td><a href="./StatusHistorie/index.html">StatusHistorie</a></td>
+			<td><a href="./StatusHistorie/StatusHistorie.gc">gc</a></td>
+			<td><a href="./StatusHistorie/StatusHistorie.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>InOnderzoek::InOnderzoek.authentiekGegeven</td>
+            <td><a href="./GegevenInOnderzoek/index.html">GegevenInOnderzoek</a></td>
+			<td><a href="./GegevenInOnderzoek/GegevenInOnderzoek.gc">gc</a></td>
+			<td><a href="./GegevenInOnderzoek/GegevenInOnderzoek.csv">csv</a></td>
+         </tr>
+		 
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Kadastraal object en Onroerende zaak</strong></td></tr>
+         <tr>
+            <td>KadastraalObject::LocatieKadastraalObject.koppelingswijze</td>
+            <td><a href="./Koppelingswijze/index.html">Koppelingswijze</a></td>
+            <td><a href="./Koppelingswijze/Koppelingswijze.gc">gc</a></td>
+            <td><a href="./Koppelingswijze/Koppelingswijze.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::KadastraleGrens.type</td>
+            <td><a href="./TypeGrens/index.html">TypeGrens</a></td>
+			<td><a href="./TypeGrens/TypeGrens.gc">gc</a></td>
+			<td><a href="./TypeGrens/TypeGrens.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::Leidingnetwerk.aard</td>
+            <td><a href="./AardLeidingnetwerk/index.html">AardLeidingnetwerk</a></td>
+			<td><a href="./AardLeidingnetwerk/AardLeidingnetwerk.gc">gc</a></td>
+			<td><a href="./AardLeidingnetwerk/AardLeidingnetwerk.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::_OnroerendeZaak.aardCultuurOnbebouwd</td>
+            <td><a href="./CultuurcodeOnbebouwd/index.html">CultuurcodeOnbebouwd</a></td>
+			<td><a href="./CultuurcodeOnbebouwd/CultuurcodeOnbebouwd.gc">gc</a></td>
+			<td><a href="./CultuurcodeOnbebouwd/CultuurcodeOnbebouwd.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::_OnroerendeZaak.aardCultuurBebouwd</td>
+            <td><a href="./CultuurcodeBebouwd/index.html">CultuurcodeBebouwd</a></td>
+			<td><a href="./CultuurcodeBebouwd/CultuurcodeBebouwd.gc">gc</a></td>
+			<td><a href="./CultuurcodeBebouwd/CultuurcodeBebouwd.csv">csv</a></td>
+			
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::OnroerendeZaakFiliatie.aard</td>
+            <td><a href="./AardFiliatie/index.html">AardFiliatie</a></td>
+			<td><a href="./AardFiliatie/AardFiliatie.gc">gc</a></td>
+			<td><a href="./AardFiliatie/AardFiliatie.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::Perceel.soortGrootte</td>
+            <td><a href="./SoortGrootte/index.html">SoortGrootte</a></td>
+			<td><a href="./SoortGrootte/SoortGrootte.gc">gc</a></td>
+			<td><a href="./SoortGrootte/SoortGrootte.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>OnroerendeZaak::TypeKadastraleAanduiding.kadastraleGemeente</td>
+            <td><a href="./KadastraleGemeente/index.html">KadastraleGemeente</a></td>
+			<td><a href="./KadastraleGemeente/KadastraleGemeente.gc">gc</a></td>
+			<td><a href="./KadastraleGemeente/KadastraleGemeente.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Kadgem1832: Kadastrale gemeenten sinds 1832 tbv conversie</td>
+            <td><a href="./Kadgem1832/index.html">Kadgem1832</a></td>
+			<td><a href="./Kadgem1832/Kadgem1832.gc">gc</a></td>
+			<td><a href="./Kadgem1832/Kadgem1832.csv">csv</a></td>
+         </tr>
+		 <tr><td colspan="4" bgcolor="#EEEEEE"><strong>Persoon</strong></td></tr>
+          <tr>
+            <td>BrpPersoon::BuitenlandsAdres.land</td>
+            <td><a href="./BRPLand/index.html">BRPLand</a></td>
+			<td><a href="./BRPLand/BRPLand.gc">gc</a></td>
+			<td><a href="./BRPLand/BRPLand.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>BrpPersoon::Geboorte.geboorteland</td>
+            <td><a href="./BRPLand/index.html">BRPLand</a></td>
+			<td><a href="./BRPLand/BRPLand.gc">gc</a></td>
+			<td><a href="./BRPLand/BRPLand.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>BrpPersoon::_GeregistreerdPersoon.adellijkeTitelOfPredicaat</td>
+            <td><a href="./AdellijkeTitelOfPredicaat/index.html">AdellijkeTitelOfPredicaat</a></td>
+            <td><a href="./AdellijkeTitelOfPredicaat/AdellijkeTitelOfPredicaat.gc">gc</a></td>
+            <td><a href="./AdellijkeTitelOfPredicaat/AdellijkeTitelOfPredicaat.csv">csv</a></td>						
+         </tr>
+         <tr>
+            <td>BrpPersoon::_GeregistreerdPersoon.aanduidingNaamgebruik</td>
+            <td><a href="./BRPAanduidingNaamgebruik/index.html">BRPAanduidingNaamgebruik</a></td>
+			<td><a href="./BRPAanduidingNaamgebruik/BRPAanduidingNaamgebruik.gc">gc</a></td>
+			<td><a href="./BRPAanduidingNaamgebruik/BRPAanduidingNaamgebruik.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>BrpPersoon::_GeregistreerdPersoon.indicatieGeheim</td>
+            <td><a href="./BRPIndicatieGeheim/index.html">BRPIndicatieGeheim</a></td>
+			<td><a href="./BRPIndicatieGeheim/BRPIndicatieGeheim.gc">gc</a></td>
+			<td><a href="./BRPIndicatieGeheim/BRPIndicatieGeheim.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>BrpPersoon::Geslacht.geslachtsaanduiding</td>
+            <td><a href="./BRPAanduidingGeslacht/index.html">BRPAanduidingGeslacht</a></td>
+			<td><a href="./BRPAanduidingGeslacht/BRPAanduidingGeslacht.gc">gc</a></td>
+			<td><a href="./BRPAanduidingGeslacht/BRPAanduidingGeslacht.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>BrpPersoon::NietIngezetene.landWaarnaarVertrokken</td>
+            <td><a href="./BRPLand/index.html">BRPLand</a></td>
+			<td><a href="./BRPLand/BRPLand.gc">gc</a></td>
+			<td><a href="./BRPLand/BRPLand.csv">csv</a></td>
+         </tr>
+		 <tr>
+            <td>NhrRechtspersoon::Rechtspersoon.rechtsvorm</td>
+            <td><a href="./Rechtsvorm/index.html">Rechtsvorm</a></td>
+            <td><a href="./Rechtsvorm/Rechtsvorm.gc">gc</a></td>
+            <td><a href="./Rechtsvorm/Rechtsvorm.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::GekozenWoonplaats.aard</td>
+            <td><a href="./AardDomiciliekeuze/index.html">AardDomiciliekeuze</a></td>
+			<td><a href="./AardDomiciliekeuze/AardDomiciliekeuze.gc">gc</a></td>
+			<td><a href="./AardDomiciliekeuze/AardDomiciliekeuze.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::KADNatuurlijkPersoon.geslacht</td>
+            <td><a href="./AanduidingGeslacht/index.html">AanduidingGeslacht</a></td>
+			<td><a href="./AanduidingGeslacht/AanduidingGeslacht.gc">gc</a></td>
+			<td><a href="./AanduidingGeslacht/AanduidingGeslacht.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::KADNatuurlijkPersoon.adellijkeTitelOfPredikaat</td>
+            <td><a href="./AdellijkeTitelOfPredikaat/index.html">AdellijkeTitelOfPredikaat</a></td>
+			<td><a href="./AdellijkeTitelOfPredikaat/AdellijkeTitelOfPredikaat.gc">gc</a></td>
+			<td><a href="./AdellijkeTitelOfPredikaat/AdellijkeTitelOfPredikaat.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::KADNatuurlijkPersoon.aanduidingNaamgebruik</td>
+            <td><a href="./AanduidingNaamgebruik/index.html">AanduidingNaamgebruik</a></td>
+			<td><a href="./AanduidingNaamgebruik/AanduidingNaamgebruik.gc">gc</a></td>
+			<td><a href="./AanduidingNaamgebruik/AanduidingNaamgebruik.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::KADNatuurlijkPersoon.geboorteland</td>
+            <td><a href="./BRPLand/index.html">BRPLand</a></td>
+			<td><a href="./BRPLand/BRPLand.gc">gc</a></td>
+			<td><a href="./BRPLand/BRPLand.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::KADNietNatuurlijkPersoon.rechtsvorm</td>
+            <td><a href="./Rechtsvorm/index.html">Rechtsvorm</a></td>
+            <td><a href="./Rechtsvorm/Rechtsvorm.gc">gc</a></td>
+            <td><a href="./Rechtsvorm/Rechtsvorm.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Persoon::_Persoon.beschikkingsbevoegdheid</td>
+            <td><a href="./Beschikkingsbevoegdheid/index.html">Beschikkingsbevoegdheid</a></td>
+            <td><a href="./Beschikkingsbevoegdheid/Beschikkingsbevoegdheid.gc">gc</a></td>
+		 	<td><a href="./Beschikkingsbevoegdheid/Beschikkingsbevoegdheid.csv">csv</a></td>
+		 </tr>
+		 <tr><td colspan="4" bgcolor="#EEEEEE"><strong>Recht</strong></td></tr>
+         <tr>
+            <td>Recht::Aantekening.aard</td>
+            <td><a href="./AardAantekening/index.html">AardAantekening</a></td>
+			<td><a href="./AardAantekening/AardAantekening.gc">gc</a></td>
+			<td><a href="./AardAantekening/AardAantekening.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::Erfpachtcanon.soort</td>
+            <td><a href="./SoortErfpachtcanon/index.html">SoortErfpachtcanon</a></td>
+			<td><a href="./SoortErfpachtcanon/SoortErfpachtcanon.gc">gc</a></td>
+			<td><a href="./SoortErfpachtcanon/SoortErfpachtcanon.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::AantekeningKadastraalObject.aanduidingErfdienstbaarheid</td>
+            <td><a href="./AanduidingErfdienstbaarheid/index.html">AanduidingErfdienstbaarheid</a></td>
+			<td><a href="./AanduidingErfdienstbaarheid/AanduidingErfdienstbaarheid.gc">gc</a></td>
+			<td><a href="./AanduidingErfdienstbaarheid/AanduidingErfdienstbaarheid.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::Tenaamstelling.burgerlijkeStaatTenTijdeVanVerkrijging</td>
+            <td><a href="./BurgerlijkeStaat/index.html">BurgerlijkeStaat</a></td>
+			<td><a href="./BurgerlijkeStaat/BurgerlijkeStaat.gc">gc</a></td>
+			<td><a href="./BurgerlijkeStaat/BurgerlijkeStaat.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::Tenaamstelling.verkregenNamensSamenwerkingsverband</td>
+            <td><a href="./Samenwerkingsverband/index.html">Samenwerkingsverband</a></td>
+			<td><a href="./Samenwerkingsverband/Samenwerkingsverband.gc">gc</a></td>
+			<td><a href="./Samenwerkingsverband/Samenwerkingsverband.csv">csv</a></td>
+         </tr>
+		 <tr>
+            <td>Recht::TenaamstellingFiliatie.aard</td>
+            <td><a href="./AardFiliatie/index.html">AardFiliatie</a></td>
+			<td><a href="./AardFiliatie/AardFiliatie.gc">gc</a></td>
+			<td><a href="./AardFiliatie/AardFiliatie.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::ZakelijkRecht.aard</td>
+            <td><a href="./AardZakelijkRecht/index.html">AardZakelijkRecht</a></td>
+			<td><a href="./AardZakelijkRecht/AardZakelijkRecht.gc">gc</a></td>
+			<td><a href="./AardZakelijkRecht/AardZakelijkRecht.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::_Zekerheidsstelling.omschrijvingBetrokkenRecht</td>
+            <td><a href="./BetrokkenRecht/index.html">BetrokkenRecht</a></td>
+			<td><a href="./BetrokkenRecht/BetrokkenRecht.gc">gc</a></td>
+			<td><a href="./BetrokkenRecht/BetrokkenRecht.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Recht::ZekerheidsstellingInzakeBeslag.aard</td>
+            <td><a href="./AardBeslag/index.html">AardBeslag</a></td>
+			<td><a href="./AardBeslag/AardBeslag.gc">gc</a></td>
+			<td><a href="./AardBeslag/AardBeslag.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Stuk</strong></td></tr>
+         <tr>
+            <td>Stuk::AcgID.akrRegistercode</td>
+            <td><a href="./akrRegistercode/index.html">akrRegistercode</a></td>
+			<td><a href="./akrRegistercode/akrRegistercode.gc">gc</a></td>
+			<td><a href="./akrRegistercode/akrRegistercode.csv">csv</a></td>
+         </tr>
+		 <tr>
+            <td>Stuk::Bijlage.aard</td>
+            <td><a href="./AardBijlage/index.html">AardBijlage</a></td>
+			<td><a href="./AardBijlage/AardBijlage.gc">gc</a></td>
+			<td><a href="./AardBijlage/AardBijlage.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Stuk::KadasterVerzoek.aard</td>
+            <td><a href="./AardKadasterverzoek/index.html">AardKadasterverzoek</a></td>
+			<td><a href="./AardKadasterverzoek/AardKadasterverzoek.gc">gc</a></td>
+			<td><a href="./AardKadasterverzoek/AardKadasterverzoek.csv">csv</a></td>
+         </tr>
+		 <tr>
+            <td>Stuk::RedenVerzoek.reden</td>
+            <td><a href="./RedenVerzoek/index.html">RedenVerzoek</a></td>
+            <td><a href="./RedenVerzoek/RedenVerzoek.gc">gc</a></td>
+            <td><a href="./RedenVerzoek/Redenverzoek.csv">csv</a></td>
+		 </tr>
+         <tr>
+            <td>Stuk::Stukdeel.aard</td>
+            <td><a href="./AardStukdeel/index.html">AardStukdeel</a></td>
+			<td><a href="./AardStukdeel/AardStukdeel.gc">gc</a></td>
+			<td><a href="./AardStukdeel/AardStukdeel.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Stuk::Stukdeel.redenDoorhalingTeboekstelling</td>
+            <td><a href="./RedenDoorhalingTeboekstelling/index.html">RedenDoorhalingTeboekstelling</a></td>
+			<td><a href="./RedenDoorhalingTeboekstelling/RedenDoorhalingTeboekstelling.gc">gc</a></td>
+			<td><a href="./RedenDoorhalingTeboekstelling/RedenDoorhalingTeboekstelling.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Stuk::TerInschrijvingAangebodenStuk.aard</td>
+            <td><a href="./AardAangebodenStuk/index.html">AardAangebodenStuk</a></td>
+            <td><a href="./AardAangebodenStuk/AardAangebodenStuk.gc">gc</a></td>
+            <td><a href="./AardAangebodenStuk/AardAangebodenStuk.csv">csv</a></td>
+		 </tr>
+         <tr>
+            <td>Stuk::TerInschrijvingAangebodenStuk.statusStukOR</td>
+            <td><a href="./StatusStukOR/index.html">StatusStukOR</a></td>
+            <td><a href="./StatusStukOR/StatusStukOR.gc">gc</a></td>
+			<td><a href="./StatusStukOR/StatusStukOR.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Stuk::TypeDeelEnNummer.reeks</td>
+            <td><a href="./Reekscode/index.html">Reekscode</a></td>
+			<td><a href="./Reekscode/Reekscode.gc">gc</a></td>
+			<td><a href="./Reekscode/Reekscode.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Stuk::TypeDeelEnNummer.registercode</td>
+            <td><a href="./Registercode/index.html">Registercode</a></td>
+			<td><a href="./Registercode/Registercode.gc">gc</a></td>
+			<td><a href="./Registercode/Registercode.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Stuk::TypeDeelEnNummer.soortRegister</td>
+            <td><a href="./SoortRegister/index.html">SoortRegister</a></td>
+			<td><a href="./SoortRegister/SoortRegister.gc">gc</a></td>
+			<td><a href="./SoortRegister/SoortRegister.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Teboekgestelde zaak</strong></td></tr>
+         <tr>
+            <td>TeboekgesteldeZaak::BrandmerkSchip.rubriek</td>
+            <td><a href="./RubriekBrandmerk/index.html">RubriekBrandmerk</a></td>
+			<td><a href="./RubriekBrandmerk/RubriekBrandmerk.gc">gc</a></td>
+			<td><a href="./RubriekBrandmerk/RubriekBrandmerk.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::BrandmerkSchip.plaats</td>
+            <td><a href="./PlaatsBrandmerk/index.html">PlaatsBrandmerk</a></td>
+			<td><a href="./PlaatsBrandmerk/PlaatsBrandmerk.gc">gc</a></td>
+			<td><a href="./PlaatsBrandmerk/PlaatsBrandmerk.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::BrandmerkSchip.status</td>
+            <td><a href="./StatusBrandmerk/index.html">StatusBrandmerk</a></td>
+			<td><a href="./StatusBrandmerk/StatusBrandmerk.gc">gc</a></td>
+			<td><a href="./StatusBrandmerk/StatusBrandmerk.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::KenmerkAndereRegistratie.code</td>
+            <td><a href="./CodeAndereRegistratie/index.html">CodeAndereRegistratie</a></td>
+			<td><a href="./CodeAndereRegistratie/CodeAndereRegistratie.gc">gc</a></td>
+			<td><a href="./CodeAndereRegistratie/CodeAndereRegistratie.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::Schip.status</td>
+            <td><a href="./StatusSchip/index.html">StatusSchip</a></td>
+			<td><a href="./StatusSchip/StatusSchip.gc">gc</a></td>
+			<td><a href="./StatusSchip/StatusSchip.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::Schip.soortCode</td>
+            <td><a href="./SoortSchip/index.html">SoortSchip</a></td>
+		 	<td><a href="./SoortSchip/SoortSchip.gc">gc</a></td>
+            <td><a href="./SoortSchip/SoortSchip.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::TypeInhoud.eenheid</td>
+            <td><a href="./InhoudEenheid/index.html">InhoudEenheid</a></td>
+			<td><a href="./InhoudEenheid/InhoudEenheid.gc">gc</a></td>
+			<td><a href="./InhoudEenheid/InhoudEenheid.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>TeboekgesteldeZaak::TypeVermogen.eenheid</td>
+            <td><a href="./VermogenEenheid/index.html">VermogenEenheid</a></td>
+			<td><a href="./VermogenEenheid/VermogenEenheid.gc">gc</a></td>
+			<td><a href="./VermogenEenheid/VermogenEenheid.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>Typen::Bedrag.valuta</td>
+            <td><a href="./Valuta/index.html">Valuta</a></td>
+			<td><a href="./Valuta/Valuta.gc">gc</a></td>
+			<td><a href="./Valuta/Valuta.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>BRK-PubliekrechtelijkeBeperkingen<strong/></tr>	 
+         <tr>
+            <td>PubliekrechtelijkeBeperking::PubliekrechtelijkeBeperking.Grondslag</td>
+            <td><a href="./GrondslagBRK-PB/index.html">GrondslagBRK-PB</a></td>
+			<td><a href="./GrondslagBRK-PB/GrondslagBRK-PB.gc">gc</a></td>
+			<td><a href="./GrondslagBRK-PB/GrondslagBRK-PB.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Bugerlijke gemeente - Kadastrale gemeente - Sectie</strong></td></tr>
+		 <tr>
+            <td>BurgemKadgemSectie</td>
+            <td><a href="./BurgemKadgemSectie/index.html">BurgemKadgemSectie</a></td>
+			<td><a href="./BurgemKadgemSectie/BurgemKadgemSectie.gc">gc</a></td>
+			<td><a href="./BurgemKadgemSectie/BurgemKadgemSectie.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" ><a name="IMAST"></a><h1>IMAST</h1></td></tr>
+<tr><td colspan="4" >De onderstaande waardelijsten worden gebruikt in de M2M interfaces voor het aanbieden van verzoeken (verzoek tot inschrijving stuk of verbetering, verzoek tot indepotname, verzoek tot intrekking) aan het Kadaster en het ophalen van de bijbehorende mededelingen. Deze waardelijsten worden buiten het formele publicatie proces gepubliceerd totdat deze interfaces in productie in gebruik genomen zijn. De laatste publicatiedatum is 30 september 2021.</td></tr>
+         <tr class="tableHeader">
+            <td>attribuutnaam</td>
+            <td>URL van de waardelijst</td>
+			<td>*.gc (xml)</td>
+			<td>*.csv</td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Inschrijving::Verzoeken</strong></td></tr>
+		 <tr>
+            <td>VerzoekTotInschrijvingStuk:soortStuk</td>
+            <td><a href="./-imast-/SoortStuk/index.html">SoortStuk</a></td>
+			<td><a href="./-imast-/SoortStuk/SoortStuk.gc">gc</a></td>
+			<td><a href="./-imast-/SoortStuk/SoortStuk.csv">csv</a></td>
+         </tr>
+         <tr>
+            <td>VerzoekTotInDepotname:soortDepotstuk</td>
+            <td><a href="./-imast-/SoortDepotstuk/index.html">SoortDepotstuk</a></td>
+			<td><a href="./-imast-/SoortDepotstuk/SoortDepotstuk.gc">gc</a></td>
+			<td><a href="./-imast-/SoortDepotstuk/SoortDepotstuk.csv">csv</a></td>
+         </tr> 
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Inschrijving::Mededelingen</strong></td></tr>
+         <tr>
+            <td>OpTeHalenMededeling.soortMededeling</td>
+            <td><a href="./-imast-/SoortMededeling/index.html">SoortMededeling</a></td>
+			<td><a href="./-imast-/SoortMededeling/SoortMededeling.gc">gc</a></td>
+			<td><a href="./-imast-/SoortMededeling/SoortMededeling.csv">csv</a></td>
+         </tr>		 
+
+		 <tr>
+            <td>OpTeHalenMededeling.statusMededeling</td>
+            <td><a href="./-imast-/StatusMededeling/index.html">StatusMededeling</a></td>
+			<td><a href="./-imast-/StatusMededeling/StatusMededeling.gc">gc</a></td>
+			<td><a href="./-imast-/StatusMededeling/StatusMededeling.csv">csv</a></td>
+         </tr>
+		 <tr>
+            <td>OphalenMededelingen.statusOpTeHalenMededelingen</td>
+            <td><a href="./-imast-/StatusOpTeHalenMededelingen/index.html">StatusOpTeHalenMededelingen</a></td>
+			<td><a href="./-imast-/StatusOpTeHalenMededelingen/StatusOpTeHalenMededelingen.gc">gc</a></td>
+			<td><a href="./-imast-/StatusOpTeHalenMededelingen/StatusOpTeHalenMededelingen.csv">csv</a></td>
+         </tr>
+		  <tr>
+            <td>Verzoek.typeVerzoek</td>
+            <td><a href="./-imast-/TypeVerzoek/index.html">TypeVerzoek</a></td>
+			<td><a href="./-imast-/TypeVerzoek/TypeVerzoek.gc">gc</a></td>
+			<td><a href="./-imast-/TypeVerzoek/TypeVerzoek.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Inschrijving::Typen</strong></td></tr>
+         <tr>
+            <td>Document</td>
+            <td><a href="./-imast-/DigestMethod/index.html">DigestMethod</a></td>
+			<td><a href="./-imast-/DigestMethod/DigestMethod.gc">gc</a></td>
+			<td><a href="./-imast-/DigestMethod/DigestMethod.csv">csv</a></td>
+         </tr>
+<tr><td colspan="4" bgcolor="#EEEEEE"><strong>Inschrijving::Proces</strong></td></tr>
+		 <tr>
+            <td>Nvt</td>
+            <td><a href="./-imast-/SoortStukProcesInformatie/index.html">SoortStukProcesInformatie</a></td>
+			<td><a href="./-imast-/SoortStukProcesInformatie/SoortStukProcesInformatie.gc">gc</a></td>
+			<td><a href="./-imast-/SoortStukProcesInformatie/SoortStukProcesInformatie.csv">csv</a></td>
+         </tr>
+		 <tr>
+            <td>Nvt</td>
+            <td><a href="./-imast-/SoortDepotstukProcesInformatie/index.html">SoortDepotstukProcesInformatie</a></td>
+			<td><a href="./-imast-/SoortDepotstukProcesInformatie/SoortDepotstukProcesInformatie.gc">gc</a></td>
+			<td><a href="./-imast-/SoortDepotstukProcesInformatie/SoortDepotstukProcesInformatie.csv">csv</a></td>
+         </tr>		 
+     </table>
+   </body>
+</html>

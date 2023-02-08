@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimbrpa-ref="http://www.kadaster.nl/schemas/imkad/kimbrp-adres-ref/v20130801"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/kimbrp-adres-ref/v20130801"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.0.0-">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/kimbrp-adres-ref</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20130801</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/kimbrp-adres-ref/v20130801/IMKAD_KIMBRPAdresRef_v1_0_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+              schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="AdresBuitenlandRef"
+               type="kimbrpa-ref:AdresBuitenlandRef"
+               abstract="false"/>
+   <xs:complexType name="AdresBuitenlandRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

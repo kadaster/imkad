@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:r-ref="http://www.kadaster.nl/schemas/imkad/imkad-recht-ref/v20160901"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-recht-ref/v20160901"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.6.0-">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-recht-ref</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.6.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20160901</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-recht-ref/v20160901/IMKAD_RechtRef_v1_6_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+              schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="ErfpachtcanonRef"
+               type="r-ref:ErfpachtcanonRef"
+               abstract="false"/>
+   <xs:complexType name="ErfpachtcanonRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_ZekerheidsstellingRef"
+               type="r-ref:_ZekerheidsstellingRef"
+               abstract="false"/>
+   <xs:complexType name="_ZekerheidsstellingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="HoofdsplitsingRef"
+               type="r-ref:HoofdsplitsingRef"
+               abstract="false"/>
+   <xs:complexType name="HoofdsplitsingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_AppartementsrechtSplitsingRef"
+               type="r-ref:_AppartementsrechtSplitsingRef"
+               abstract="false"/>
+   <xs:complexType name="_AppartementsrechtSplitsingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="ZakelijkRechtRef"
+               type="r-ref:ZakelijkRechtRef"
+               abstract="false"/>
+   <xs:complexType name="ZakelijkRechtRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="ZekerheidsstellingInzakeBeslagRef"
+               type="r-ref:ZekerheidsstellingInzakeBeslagRef"
+               abstract="false"/>
+   <xs:complexType name="ZekerheidsstellingInzakeBeslagRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="ZekerheidsstellingHypothecairRef"
+               type="r-ref:ZekerheidsstellingHypothecairRef"
+               abstract="false"/>
+   <xs:complexType name="ZekerheidsstellingHypothecairRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="GezamenlijkAandeelRef"
+               type="r-ref:GezamenlijkAandeelRef"
+               abstract="false"/>
+   <xs:complexType name="GezamenlijkAandeelRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="MandeligheidRef"
+               type="r-ref:MandeligheidRef"
+               abstract="false"/>
+   <xs:complexType name="MandeligheidRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="AantekeningRef" type="r-ref:AantekeningRef" abstract="false"/>
+   <xs:complexType name="AantekeningRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="OndersplitsingRef"
+               type="r-ref:OndersplitsingRef"
+               abstract="false"/>
+   <xs:complexType name="OndersplitsingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="SpiegelsplitsingOndersplitsingRef"
+               type="r-ref:SpiegelsplitsingOndersplitsingRef"
+               abstract="false"/>
+   <xs:complexType name="SpiegelsplitsingOndersplitsingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="TenaamstellingRef"
+               type="r-ref:TenaamstellingRef"
+               abstract="false"/>
+   <xs:complexType name="TenaamstellingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="SpiegelsplitsingAfkoopErfpachtRef"
+               type="r-ref:SpiegelsplitsingAfkoopErfpachtRef"
+               abstract="false"/>
+   <xs:complexType name="SpiegelsplitsingAfkoopErfpachtRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

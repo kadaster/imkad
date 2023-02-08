@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:pb="http://www.kadaster.nl/schemas/imkad/publiekrechtelijkebeperking/v20190901"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           xmlns:kimbaga="http://www.kadaster.nl/schemas/imkad/kimbag-adres/v20190201"
+           xmlns:p-ref="http://www.kadaster.nl/schemas/imkad/imkad-persoon-ref/v20120508"
+           xmlns:pb-ref="http://www.kadaster.nl/schemas/imkad/publiekrechtelijkebeperking-ref/v20190901"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+           xmlns:s-ref="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/publiekrechtelijkebeperking/v20190901"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.1-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/publiekrechtelijkebeperking</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190901</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/publiekrechtelijkebeperking/v20190901/IMKAD_PubliekrechtelijkeBeperking_v2_2_1.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/kimbag-adres/v20190201"
+              schemaLocation="../../../imkad/kimbag-adres/v20190201/IMKAD_KIMBAGAdres_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-persoon-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-persoon-ref/v20120508/IMKAD_PersoonRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/publiekrechtelijkebeperking-ref/v20190901"
+              schemaLocation="../../../imkad/publiekrechtelijkebeperking-ref/v20190901/IMKAD_PubliekrechtelijkeBeperkingRef_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-onroerendezaak-ref/v20120508/IMKAD_OnroerendeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-stuk-ref/v20120508/IMKAD_StukRef_v1_6_0.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="../../../gml/3.2.1/gml.xsd"/>
+   <xs:element name="WerkingsGebied" type="pb:WerkingsGebied" abstract="false"/>
+   <xs:complexType name="WerkingsGebied" abstract="false">
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element name="bGTObject"
+                     type="pb:BGTObjectReferentie"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+         <xs:element name="bAGObject"
+                     type="pb:BAGObjectReferentie"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+         <xs:element name="kadastraalObject"
+                     type="pb:BRKObjectReferentie"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+         <xs:element name="vrijeContour"
+                     type="pb:VrijeContour"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:choice>
+   </xs:complexType>
+   <xs:element name="BGTObjectReferentie"
+               type="pb:BGTObjectReferentie"
+               abstract="false"/>
+   <xs:complexType name="BGTObjectReferentie" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatieReferentie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">IdentificatieReferentie is de referentie naar een object in een andere registratie via de identificatie van dat object in die andere registratie. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="BeperkingsGebied" type="pb:BeperkingsGebied" abstract="false"/>
+   <xs:complexType name="BeperkingsGebied" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="ontleendAan"
+                     type="pb:WerkingsGebied"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="BevoegdGezag" type="pb:BevoegdGezag" abstract="false"/>
+   <xs:complexType name="BevoegdGezag" abstract="false">
+      <xs:sequence>
+         <xs:element name="is" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="beheert" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="pb-ref:PubliekrechtelijkeBeperkingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="OnroerendeZaakBeperking"
+               type="pb:OnroerendeZaakBeperking"
+               abstract="false"/>
+   <xs:complexType name="OnroerendeZaakBeperking" abstract="false">
+      <xs:sequence>
+         <xs:element name="inOnderzoek"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Één of meer objecten uit het werkingsgebied van de publiekrechtelijke beperking die overlappen met de onroerende zaak, zijn blijkens hun registratie, inmiddels niet meer actueel. Het bevoegd gezag dient het werkingsgebied opnieuw te beoordelen.Een object uit het werkingsgebied van de publiekrechtelijke beperking heeft een status gekregen die actueel niet meer geldig is. Uitsluitsel is vereist van het bevoegd gezag of de gerelateerde onroerende zaak nog beperkt is met deze publiekrechtelijke beperking.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beperkt" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="BRKObjectReferentie"
+               type="pb:BRKObjectReferentie"
+               abstract="false"/>
+   <xs:complexType name="BRKObjectReferentie" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatieReferentie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="BAGObjectReferentie"
+               type="pb:BAGObjectReferentie"
+               abstract="false"/>
+   <xs:complexType name="BAGObjectReferentie" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatieReferentie"
+                     type="kimbaga:Objectnummering"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="VrijeContour" type="pb:VrijeContour" abstract="false"/>
+   <xs:complexType name="VrijeContour" abstract="false">
+      <xs:sequence>
+         <xs:element name="geometrie"
+                     type="pb:VlakOfMultivlak"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="PubliekrechtelijkeBeperking"
+               type="pb:PubliekrechtelijkeBeperking"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">PubliekrechtelijkeBeperking </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="PubliekrechtelijkeBeperking" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="grondslag"
+                     type="pb:GrondslagBRKPB"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De grondslag is een verwijzing naar de wet waar de publiekrechtelijke beperking op gebaseerd is. De waarden zijn opgenomen in een Waardelijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datumInWerking"
+                     type="xs:date"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">datumInWerking wordt overgenomen in het LTO van de PB</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datumBeeindiging"
+                     type="xs:date"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">-Toelichting--datumBeeindiging wordt overgenomen in het LTV van de PB</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="leidtTot" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="pb:OnroerendeZaakBeperking"
+                              minOccurs="1"
+                              maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="heeft" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="pb-ref:BeperkingsGebiedRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="GrondslagBRKPB" type="pb:GrondslagBRKPB" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardAantekening</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GrondslagBRKPB" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="VlakOfMultivlak" type="pb:VlakOfMultivlak" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een datatype waarin gekozen kan worden tussen een vlak en of een multivlak. De begrenzing van een Publiekrechtelijke beperking kan zowel een enkel vlak of meerdere vlakken worden beschreven. Vlakvormig houdt in dat de lijnketens onderling zodanig met elkaar zijn verbonden dat een vlakvormige figuur (polylijn) is af te leiden. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="VlakOfMultivlak" abstract="false">
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element ref="gml:Surface" minOccurs="1" maxOccurs="1"/>
+         <xs:element ref="gml:MultiSurface" minOccurs="1" maxOccurs="1"/>
+      </xs:choice>
+   </xs:complexType>
+</xs:schema>

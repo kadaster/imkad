@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tz="http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak/v20120508"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+           xmlns:a-ref="http://www.kadaster.nl/schemas/imkad/imkad-adres-ref/v20141101"
+           xmlns:tz-ref="http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak-ref/v20120508"
+           xmlns:oz="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak/v20190201"
+           xmlns:s-ref="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+           xmlns:ko="http://www.kadaster.nl/schemas/imkad/imkad-kadastraalobject/v20190201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak/v20120508"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.5.0-3">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.5.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">3</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20120508</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-teboekgesteldezaak/v20120508/IMKAD_TeboekgesteldeZaak_v1_5_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-onroerendezaak-ref/v20120508/IMKAD_OnroerendeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-adres-ref/v20141101"
+              schemaLocation="../../../imkad/imkad-adres-ref/v20141101/IMKAD_AdresRef_v1_7_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-teboekgesteldezaak-ref/v20120508/IMKAD_TeboekgesteldeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak/v20190201"
+              schemaLocation="../../../imkad/imkad-onroerendezaak/v20190201/IMKAD_OnroerendeZaak_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-stuk-ref/v20120508/IMKAD_StukRef_v1_6_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-kadastraalobject/v20190201"
+              schemaLocation="../../../imkad/imkad-kadastraalobject/v20190201/IMKAD_KadastraalObject_v2_2_0.xsd"/>
+   <xs:element name="Microdots" type="tz:Microdots" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Microdots zijn zeer kleine kunststof schijfjes met een uniek identificatienummer. Een microdot is een chip ter grootte van 1 mm voorzien van een uniek idenficatienummer (dna) dat aangebracht is op een schip. Met een spuitbus worden duizenden van deze schijfjes samen met een helder opdrogende lijm aangebracht op vaste of diefstalgevoelige onderdelen van een schip. De microdots zijn water- en hittebestendig en kunnen zowel binnen- als buitenboord worden aangebracht. De lijmlaag met microdots is nagenoeg onzichtbaar. Alleen bevoegden zoals de waterpolitie kunnen de code met speciale apparatuur aflezen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Microdots" abstract="false">
+      <xs:sequence>
+         <xs:element name="nummer" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Uniek kenmerk van de microdots.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="30"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="plaatsNummer" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Plaats waar de microdots op het schip zijn aangebracht. Deze plaats mag niet verstrekt worden aan derden!</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Bouwwerf" type="tz:Bouwwerf" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De gegevens van de bouwwerf waar het Schip in aanbouw of gebouwd is.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Bouwwerf" abstract="false">
+      <xs:sequence>
+         <xs:element name="naam" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De naam van de bouwwerf.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="120"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="bouwNummer" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het bouwnummer waaronder het schip op de bouwwerf in aanbouw is of is afgebouwd.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="jaarBeginBouw"
+                     type="xs:gYear"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het jaar waarin met de bouw begonnen is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="jaarEindBouw" type="xs:gYear" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het jaar waarin met de bouw gestopt is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="plaats" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De plaats waar de bouwwerf gesitueerd is.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="land" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het land van vestiging van de bouwwerf.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="40"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="BrandmerkSchip" type="tz:BrandmerkSchip" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een door het Kadaster vastgesteld uniek registratienummer dat op het schip wordt aangebracht en niet zonder beschadiging kan worden verwijderd, bestaande uit volgnummer, rubriek, plaatscode (tot juni 2006) en jaar.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="BrandmerkSchip" abstract="false">
+      <xs:sequence>
+         <xs:element name="nummer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het volgnummer van het brandmerk. Het volgnummer is onderdeel van het brandmerk dat op het schip is aangebracht. Dit nummer vormt samen met de plaats (wanneer aanwezig) de unieke identificatie van het schip.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="8"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="rubriek"
+                     type="tz:RubriekBrandmerk"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De aanduiding die aangeeft wat de rubriek van het teboekgestelde schip is. De rubriek is onderdeel van het brandmerk dat op het schip is aangebracht. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="plaats"
+                     type="tz:PlaatsBrandmerk"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De aanduiding van de plaats waar het schip teboekgesteld is. De plaatsaanduiding is onderdeel van het brandmerk dat op het schip is aangebracht. Vanaf 12 juni 2006 wordt de plaats niet meer opgenomen in een brandmerk. De plaats (wanneer aanwezig) vormt samen met het nummer de unieke identificatie van het schip. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="jaar" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het jaar waarin het brandmerk op het schip is aangebracht. Het jaar is onderdeel van het brandmerk dat op het schip is aangebracht.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="4"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="status"
+                     type="tz:StatusBrandmerk"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Aanduiding van de status van het aanbrengen van het brandmerk op het schip.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="plaatsBrandmerk" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De plaats op het schip waar het brandmerk is aangebracht.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Schip" type="tz:Schip" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een schip is een zaak, geen luchtvaartuig zijnde, die blijkens zijn constructie bestemd is om te drijven, drijft of heeft gedreven. ( https://tax.kadaster.nl/doc/begrip/Schip)</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Schip" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="tz:_TeboekgesteldeZaak">
+            <xs:sequence>
+               <xs:element name="status" type="tz:StatusSchip" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="indicatieAdministratieveTbs"
+                           type="xs:boolean"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="soortCode"
+                           type="tz:SoortSchip"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De aanduiding voor de soort van een Schip. De waarden zijnopgenomen in een Waardelijst.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="soortOmschrijving" minOccurs="0" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="60"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="type" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="inhoud" type="tz:TypeInhoud" minOccurs="0" maxOccurs="1"/>
+               <xs:element name="inrichting" minOccurs="0" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="rompmateriaal" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="kleur" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Schip heeft uiterlijke verschijningsvorm van kleur.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="nietScheepsToebehoren" minOccurs="0" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="160"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="afmeting"
+                           type="tz:TypeAfmetingSchip"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="kenmerkAndereRegistratie" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="tz:KenmerkAndereRegistratie" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="afgebouwdDoor" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="tz:Bouwwerf" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="inAanbouwBij" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="tz:Bouwwerf" minOccurs="1" maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="isVoorzienVan" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="tz:Microdots" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="metBrandmerk" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="tz:BrandmerkSchip" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="isDuurzaamVerbondenMet" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="oz-ref:PerceelRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="gekozenWoonplaats" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="a-ref:ObjectlocatieBinnenlandRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="eerderTeboekgesteldAls" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="tz-ref:SchipRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Luchtvaartuig" type="tz:Luchtvaartuig" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een teboekstaand luchtvaartuig is een als luchtvaartuig teboekgestelde zaak.(https://tax.kadaster.nl/doc/begrip/Teboekstaand_luchtvaartuig)</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Luchtvaartuig" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="tz:_TeboekgesteldeZaak">
+            <xs:sequence>
+               <xs:element name="boekingsnummer" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                        <xs:pattern value="[0-9]*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="nationaliteitsEnInschrijvingskenmerk"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="serienummer" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="plaatsSerienummer" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De plaats op het Luchtvaartuig waar het Serienummer is aangebracht.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="200"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="naamFabrikant" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De naam van de fabrikant van het luchtvaartuig.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="plaatsVestigingFabrikant" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De plaats van vestiging van de fabrikant van hetluchtvaartuig.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="landVestigingFabrikant" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het land van vestiging van de fabrikant van het luchtvaartuig</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="type" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="bouwjaar" type="xs:gYear" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het jaar waarin met de bouw voltooid is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="maximaalToegelatenMassa" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:decimal">
+                        <xs:pattern value="[1-9][0-9]{0,7}.[0-9]{0,2}|0.[0-9]{1,2}"/>
+                        <xs:totalDigits value="10"/>
+                        <xs:fractionDigits value="2"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Motor" type="tz:Motor" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een motor is een werktuig waarmee een Teboekgestelde zaak kan worden voortbewogen.Motor is een groep gegevens over de motor die in een schip of een luchtvaartuig zit. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Motor" abstract="false">
+      <xs:sequence>
+         <xs:element name="nummer" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Is het nummer dat door de fabriek aan de motor is gegeven.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="25"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="plaatsnummer" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Plaats waar het nummer van de motor is aangebracht.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="60"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="merk" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Naam van het merk van de motor.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="25"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="type" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De type-aanduiding van de motor als aanvulling op het merk.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="15"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="vermogen" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De sterkte van de motor uitgedrukt in kilowatt (kW).</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:totalDigits value="10"/>
+                  <xs:fractionDigits value="2"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_TeboekgesteldeZaak"
+               type="tz:_TeboekgesteldeZaak"
+               abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een teboekgestelde zaak is een zaak die als registergoed teboekgesteld is. ( https://tax.kadaster.nl/doc/begrip/Teboekgestelde_zaak)</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_TeboekgesteldeZaak" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="ko:_KadastraalObject">
+            <xs:sequence>
+               <xs:element name="naam" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Naam is de naam van de teboekgestelde zaak.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="aantalMotoren"
+                           type="xs:integer"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het aantal motoren dat de teboekgestelde zaak heeft.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="koopsom" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Belangrijkste recht van teboekgestelde zaak is verkregen voor bedrag met waarde. Bedrag waarvoor het eigendom is gekocht.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="oz:TypeKoopsom" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="metMotor" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="tz:Motor" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="toelichtingBewaarder" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Bevat een toelichtende tekst die de bewaarder vermeld wil hebben bij het kadastraal object.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="isVermeldIn" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="s-ref:StukdeelRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="KenmerkAndereRegistratie"
+               type="tz:KenmerkAndereRegistratie"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een aanduiding voor een binnenlandse- of buitenlandse registratie (anders dan het Kadaster), waar het schip (in het verleden) is geregistreerd.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="KenmerkAndereRegistratie" abstract="false">
+      <xs:sequence>
+         <xs:element name="code"
+                     type="tz:CodeAndereRegistratie"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Kenmerk van een andere registratie. Deze is onttrokken aan een Waardelijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kenmerk" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Waarde van het kenmerk van de binnenlandse- ofbuitenlandse registratie (anders dan het Kadaster).</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="StatusSchip" type="tz:StatusSchip" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/StatusSchip</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="StatusSchip" abstract="false"/>
+   <xs:element name="PlaatsBrandmerk" type="tz:PlaatsBrandmerk" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/PlaatsBrandmerk</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="PlaatsBrandmerk" abstract="false"/>
+   <xs:element name="CodeAndereRegistratie"
+               type="tz:CodeAndereRegistratie"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/CodeAndereRegistratie</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="CodeAndereRegistratie" abstract="false"/>
+   <xs:element name="TypeInhoud" type="tz:TypeInhoud" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Inhoud. De waarde van de inhoud wordt vastgelegd in kubieke meters (B-schepen) of in grosstonnage (Z en V-schepen). Deze waarden zijn opgenomen in waardenlijst.Bij een (Zee)visserijschip of een Zeeschip wordt als inhoud opgegeven de bruto inhoud of het tonnage, bij een binnenvaartschip wordt als inhoud opgegeven de verplaatsing of het laadvermogen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeInhoud" abstract="false">
+      <xs:sequence>
+         <xs:element name="waarde" type="xs:decimal" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De waarde uitgedrukt in eenheden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="eenheid"
+                     type="tz:InhoudEenheid"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De eenheid van de inhoud van het schip. De eenheden zijnopgenomen in een Waardelijst.ToelichtingBij een (Zee)visserijschip of een Zeeschip wordt als inhoudopgegeven de bruto inhoud of het tonnage, bij eenbinnenvaartschip wordt als inhoud opgegeven deverplaatsing of het laadvermogen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="indicatieGeschat"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Indicatie of de waarde is geschat, in plaats van vastgesteld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="StatusBrandmerk" type="tz:StatusBrandmerk" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/StatusBrandmerk</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="StatusBrandmerk" abstract="false"/>
+   <xs:element name="SoortSchip" type="tz:SoortSchip" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/SoortSchip</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="SoortSchip" abstract="false"/>
+   <xs:element name="TypeAfmetingSchip"
+               type="tz:TypeAfmetingSchip"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Afmetingen van een schip.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeAfmetingSchip" abstract="false">
+      <xs:sequence>
+         <xs:element name="lengte" type="xs:decimal" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Lengte van een schip, in meters.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="breedte" type="xs:decimal" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Breedte van een schip, in meters.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="diepgang" type="xs:decimal" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Diepgang is de afstand van de waterlijn tot het laagste punt van een Schip onder water in maximaal (toegestane) geladen toestand, in meters.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="indicatieGeschat"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Specificatie of deze waarden berusten op een schatting.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="RubriekBrandmerk" type="tz:RubriekBrandmerk" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/RubriekBrandmerk</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="RubriekBrandmerk" abstract="false"/>
+   <xs:element name="InhoudEenheid" type="tz:InhoudEenheid" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/InhoudEenheid/</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="InhoudEenheid" abstract="false"/>
+</xs:schema>

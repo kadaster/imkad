@@ -1,0 +1,2 @@
+RedenNietInschrijving is RedenVerzoek geworden. Deze directory en de inhoud daarvan is bedoeld om de gebruiker naar de nieuwe locatie te leiden:
+ de subdirectory ../RedenVerzoek.

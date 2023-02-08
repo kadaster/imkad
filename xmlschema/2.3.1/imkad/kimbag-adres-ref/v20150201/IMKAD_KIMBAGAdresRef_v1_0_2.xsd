@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimbaga-ref="http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref/v20150201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref/v20150201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.0.2-">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0.2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20150201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/kimbag-adres-ref/v20150201/IMKAD_KIMBAGAdresRef_v1_0_2.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+              schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="NummeraanduidingRef"
+               type="kimbaga-ref:NummeraanduidingRef"
+               abstract="false"/>
+   <xs:complexType name="NummeraanduidingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="_AdresseerbaarObjectRef"
+               type="kimbaga-ref:_AdresseerbaarObjectRef"
+               abstract="false"/>
+   <xs:complexType name="_AdresseerbaarObjectRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="StandplaatsRef"
+               type="kimbaga-ref:StandplaatsRef"
+               abstract="false"/>
+   <xs:complexType name="StandplaatsRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="LigplaatsRef"
+               type="kimbaga-ref:LigplaatsRef"
+               abstract="false"/>
+   <xs:complexType name="LigplaatsRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="VerblijfsobjectRef"
+               type="kimbaga-ref:VerblijfsobjectRef"
+               abstract="false"/>
+   <xs:complexType name="VerblijfsobjectRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

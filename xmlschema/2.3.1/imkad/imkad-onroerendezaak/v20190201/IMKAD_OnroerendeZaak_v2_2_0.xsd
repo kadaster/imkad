@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:oz="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+           xmlns:h="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+           xmlns:s-ref="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+           xmlns:ko="http://www.kadaster.nl/schemas/imkad/imkad-kadastraalobject/v20190201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-onroerendezaak/v20190201/IMKAD_OnroerendeZaak_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="../../../gml/3.2.1/gml.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-onroerendezaak-ref/v20120508/IMKAD_OnroerendeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+              schemaLocation="../../../imkad/imkad-historie/v20190201/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-stuk-ref/v20120508/IMKAD_StukRef_v1_6_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-kadastraalobject/v20190201"
+              schemaLocation="../../../imkad/imkad-kadastraalobject/v20190201/IMKAD_KadastraalObject_v2_2_0.xsd"/>
+   <xs:element name="TypeKoopsom" type="oz:TypeKoopsom" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De koopsom is het in een ter inschrijving aangeboden stuk vermelde bedrag, waarvoor 1 of meer onroerende zaken zijn verkregen, alsmede het koopjaar (Het jaar van overdracht waarbij deze koopsom bij deze onroerende zaak in de akte is vermeld.) en een indicator of het meerdere onroerende goederen betreft. Koopsom is altijd een positief bedrag. Dit is een bedrag (omgerekend naar) euro's. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeKoopsom" abstract="false">
+      <xs:sequence>
+         <xs:element name="bedrag" type="t:Bedrag" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het in een ter inschrijving aangeboden stuk vermelde bedrag, waarvoor 1 of meer onroerende zaken zijn verkregen. Koopsom is altijd een positief bedrag. Dit is een bedrag (omgerekend naar) euro's. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="koopjaar" type="xs:gYear" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het jaar waarin het belangrijkste recht van het kadastraal object is verkregen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="indicatieMeerObjecten"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Geeft aan of de koopsom betrekking heeft op meer dan 1 kadastraal object.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="OnroerendeZaakFiliatie"
+               type="oz:OnroerendeZaakFiliatie"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Onroerende zaak filiatie geeft de relatie aan tussen een nieuwe en een oude Onroerende zaak. Het betreft hier de relatie tussen 2 percelen, 2 Appartementsrechten of 2 leidingnetwerken.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="OnroerendeZaakFiliatie" abstract="false">
+      <xs:sequence>
+         <xs:element name="aard" type="oz:AardFiliatie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation"> Aard is een aanduiding voor de aard van de filiatie.Onroerende zaak filiatie wordt gebruikt om aan te geven hoe een onroerende zaak (historisch) tot stand gekomen is. Het geeft aan waarom het ene kadastrale object gerelateerd is aan het andere.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="overgangsgrootte" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De oppervlakte van het gedeelte van de oude Onroerende zaak dat opgegaan is in de nieuwe Onroerende zaak. De overgangsgrootte heeft uitsluitend betrekking op Onroerende zaak van het soort Perceel.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:pattern value="[1-9][0-9]*|0\.[1-4]"/>
+                  <xs:totalDigits value="9"/>
+                  <xs:fractionDigits value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="betreftOZ" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Target karidnaliteit is 0..1 zodat ook wanneer een OnroerendeZaak uit niets is ontstaan (bijvoorbeeld ruilverkaveling) een OnroerendeZaakFiliatie opgegeven kan worden.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Leidingnetwerk" type="oz:Leidingnetwerk" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">uri http://brk.kadaster.nl/def/gegevenselement/Leidingnetwerkuri https://tax.kadaster.nl/doc/begrip/NetwerkLeidingnetwerken worden geometrisch weergegeven door een "niet opdelend" vlak, een polylijn of m.b.v. netwerktopologie. Vlakken zijn niet opdelend van karakter, d.w.z. dat géén geometrische relaties (b.v. aansluitendheid) tussen verschillende exemplaren bestaan.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Leidingnetwerk" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="oz:_OnroerendeZaak">
+            <xs:sequence>
+               <xs:element name="aard"
+                           type="oz:AardLeidingnetwerk"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Leidingnetwerk.aard is een aanduiding van het soort leidingnetwerk.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="omschrijving" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Leidingnetwerk.omschrijving is een omschrijving van het netwerk door de eigenaar. Dit kan onder meer de door de eigenaar gehanteerde naam van het leidingnetwerk bevatten. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S[\s\S]*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="begrenzing"
+                           type="oz:VlakOfMultikromme"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Leidingnetwerk.begrenzing is de begrenzing van het netwerk als polygoonLeidingnetwerken worden geometrisch weergegeven door een "niet opdelend" vlak, een polylijn of m.b.v. netwerktopologie. Vlakken zijn niet opdelend van karakter, d.w.z. dat géén geometrische relaties (b.v. aansluitendheid) tussen verschillende exemplaren bestaan. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="hartlijn"
+                           type="oz:VlakOfMultikromme"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Leidingnetwerk.hartlijn is het geheel van gekoppelde lijnstukken die de ligging van een leidingnetwerk representeren. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="breedteNetwerkstrook" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Leidingnetwerk.breedteNetwerkstrook is de betrouwbaarheidsmarge rondom de hartlijn van het leidingnetwerk. Het opgegeven aantal centimeters wordt aan beide kanten van de hartlijn als marge gebruikt. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="VoorwaartseOnroerendeZaakFiliatie"
+               type="oz:VoorwaartseOnroerendeZaakFiliatie"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Onroerende zaak filiatie geeft de relatie aan tussen een nieuwe en een oude Onroerende zaak. Het betreft hier de relatie tussen 2 percelen, 2 Appartementsrechten of 2 leidingnetwerken.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="VoorwaartseOnroerendeZaakFiliatie" abstract="false">
+      <xs:sequence>
+         <xs:element name="aard" type="oz:AardFiliatie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een aanduiding voor de aard van de filiatie.Onroerende zaak filiatie wordt gebruikt om aan te geven hoe een onroerende zaak (historisch) tot stand gekomen is. Het geeft aan waarom het ene kadastrale object gerelateerd is aan het andere.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="overgangsgrootte" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De oppervlakte van het gedeelte van de oude Onroerende zaak dat opgegaan is in de nieuwe Onroerende zaak. De overgangsgrootte heeft uitsluitend betrekking op Onroerende zaak van het soort Perceel.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:pattern value="[1-9][0-9]*|0\.[1-4]"/>
+                  <xs:totalDigits value="9"/>
+                  <xs:fractionDigits value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="betreftOZ" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="KadastraleGrens" type="oz:KadastraleGrens" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">uri http://tax.kadaster.nl/id/begrip/Kadastrale_grensIn de praktijk kent Kadastrale grens nu twee betekenissen: De grens zoals vastgesteld in het terrein, de terrein grens. (vaststelling o.b.v. de aanwijs van partijen aan beide zijde van de betreffende grens en vastgelegd door het Kadaster). De terreingrens is opgenomen in de terrestrische registratie van het Kadaster. De visualisatie van deze grens op de kadastrale kaart. De kaartgrens. Deze kan mogelijk 'verschoven' liggen door het inpassen van deze terreingrens in het 'overall' kaartbeeld. De kadastrale grens in deze betekenis vormt een indicatief gegeven over de ligging van de grens t.o.v. de topografie, d.w.z. van de in het terrein visueel waarneembare 'objecten' als huizen, straten, sloten, etc. Met het begrip 'Kadastrale grens' in relatie tot de BRK bedoelen we de kaartgrens. De terreingrens uit de 'terrestrische registratie' vormt de basis voor de kaartgrens. Bij juridische geschillen wordt echter de terreingrens uitgezet.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="KadastraleGrens" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieNEN3610" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="type" type="oz:TypeGrens" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Kadastralegrens.type geeft aan of het een definitieve, voorlopige of administratieve grens betreft. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="grenslijn"
+                     type="gml:CurvePropertyType"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een grenslijn is of een lijn (GML LineString), of een boog (GML ArcString).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="perceelLinks" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="oz-ref:PerceelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="perceelRechts" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="oz-ref:PerceelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_OnroerendeZaak" type="oz:_OnroerendeZaak" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een onroerende zaak is de grond, de niet gewonnen delfstoffen, de met de grond verenigde beplantingen, alsmede de gebouwen en werken die duurzaam met de grond zijn verenigd, hetzij rechtstreeks, hetzij door vereniging met andere gebouwen of werken.(https://tax.kadaster.nl/doc/begrip/Onroerende_zaak)</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_OnroerendeZaak" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="ko:_KadastraalObject">
+            <xs:sequence>
+               <xs:element name="historie" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="h:KadasterHistorieNEN3610" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="kadastraleAanduiding"
+                           type="oz:TypeKadastraleAanduiding"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation"> Kadastrale aanduiding is de unieke aanduiding van een onroerende zaak, die door het kadaster wordt vastgesteld. In de tijd gezien kan dezelfde onroerende zaak wel meerdere kadastrale aanduidingen hebben, te weten in het geval dat er een herindeling plaatsvindt. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="landinrichtingsrente" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Landinrichtingsrente is het bedrag waarmee de Onroerende zaak is belast in het kader van de landinrichtingswet.Opgebouwd uit de onderdelen Aanduiding Landinrichtingsrente, Bedrag Landinrichtingsrente, en Eindjaar Landinrichtingsrente.Als twee percelen met elk landinrichtingsrente-gegevens met verschillende eindjaren verenigd worden, worden beide landinrichtingsrente-gegevensgroepen bij het nieuwe perceel opgenomen.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="oz:TypeLandinrichtingsrente"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="aardCultuurOnbebouwd"
+                           type="oz:CultuurcodeOnbebouwd"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">aardCultuurOnbebouwd is een aanduiding voor aard van het gebruik van een onbebouwde onroerende zaak. Het betreft de cultuuraanduiding zoals is omschreven in het brondocument. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="aardCultuurBebouwd"
+                           type="oz:CultuurBebouwd"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">aardCultuurBebouwd is een aanduiding voor aard van het gebruik van een bebouwde onroerende zaak. Het betreft de cultuuraanduiding zoals is omschreven in het brondocument. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="omschrijvingOnderzoekErfdienstbaarheden"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Omschrijving onderzoek erfdienstbaarheden is een omschrijving van de gebeurtenis naar aanleiding waarvan de erfdienstbaarheden zijn onderzocht. De onroerende zaak kent enkel erfdienstbaarheden vanaf de gebeurtenis zoals omschrevenHet onderzoek erfdienstbaarheden is uitgevoerd vanaf een bepaalde gebeurtenis. Voordien bestaan geen relevante erfdienstbaarheden.Mogelijke waarden zijn:- Onteigening- Nieuwbouw- Toedeling landinrichting</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S[\s\S.]*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="toestandsdatumOnderzoekErfdienstbaarheden"
+                           type="xs:date"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het onderzoek erfdienstbaarheden is m.b.t. onroerende zaak uitgevoerd tot en met een bepaalde datum in het verleden. Eventueel voor die datum ingeschreven stukken inzake erfdienstbaarheden zijn niet vermeld.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="koopsom" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Koopsom is het bedrag waarvoor het belangrijkste recht van onroerende zaak is verkregen, het bedrag waarvoor het eigendom is gekocht.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="oz:TypeKoopsom" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="toelichtingBewaarder" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Toelichting bewaarder is een toelichtende tekst die de bewaarder vermeld wil hebben bij het kadastraal object.De toelichting bewaarder wordt alleen in zeer uitzonderlijke gevallen gebruikt.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="overgegaanIn" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="oz:VoorwaartseOnroerendeZaakFiliatie"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit kadastraal object is vermeld in de benoemde stukdelen.Het gaat niet om het stuk van ontstaan (dat wordt in de BRK niet meer vermeld, enkel via de audit relatie in Historie). Het is bedoeld voor stukken waarin het object is vermeld, terwijl dat stuk verder geen gevolgen heeft voor de rechtstoestand van dat object. </xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="s-ref:StukdeelRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="ontstaanUitOZ" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="oz:OnroerendeZaakFiliatie" minOccurs="1" maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="TypeLandinrichtingsrente"
+               type="oz:TypeLandinrichtingsrente"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De rente die berekend wordt over de percelen die in een herverkavelingblok van een landinrichtingsproject hebben gelegen. Deze rente wordt berekend om de niet gesubsidieerde kosten van het herverkavelingproject te dekken.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeLandinrichtingsrente" abstract="false">
+      <xs:sequence>
+         <xs:element name="bedrag" type="t:Bedrag" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het bedrag waarmee de Onroerende zaak is belast in het kader van de landinrichtingswet. Let op: Het bedrag is in AKR in euro-centen opgenomen!</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="eindjaar" type="xs:gYear" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het laatste kalenderjaar waarin de rente in het kader van landinrichtingswet nog verschuldigd is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Perceel" type="oz:Perceel" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In de BRK is een kadastraal perceel een specialisatie van een onroerende zaak. Percelen worden cartografisch gerepresenteerd door een tweedimensionale vlakbegrenzing. Tussen alle kadastrale percelen in Nederland geldt een topologische relatie (opdelende vlakstructuur), d.w.z. dat naburige perceelsvlakken naadloos moeten aansluiten en elkaar niet mogen overlappen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Perceel" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="oz:_OnroerendeZaak">
+            <xs:sequence>
+               <xs:element name="begrenzingPerceel"
+                           type="gml:SurfacePropertyType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Perceel.begrenzingPerceel is het geheel van lijnketens waarmee de vlakomtrek van een perceel wordt gevormd.Een Perceel is een (2D) vlakvormig ruimtelijk object dat "opdelend" van structuur is. Dit betekent dat Nederland altijd naadloos en volledig is bedekt met perceelsvlakken, die elkaar niet mogen overlappen. De begrenzing van een perceel bestaat uit één of meer Kaartbegrenzingen (gesloten polylijnen). De buitenomtrek wordt altijd door één Kaartbegrenzing gevormd. Indien er enclaves zijn (gebied dat niet tot het perceelsvlak behoort) zijn ook de binnenomtrekken als kaartbegrenzing opgenomen. Elk Perceel wordt begrensd door andere percelen, uitgezonderd diegenen die aan buitenland (Belgie, Duitsland en Noordzee) grenzen. Een Kaartbegrenzing is opgebouwd uit één of meer Kaartlijnen (lijnketens). Elke niet onderbroken begrenzing tussen precies 2 percelen noemen we een Kaartlijn. De topologische relatie tussen 2 vlakbegrenzingen van aangrenzende percelen wordt afgedwongen doordat hun gemeenschappelijke begrenzing door dezelfde Kaartlijn wordt gevormd.Een Kaartlijn ofwel lijnketen is opgebouwd uit opeenvolgend aansluitende kaartlijndelen, bestaande uit rechte en cirkelboogvormige lijnstukken.Hoewel momenteel in de kadastrale percelenstructuur geen exclaves (buitenliggende vlakken) voorkomen, doet dit aan de definitie van Begrenzing perceel niets af. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="kadastraleGrootte"
+                           type="oz:TypeOppervlak"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Oppervlak grootte, in vierkante meters. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="plaatscoordinaten"
+                           type="gml:PointPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De aanduiding van een kaartpunt voor de weergave van de identificatie van een perceel (centroïde). Betreft de plaatsing van het perceelnummer bij verbeelding op een kaart, om deze op een overzichtelijke plek in de perceel begrenzing te plaatsen. Door de keuze van het nulpunt geldt dat zowel de x-coordinaat als de y-coordinaat altijd positief zijn. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="perceelnummerVerschuiving"
+                           type="oz:TypePerceelnummerVerschuiving"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation"> Verschuiving van het perceelnummer, ten op zichte van het plaatscoordinaat. Betreft de plaatsing van het perceelnummer bij verbeelding op een kaart, om deze op een overzichtelijke plek in de perceel begrenzing te plaatsen. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="perceelnummerRotatie" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation"> Rotatie van het perceelnummer, in een hoek tussen de -90 +90 graden. Betreft de plaatsing van het perceelnummer bij verbeelding op een kaart, om deze op een overzichtelijke plek in de perceel begrenzing te plaatsen.+ is met de klok mee, - is tegen de klok in. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:decimal">
+                        <xs:totalDigits value="3"/>
+                        <xs:fractionDigits value="1"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Appartementsrecht"
+               type="oz:Appartementsrecht"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Appartementsrecht is een aandeel in goederen die in een splitsing zijn betrokken, dat de bevoegdheid omvat tot het uitsluitend gebruik van bepaalde gedeelten van het gebouw die blijkens hun inrichting bestemd zijn of worden om als afzonderlijk geheel te worden gebruikt. (http://tax.kadaster.nl/id/begrip/Appartementsrecht)Kadastrale aanduiding authentiek volgens de BRKPlaatselijke aanduiding (adres) authentiek volgens de BAG. Ovberige gegevens zijn niet authentiek, maar wel basisgegeven.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Appartementsrecht" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="oz:_OnroerendeZaak">
+            <xs:sequence>
+               <xs:element name="heeftTekening" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="s-ref:StukdeelRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="CultuurcodeOnbebouwd"
+               type="oz:CultuurcodeOnbebouwd"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/CultuurcodeOnbebouwd</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst CultuurOnbebouwd is een opsomming van de mogelijke waarden voor de aard van het gebruik van een onbebouwde onroerende zaak. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="CultuurcodeOnbebouwd" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="TypeKadastraleAanduiding"
+               type="oz:TypeKadastraleAanduiding"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Kadastrale aanduiding is de unieke aanduiding van een onroerende zaak, die door het kadaster wordt vastgesteld.Percelen worden kadastraal aangeduid door vermelding van achtereenvolgens de kadastrale gemeente en sectie, waarin de percelen en gedeelten van percelen zijn gelegen waarvan het grondgebied tot die zaak behoort, alsmede de nummers van die percelen. Voor een onroerende zaak die zich krachtens een opstalrecht op, in of boven de grond van een ander bevindt, geldt dezelfde kadastrale aanduiding als van de onroerende zaak die met dat opstalrecht is bezwaard. Dit is van overeenkomstige toepassing op een onroerende zaak die zich op, in of boven de grond van een ander bevindt krachtens een recht als bedoeld in het voor 1 januari 1992 geldende artikel 5, derde lid, onder b, laatste zinsnede, van de Belemmeringenwet Privaatrecht. Appartementsrechten worden kadastraal aangeduid door de vermelding van achtereenvolgens de kadastrale gemeente en sectie, waarin de in de splitsing betrokken percelen zijn gelegen, de complexaanduiding en de appartementsindex (Een oplopend volgnummer van "0001" tot "9999"). De complexaanduiding bestaat uit het voor de in de splitsing betrokken percelen vastgestelde complexnummer, gevolgd door de hoofdletter A. Onze Minister stelt regelen vast omtrent de vaststelling van het complexnummer. Er zijn 1111 kadastrale gemeentenamen. Elke kadastrale gemeentenaam is uniek.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeKadastraleAanduiding" abstract="false">
+      <xs:sequence>
+         <xs:element name="kadastraleGemeente"
+                     type="oz:KadastraleGemeente"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De kadastrale gemeente, deel van de kadastrale aanduiding van de onroerende zaak. De waarden komen uit een Waardelijst.Er zijn 1111 kadastrale gemeentenamen. Elke kadastrale gemeentenaam is uniek.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="sectie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Sectie is een onderverdeling van de kadastrale gemeente, bedoeld om het werk van de meetdienst en de kadastrale kaarten overzichtelijk te houden. Per kadastrale gemeente zijn er max. 26x26 secties . Elke sectie heeft een of twee letters (bijv. "A", 'B', ....'AA', 'AB', ....'ZZ' . Alleen de sectieletter "J" werd niet gebruikt om verwarring (handgeschreven) te voorkomen met "I"</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="2"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="perceelnummer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het perceelnummer dat een geheel perceel of een complex uniek identificeert binnen de sectie. Per kadastrale gemeente en per sectie heeft een perceel een perceelnummer oplopend door de jaren heen van "00001" tot max "99999"</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="5"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="appartementsrechtVolgnummer" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Nummer dat het kadastraal object uniek identificeert als een appartementsrecht binnen het complex. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="4"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TypePerceelnummerVerschuiving"
+               type="oz:TypePerceelnummerVerschuiving"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verschuiving van het perceelnummer ten behoeve van visualisatie op een kaart. Dit voorkomt dat perceelnummers van kleine percelen elkaar overlappen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypePerceelnummerVerschuiving" abstract="false">
+      <xs:sequence>
+         <xs:element name="deltaX" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verschuiving op de X as.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:totalDigits value="20"/>
+                  <xs:fractionDigits value="10"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="deltaY" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verschuiving op de Y as.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:totalDigits value="20"/>
+                  <xs:fractionDigits value="10"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="AardFiliatie" type="oz:AardFiliatie" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardFiliatie</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst AardFiliatie is een opsomming van de mogelijke waarden voor de aard of reden van de filiatie van een onroerende zaak.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AardFiliatie" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="KadastraleGemeente"
+               type="oz:KadastraleGemeente"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/KadastraleGemeente</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst KadastraleGemeente is een opsomming van de mogelijke Kadastrale gemeenten. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="KadastraleGemeente" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AardLeidingnetwerk"
+               type="oz:AardLeidingnetwerk"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardLeidingnetwerk</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst AardLeidingnetwerk is een opsomming van de mogelijke waarden voor de aard van een leidingnetwerk. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AardLeidingnetwerk" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="TypeOppervlak" type="oz:TypeOppervlak" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Oppervlakte.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeOppervlak" abstract="false">
+      <xs:sequence>
+         <xs:element name="waarde" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Oppervlak grootte, in vierkante meters. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:decimal">
+                  <xs:pattern value="[1-9][0-9]*|0,[1-4]"/>
+                  <xs:totalDigits value="9"/>
+                  <xs:fractionDigits value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="soortGrootte"
+                     type="oz:SoortGrootte"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De soortGrootte geeft aan of de grootte van het perceel voorlopig, administratief of definitief is vastgesteld. Een grens is voorlopig zolang de [Aanwijzing kadastrale grens](http://tax.kadaster.nl/id/begrip/Aanwijzing_kadastrale_grens) nog niet heeft plaatsgevonden. Met voorlopige kadastrale grenzen (VKG) worden gehele kadastrale percelen gevormd, voordat de definitieve grenzen in het terrein aan te wijzen zijn. Bij de splitsing ontstaan gehele percelen met:* voorlopige kadastrale grenzen;* een voorlopige kadastrale oppervlakte;* definitieve perceelnummers.Een administratieve grens is een grens die door het Kadaster is ingetekend om een, in een akte geleverd gedeelte van een perceel, af te beelden op de kadastrale kaart. De kleur van een administratieve grens is blauw. Een administratieve grens wordt definitief als de grens, na aanwijzing door belanghebbenden, door het Kadaster is gemeten.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TypeGrens" type="oz:TypeGrens" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/TypeGrens</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst TypeGrens is een opsomming van de mogelijke typen grens.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeGrens" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="CultuurBebouwd" type="oz:CultuurBebouwd" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/CultuurBebouwd</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst CultuurBebouwd is een opsomming van de mogelijke waarden voor de aard van het gebruik van een bebouwde onroerende zaak. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="CultuurBebouwd" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="SoortGrootte" type="oz:SoortGrootte" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/SoortGrootte/</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Referentielijst SoortGrootte is een opsomming van de mogelijke typen soorten van de grootte van een perceel.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="SoortGrootte" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="VlakOfMultikromme"
+               type="oz:VlakOfMultikromme"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een datatype waarin gekozen kan worden tussen een vlak en een multikromme. De begrenzing van een leidingnetwerk kan zowel lijnvormig als vlakvormig worden beschreven. Lijnvormig houdt in dat het leidingnetwerk bestaat uit een netwerk van lijnketens, die onderling minimaal een punt in de keten gemeenschappelijk hebben. Vlakvormig houdt in dat de lijnketens onderling zodanig met elkaar zijn verbonden dat een vlakvormige figuur (polylijn) is af te leiden. In het lijnvormige geval kan ook de strookbreedte, waarbinnen de grenslijn ligt, zijn opgenomen. In zo'n geval is, indien nodig, een vlakvormige figuur te berekenen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="VlakOfMultikromme" abstract="false">
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element ref="gml:MultiCurve" minOccurs="1" maxOccurs="1"/>
+         <xs:element ref="gml:Surface" minOccurs="1" maxOccurs="1"/>
+      </xs:choice>
+   </xs:complexType>
+</xs:schema>

@@ -1,0 +1,50 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>readme.md</title>
+    <style type="text/css">
+            /* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+            
+        </style>
+  </head>
+  <body>
+    <p>Een actuele woonplaatsen lijst is te verkrijgen via het nationaalgeoregister. Let hierbij wel op het volgende:</p>
+    <p>Het maximum aantal features dat door een WFS teruggeven wordt is gelimiteerd tot 1000 features. Om te zien hoeveel woonplaatsen er zijn kan je de volgende URL in de browser laden:</p>
+    <p>
+      <a target="_blank" href="http://geodata.nationaalgeoregister.nl/bag/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=woonplaats&amp;resulttype=hits">http://geodata.nationaalgeoregister.nl/bag/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=woonplaats&amp;resulttype=hits</a>
+    </p>
+    <p>In het resultaat hiervan is te zien hoeveel woonplaasten er zijn (numberMatched="2501").</p>
+<h2>Opvragen</h2>    
+    <p>Met behulp van paging kunnen alle features opgehaald worden in drie requests:</p>
+    <p>Van 0-1000: <a target="_blank" href="http://geodata.nationaalgeoregister.nl/bag/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=woonplaats&amp;startIndex=0&amp;outputFormat=csv">http://geodata.nationaalgeoregister.nl/bag/wfs?request=GetFeature&amp;service=WFS&amp;version=2.0.0&amp;typeName=woonplaats&amp;startIndex=0&amp;outputFormat=csv</a></p>
+    <p>Van 1001-2000: <a target="_blank" href="http://geodata.nationaalgeoregister.nl/bag/wfs?TYPENAME=woonplaats&amp;STARTINDEX=1000&amp;COUNT=1000&amp;VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;outputFormat=csv">http://geodata.nationaalgeoregister.nl/bag/wfs?TYPENAME=woonplaats&amp;STARTINDEX=1000&amp;COUNT=1000&amp;VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;outputFormat=csv</a></p>
+    <p>Van 2000-3000: <a target="_blank" href="http://geodata.nationaalgeoregister.nl/bag/wfs?TYPENAME=woonplaats&amp;STARTINDEX=2000&amp;COUNT=1000&amp;VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;outputFormat=csv">http://geodata.nationaalgeoregister.nl/bag/wfs?TYPENAME=woonplaats&amp;STARTINDEX=2000&amp;COUNT=1000&amp;VERSION=2.0.0&amp;SERVICE=WFS&amp;REQUEST=GetFeature&amp;outputFormat=csv</a></p>
+    <p>Voor verdere vragen over PDOK kunt je contact opnemen met het Klantcontactcenter PDOK via beheerPDOK@kadaster.nl.</p>
+<h2>Importeren in excel</h2>
+    <p>De gedownloade csv bestanden kun je vervolgens in excel importeren.</p>
+    <p>Start Excel&gt; Gegevens [externe gegevens ophalen] &gt; Van tekst &gt; open file &gt; Wizzard Tekst importeren</p>
+    <p>In wizzard importeren bij stap 1:</p>
+    <ul>
+      <li>kies voor Gescheiden</li>
+      <li>Oorspronkelijk bestand = 65001 : Unicode (UTF-8) en</li>
+      <li>Mijn gegevens bevatten Kopteksten</li>
+    </ul>
+    <p>bij stap 2:</p>
+    <ul>
+      <li>Scheidingstekens Komma</li>
+    </ul>
+    <p>bij stap 3:</p>
+    <ul>
+      <li>kolommen geometrie, FID en Status overslaan. &gt; Voltooien</li>
+    </ul>
+<h2>Alternatief via linked data</h2>    
+<p>Met de volgende linked data query is de lijst ook op te vragen: </p><p><a href="https://data.pdok.nl/sparql#query=++++PREFIX+bag%3A+%3Chttp%3A%2F%2Fbag.basisregistraties.overheid.nl%2Fdef%2Fbag%23%3E%0A++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++PREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A++++select+%3Fcode+%3Fwoonplaats+%3Fwoonplaats_label+%3Fstatus+%3Fstatus_label+%3Fbegingeldigheid+%3Feindgeldigheid%0A++++where+%7B%0A++++++%7B%0A++++++++select+%3Fcode+%3Fwoonplaats+%3Fwoonplaats_label+%3Fstatus+%3Fstatus_label%0A++++++++++++++(max(%3Fvoorkomen)+as+%3Fthevoorkomen)%0A++++++++where+%7B%0A++++++++++graph+%3Fvoorkomen+%7B%0A++++++++++++%3Fwoonplaats+a+bag%3AWoonplaats.%0A++++++++++++%3Fwoonplaats+rdfs%3Alabel+%3Fwoonplaats_label.%0A++++++++++++%3Fwoonplaats+bag%3Aidentificatiecode+%3Fcode.%0A++++++++++++%3Fwoonplaats+bag%3Astatus+%3Fstatus.%0A++++++++++++%3Fwoonplaats+rdfs%3AisDefinedBy+%3Fvoorkomen.%0A++++++++++%7D%0A++++++++++graph+%3Chttp%3A%2F%2Fbag.basisregistraties.overheid.nl%2Fmodel%3E+%7B%0A++++++++++++%3Fstatus+skos%3AprefLabel+%3Fstatus_label.%0A++++++++++%7D%0A++++++++%7D%0A++++++++groupby+%3Fcode+%3Fwoonplaats+%3Fwoonplaats_label+%3Fstatus+%3Fstatus_label%0A++++++%7D%0A++++++graph+%3Fthevoorkomen+%7B%0A++++++++%3Fthevoorkomen+bag%3AbeginGeldigheid+%3Fbegingeldigheid.%0A++++++++OPTIONAL+%7B%3Fthevoorkomen+bag%3AeindGeldigheid+%3Feindgeldigheid%7D%0A++++++%7D%0A++++%7D%0A++++orderby+%3Fcode+%3Fbegingeldigheid%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&outputFormat=table">https://data.pdok.nl/sparql#query=++++PREFIX+bag%3A+%3Chttp%3A%2F%2Fbag.basisregistraties.overheid.nl%2Fdef%2Fbag%23%3E%0A++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++PREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A++++select+%3Fcode+%3Fwoonplaats+%3Fwoonplaats_label+%3Fstatus+%3Fstatus_label+%3Fbegingeldigheid+%3Feindgeldigheid%0A++++where+%7B%0A++++++%7B%0A++++++++select+%3Fcode+%3Fwoonplaats+%3Fwoonplaats_label+%3Fstatus+%3Fstatus_label%0A++++++++++++++(max(%3Fvoorkomen)+as+%3Fthevoorkomen)%0A++++++++where+%7B%0A++++++++++graph+%3Fvoorkomen+%7B%0A++++++++++++%3Fwoonplaats+a+bag%3AWoonplaats.%0A++++++++++++%3Fwoonplaats+rdfs%3Alabel+%3Fwoonplaats_label.%0A++++++++++++%3Fwoonplaats+bag%3Aidentificatiecode+%3Fcode.%0A++++++++++++%3Fwoonplaats+bag%3Astatus+%3Fstatus.%0A++++++++++++%3Fwoonplaats+rdfs%3AisDefinedBy+%3Fvoorkomen.%0A++++++++++%7D%0A++++++++++graph+%3Chttp%3A%2F%2Fbag.basisregistraties.overheid.nl%2Fmodel%3E+%7B%0A++++++++++++%3Fstatus+skos%3AprefLabel+%3Fstatus_label.%0A++++++++++%7D%0A++++++++%7D%0A++++++++groupby+%3Fcode+%3Fwoonplaats+%3Fwoonplaats_label+%3Fstatus+%3Fstatus_label%0A++++++%7D%0A++++++graph+%3Fthevoorkomen+%7B%0A++++++++%3Fthevoorkomen+bag%3AbeginGeldigheid+%3Fbegingeldigheid.%0A++++++++OPTIONAL+%7B%3Fthevoorkomen+bag%3AeindGeldigheid+%3Feindgeldigheid%7D%0A++++++%7D%0A++++%7D%0A++++orderby+%3Fcode+%3Fbegingeldigheid%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&outputFormat=table</a> </p><p>het resultaat van deze query op https://data.pdok.nl/sparql# is vervolgens te downloaden als *.csv bestand.</p>
+    
+  </body>
+</html>

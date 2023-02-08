@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:a="http://www.kadaster.nl/schemas/imkad/imkad-adres/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           xmlns:kimbrpa-ref="http://www.kadaster.nl/schemas/imkad/kimbrp-adres-ref/v20130801"
+           xmlns:h="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+           xmlns:kimbaga-ref="http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref/v20150201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-adres/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-adres</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-adres/v20190201/IMKAD_Adres_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit package bevat uitbreidingen voor de. conversie AKR.Dit package bevat alle klassen die behoren bij de representatie van adressen.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/kimbrp-adres-ref/v20130801"
+              schemaLocation="../../../imkad/kimbrp-adres-ref/v20130801/IMKAD_KIMBRPAdresRef_v1_0_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+              schemaLocation="../../../imkad/imkad-historie/v20190201/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref/v20150201"
+              schemaLocation="../../../imkad/kimbag-adres-ref/v20150201/IMKAD_KIMBAGAdresRef_v1_0_2.xsd"/>
+   <xs:element name="PostbusLocatie" type="a:PostbusLocatie" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een PostbusLocatie is een aanduiding van de locatie van een postbus. De locatie waar een persoon post wenst te ontvangen kan een postbus zijn. Een PostbusLocatie bestaat uit een woonplaatsnaam, postcode en postbusnummer.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="PostbusLocatie" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="a:_AdresLocatie">
+            <xs:sequence>
+               <xs:element name="postbusnummer" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het postbusnummer van een postbus locatie is het nummer van een postbus.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="7"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="postcode"
+                           type="t:TypePostcode"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De postcode van een postbus locatie is de postcode van het gebouw waarin de postbus zich bevindt.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="woonplaatsNaam" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De woonplaatsnaam van een postbus locatie is de woonplaats waarin de postbus zich bevindt. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="ObjectlocatieBuitenland"
+               type="a:ObjectlocatieBuitenland"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een objectlocatiebuitenland is een adres buiten Nederland.Een ObjectlocatieBuitenland wordt adres wordt overgenomen van de BRP (tabel 08.13) als een AdresBuitenland. Als het Kadaster van BRP een mutatiemelding krijgt met enkel een land, dan wordt dat geregistreerd als adresBuitenland. Als een koppeling met het BRP niet mogelijk is dan is het adresnummer niet gevuld en is het een KadasterAdresbuitenland.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ObjectlocatieBuitenland" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="a:_Objectlocatie">
+            <xs:sequence>
+               <xs:element name="adresgegevens" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="kimbrpa-ref:AdresBuitenlandRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="_AdresLocatie" type="a:_AdresLocatie" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een AdresLocatie is een ObjectLocatie of een PostbusLocatie</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_AdresLocatie" abstract="true">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door het Kadaster toegekend landelijk uniek nummer aan een object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="_Objectlocatie" type="a:_Objectlocatie" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Objectlocatie is een ObjectlocatieBinnenland of een ObjectlocatieBuitenland.Een woonlocatie (waar een persoon woont/gevestigd is) kan een binnenlandse locatie of een buitenlandse locatie zijn. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_Objectlocatie" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="a:_AdresLocatie"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="ObjectlocatieBinnenland"
+               type="a:ObjectlocatieBinnenland"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een ObjectlocatieBinnenland is een adres binnen nederland.Een Objectlocatie Binnenland is gemodelleerd als een BAGadres.In het huidige bijhoudingsproces van de BRK worden de gegevens van een ObjectlocatieBinnenland initieel geregistreerd conform de Openbare registers. Kort daarna worden deze gegevens vervangen door de BAG-gegevens.In uitzonderlijke situaties kunnen de BAG-gegevens niet worden overgenomen. Dergelijke situatie worden teruggemeld aan de BRP.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ObjectlocatieBinnenland" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="a:_Objectlocatie">
+            <xs:sequence>
+               <xs:element name="adresgegevens" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="kimbaga-ref:NummeraanduidingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

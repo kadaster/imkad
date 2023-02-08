@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimbaga="http://www.kadaster.nl/schemas/imkad/kimbag-adres/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:kimbaga-ref="http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref/v20150201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/kimbag-adres/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/kimbag-adres</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/kimbag-adres/v20190201/IMKAD_KIMBAGAdres_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit package bevat alle klassen die behoren bij de representatie van een binnenlands adres. Dit adres is gebaseerd op het KIMBAG model.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/kimbag-adres-ref/v20150201"
+              schemaLocation="../../../imkad/kimbag-adres-ref/v20150201/IMKAD_KIMBAGAdresRef_v1_0_2.xsd"/>
+   <xs:element name="Nummeraanduiding"
+               type="kimbaga:Nummeraanduiding"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In het informatie model van de BRK heeft het Kadaster de modellering van adressen overgenomen van de BAG. Voor de BRK zijn echter de adressen in de ter inschrijving aangeboden akten leidend. Bij de registratie worden de akte adressen vergeleken met de BAG. Indien een adres overeenkomt met een BAG adres worden de BAG gegevens overgenomen. Als geen overeenkomstig BAG adres gevonden wordt, dan blijft de identificatie van de nummeraanduiding, de openbareruimte en de woonplaats leeg. Het adres is dan een Kadasteradres en geen BAG adres. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Nummeraanduiding" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="kimbaga:Objectnummering"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door Basisregistratie Adressen en Gebouwen (BAG) toegekend landelijk uniek nummer aan een object binnen registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="huisnummer" minOccurs="1" maxOccurs="1" nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In de BRK zijn er situaties waarbij het huisnummer onbekend is. </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:pattern value="[1-9][0-9]{0,4}"/>
+                  <xs:totalDigits value="5"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="huisletter" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken.(bron: https://imbag.github.io/catalogus/hoofdstukken/attributen--relaties#733-huisletter)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="[a-zA-Z]"/>
+                  <xs:maxLength value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="huisnummertoevoeging" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. (bron:https://imbag.github.io/catalogus/hoofdstukken/attributen--relaties#734-huisnummertoevoeging)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="([a-z,A-Z,0-9])+"/>
+                  <xs:maxLength value="4"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="postcode" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De door PostNL vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.(Bron: https://imbag.github.io/catalogus/hoofdstukken/attributen--relaties#735-postcode)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="[1-9][0-9][0-9][0-9][A-Z][A-Z]"/>
+                  <xs:maxLength value="6"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="inOnderzoek"
+                     type="kimbaga:Indicatie"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">InOnderzoek kan niet beschikbaar (voidable) zijn, wanneer het adres niet een BAG geregistreerd adres is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gerelateerdeOpenbareRuimte" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De unieke aanduiding van een OPENBARE RUIMTEwaaraan een adresseerbaar object is gelegen.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbaga:OpenbareRuimte" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="gerelateerdeWoonplaats" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Unieke aanduiding van de woonplaats waarbinnen hetobject waaraan de NUMMERAANDUIDING is toegekendis gelegen. Dit gegeven wordt opgenomen indien het object is gelegen in een andere woonplaats dan de openbare ruimte waaraan de nummeraanduiding is gerelateerd.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbaga:Woonplaats" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="_AdresseerbaarObject"
+               type="kimbaga:_AdresseerbaarObject"
+               abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het begrip adresseerbaarobject is onderdeel van de BAG en niet van de BRK, maar kan wanneer een adres gekoppeld is aan de BAG, in producten worden meegeleverd. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_AdresseerbaarObject" abstract="true">
+      <xs:sequence>
+         <xs:element name="nevenadres" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="kimbaga-ref:NummeraanduidingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="hoofdadres" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="kimbaga-ref:NummeraanduidingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="OpenbareRuimte"
+               type="kimbaga:OpenbareRuimte"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In het informatie model van de BRK heeft het Kadaster de modellering van adressen overgenomen van de BAG. Voor de BRK zijn echter de adressen in de ter inschrijving aangeboden akten leidend. Bij de registratie worden de akte adressen vergeleken met de BAG. Indien een adres overeenkomt met een BAG adres worden de BAG gegevens overgenomen. Als geen overeenkomstig BAG adres gevonden wordt, dan blijft de identificatie van de nummeraanduiding, de openbareruimte en de woonplaats leeg. Het adres is dan een Kadasteradres en geen BAG adres. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="OpenbareRuimte" abstract="false">
+      <xs:sequence>
+         <xs:element name="openbareRuimteNaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">OpenbareRuimteNaam is de naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit. (Bron: https://imbag.github.io/catalogus/hoofdstukken/attributen--relaties#722-naam)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="inOnderzoek"
+                     type="kimbaga:Indicatie"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">InOnderzoek kan niet beschikbaar (voidable) zijn, wanneer het adres niet een binnen BAG geregistreerd adres is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gerelateerdeWoonplaats" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Unieke aanduiding van de woonplaats waarbinnen eenOPENBARE RUIMTE is gelegen.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbaga:Woonplaats" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Standplaats" type="kimbaga:Standplaats" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het begrip standplaats is onderdeel van de BAG en niet van de BRK, maar kan wanneer een adres gekoppeld is aan de BAG, in producten worden meegeleverd. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Standplaats" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="kimbaga:_AdresseerbaarObject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="kimbaga:Objectnummering"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door Basisregistratie Adressen en Gebouwen (BAG) toegekend landelijk uniek nummer aan een object binnen registratie. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="inOnderzoek"
+                           type="kimbaga:Indicatie"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In onderzoek is een aanduiding waarmee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van een object.(Bron: https://bag.basisregistraties.overheid.nl/doc/begrip/InOnderzoek) zie ook: https://imbag.github.io/praktijkhandleiding/trefwoorden/in-onderzoek?q=in%2BOnderzoekInOnderzoek kan niet beschikbaar (voidable) zijn, wanneer het adres niet een BAG geregistreerd adres is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Ligplaats" type="kimbaga:Ligplaats" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">uri http://tax.kadaster.nl/id/begrip/LigplaatsHet begrip ligplaats is onderdeel van de BAG en niet van de BRK, maar kan wanneer een adres gekoppeld is aan de BAG, in producten worden meegeleverd. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Ligplaats" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="kimbaga:_AdresseerbaarObject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="kimbaga:Objectnummering"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door Basisregistratie Adressen en Gebouwen (BAG) toegekend landelijk uniek nummer aan een object binnen registratie. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="inOnderzoek"
+                           type="kimbaga:Indicatie"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In onderzoek is een aanduiding waarmee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van een object.(Bron: https://bag.basisregistraties.overheid.nl/doc/begrip/InOnderzoek) zie ook: https://imbag.github.io/praktijkhandleiding/trefwoorden/in-onderzoek?q=in%2BOnderzoekInOnderzoek kan niet beschikbaar (voidable) zijn, wanneer het adres niet een BAG geregistreerd adres is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Woonplaats" type="kimbaga:Woonplaats" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In het informatie model van de BRK heeft het Kadaster de modellering van adressen overgenomen van de BAG. Voor de BRK zijn echter de adressen in de ter inschrijving aangeboden akten leidend. Bij de registratie worden de akte adressen vergeleken met de BAG. Indien een adres overeenkomt met een BAG adres worden de BAG gegevens overgenomen. Als geen overeenkomstig BAG adres gevonden wordt, dan blijft de identificatie van de nummeraanduiding, de openbareruimte en de woonplaats leeg. Het adres is dan een Kadasteradres en geen BAG adres. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Woonplaats" abstract="false">
+      <xs:sequence>
+         <xs:element name="woonplaatsNaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De woonplaatsnaam is de benaming van een door het gemeentebestuur aangewezen woonplaats.(Bron: https://imbag.github.io/catalogus/hoofdstukken/attributen--relaties#712-naam)</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="inOnderzoek"
+                     type="kimbaga:Indicatie"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">InOnderzoek kan niet beschikbaar (voidable) zijn, wanneer het adres niet een binnen BAG geregistreerd adres is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Verblijfsobject"
+               type="kimbaga:Verblijfsobject"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het begrip verblijfsobject is onderdeel van de BAG en niet van de BRK, maar kan wanneer een adres gekoppeld is aan de BAG, in producten worden meegeleverd. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Verblijfsobject" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="kimbaga:_AdresseerbaarObject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="kimbaga:Objectnummering"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door Basisregistratie Adressen en Gebouwen (BAG) toegekend landelijk uniek nummer aan een object binnen registratie. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="inOnderzoek"
+                           type="kimbaga:Indicatie"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In onderzoek is een aanduiding waarmee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van een object.(Bron: https://bag.basisregistraties.overheid.nl/doc/begrip/InOnderzoek) zie ook: https://imbag.github.io/praktijkhandleiding/trefwoorden/in-onderzoek?q=in%2BOnderzoekInOnderzoek kan niet beschikbaar (voidable) zijn, wanneer het adres niet een BAG geregistreerd adres is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Objectnummering"
+               type="kimbaga:Objectnummering"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Unieke objectaanduiding binnen een gemeente, bestaande uit 16 cijfers.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:simpleType name="Objectnummering">
+      <xs:annotation>
+         <xs:documentation>This complex datatype is transformed to a simple type because a content pattern is defined.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="[0-9]{16}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Indicatie">
+      <xs:restriction base="xs:string">
+         <xs:pattern value="J|N"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

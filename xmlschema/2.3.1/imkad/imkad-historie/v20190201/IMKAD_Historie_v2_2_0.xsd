@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:h="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-historie</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-historie/v20190201/IMKAD_Historie_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit package bevat alle klassen die behoren bij de representatie van de informatie in historisch kader. Dit betreft levensduur, historie, en audit trail. </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:element name="KadasterHistorieOR"
+               type="h:KadasterHistorieOR"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">KadasterHistorie is een verzameling gegevens waarmee historie vastgelegd wordt. Historie betreft alleen voorkomens van objecten, dus het object op een bepaald moment. De historie is conform het Kadaster historiemodel.Alle datums in dit gegevensgroeptype moeten voldoen aan de datumdefinitie zoals vastgelegd in het Kadaster Historie Model: yyyy-mm-dd:hh:mm:ss.fff (datum + tijd met miliseconden). </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="KadasterHistorieOR" abstract="false">
+      <xs:sequence>
+         <xs:element name="tijdstipRegistratieOR" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het tijdstipRegistratieOR is het moment waarop de akte in het openbaar register is ingeschreven. De gegevens in de registratie (van dit voorkomen) zijn op deze akte gebaseerd.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="tijdstipVervallenOR" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de werkelijkheid is vervallen. Wanneer deze waarde niet is opgegevenis de instantie nog geldig.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="tijdstipRegistratie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de registratie is ontstaan.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="eindRegistratie" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de registratie is vervallen. Wanneer deze waarde niet is opgegeven isde instantie nog geldig.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="volgnummer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Opvolgend nummer ter identificatie van een versie indien deidentificatie van die versie niet wijzigt. Initieel heeft ditattribuut de waarde 0.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="statusHistorie"
+                     type="h:StatusHistorie"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Status geeft de status van de versie van het voorkomen aan (geldig/correctie/audit). De waarden zijn opgenomen in een waardelijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_VoorkomenOR" type="h:_VoorkomenOR" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Voorkomen is een Object in de registratie waarvan wordt bijgehouden op basis waarvan en wanneer de vastgelegde informatie is ontstaan of gewijzigd. Er wordt aangegeven op basis waarvan de informatie deze vorm heeft gekregen ("audit trail") en wanneer deze informatie ontstaan of vervallen ("historie").</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_VoorkomenOR" abstract="true">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_VoorkomenNEN3610" type="h:_VoorkomenNEN3610" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Voorkomen is een Object in de registratie waarvan wordt bijgehouden op basis waarvan en wanneer de vastgelegde informatie is ontstaan of gewijzigd. Er wordt aangegeven op basis waarvan de informatie deze vorm heeft gekregen ("audit trail") en wanneer deze informatie ontstaan of vervallen ("historie").</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_VoorkomenNEN3610" abstract="true">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieNEN3610" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="KadasterHistorieNEN3610"
+               type="h:KadasterHistorieNEN3610"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">KadasterHistorie is een verzameling gegevens waarmee historie vastgelegd wordt. Historie betreft alleen voorkomens van objecten, dus het object op een bepaald moment. De historie is conform het Kadaster historiemodel.Alle datums in dit gegevensgroeptype moeten voldoen aan de datumdefinitie zoals vastgelegd in het Kadaster Historie Model: yyyy-mm-dd:hh:mm:ss.fff (datum + tijd met miliseconden). </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="KadasterHistorieNEN3610" abstract="false">
+      <xs:sequence>
+         <xs:element name="beginGeldigheid" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de werkelijkheid is ontstaan.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="eindGeldigheid" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de werkelijkheid is vervallen. Wanneer deze waarde niet is opgegeven is de instantie nog geldig.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="tijdstipRegistratie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de registratie is ontstaan.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="eindRegistratie" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het moment waarop het voorkomen in de registratie is vervallen. Wanneer deze waarde niet is opgegeven is de instantie nog geldig.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:dateTime">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="volgnummer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Opvolgend nummer ter identificatie van een versie indien deidentificatie van die versie niet wijzigt. Initieel heeft ditattribuut de waarde 0.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="statusHistorie"
+                     type="h:StatusHistorie"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Status geeft de status van de versie van het voorkomen aan (geldig/correctie/audit). De waarden zijn opgenomen in een waardelijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="StatusHistorie" type="h:StatusHistorie" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/StatusHistorie</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="StatusHistorie" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

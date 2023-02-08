@@ -1,0 +1,404 @@
+"Code","Waarde","DatumVanaf","DatumTot","Toelichting"
+"001","Akte van Koop en Verkoop","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"002","Akte van Ruiling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"003","Akte van Scheiding onverdeeldheid","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"004","Akte van Scheiding huwelijksgoederengemeenschap","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"005","Akte van Schenking","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"006","Akte van Inbreng","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"007","Akte van Vestiging zakelijk recht van Erfpacht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"008","Akte van Vestiging zakelijk recht van Opstal","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"009","Akte van Vestiging zakelijk recht van Vruchtgebruik","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"010","Akte van Vestiging zakelijk recht van B.P.art.5, lid 3, letter B","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"011","Akte van Vestiging zakelijk recht van Gebruik en Bewoning","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"012","Akte van Vestiging zakelijk recht overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"013","Akte van Grensregeling of Dading","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"014","Akte van Vestiging Erfdienstbaarheden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"015","Akte van Huurkoop","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"016","Akte c.q. vonnis van Ontbinding Koopovereenkomst","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"017","Akte van Ontbinding m.b.t. Rechtspersoon/niet Rechts-persoon","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"018","Akte van Algemene Voorwaarden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"019","Akte van Algemene Veilingsvoorwaarden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"020","Akte van Consessie","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"021","Akte van Publieke Verkoop (provisioneel)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"022","Akte van Publieke Verkoop op vrijwillige basis (definitief)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"023","Akte van Publieke Verkoop op grond van art. 1223 B.W. (definitief)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"024","Akte van Bekrachting","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"025","Akte van Splitsing in Appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"026","Akte van Ondersplitsing in Appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"027","Akte van Wijziging Splitsing in Appartementsrechten m.b.t. Appartementen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"028","Akte van Wijziging Splitsing in Appartementsrechten m.b.t. Reglement","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"029","Akte van Wijziging Ondersplitsing in Appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"030","Akte van Opheffing Splitsing in Appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"031","Akte van Opheffing Ondersplitsing in Appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"032","Akte van Wijziging Splitsing in Appartementsrechten m.b.t. Onttrekken Grondperceel","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"033","Akte van Wijziging Splitsing in Appartementsrechten m.b.t. Toevoegen Grondperceel","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"034","Akte van Verkrijging onder Opschortende Voorwaarde","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"035","Akte van Vervulling Opschortende Voorwaarde","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"036","Akte van Vervulling Ontbindende Voorwaarde","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"037","Akte of Verklaring dat Opschortende Voorwaarde niet meer vervuld kan worden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"038","Akte of Verklaring dat Ontbindende Voorwaarde niet meer vervuld kan worden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"039","Akte gebruikmaking van het ""voorbehouden"" recht van Wederinkoop","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"040","Akte Afkoop Grondrente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"041","Stuk brengen percelen onder de Monumentenwet","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"042","Stuk brengen percelen onder de Natuurmonumentenwet","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"043","Stuk brengen percelen onder de Deltawet","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"044","Stuk opleggen van een B.P. gedoogplicht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"045","Stuk opleggen van een B.L. gedoogplicht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"046","Vonnis van Toewijzing","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"047","Eenzijdige verklaring van eigendomsovergang door verjaring","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"048","Akte van Scheiding ingev. art. 126 IKR","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"049","Tweezijdige verklaring van eigendomsovergang door verjaring","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"050","Eenzijdige afstand (beperkt) zakelijk recht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"051","Vervallen verklaring (beperkt) zakelijk recht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"052","Tweezijdige afstand zakelijk recht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"053","Vonnis van Onteigening","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"054","Voorlopig Koopcontract","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"055","Akte Kwitantie betaalde kooppenningen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"056","Akte Splitsing erfpachtscanon","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"057","Akte Naamswijziging rechtspersoon","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"058","Akte besluit G.S. betreffende wegen en waterlopen of afschrift van een K.B.","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"059","Akte Ruilverkavelingsovereenkomst c.q. overeenkomst van kavelruil","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"060","Akte verklaring koper het verkregene zelf te behouden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"061","Akte bijdrage ineens aan vermelde eigenaren","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"062","Stuk verstrekking van een lening krachtens wet Bezitsvormingsfonds aan vermelde eigenaren","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"063","Stuk aanbrengen beperkende bepaling op zakelijk recht overig","2011-01-01","2014-03-01","tbv migratie/conversie AKR"
+"064","Stuk doorhaling beperkende bepaling op zak. recht overig (géén overboeking)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"065","Stuk doorhaling beperkende bepaling op zak. recht overig (wel overboeking)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"066","Bezwaarschrift tegen overboeking binnen de gestelde bezwaartermijn","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"067","Bezwaarschrift tegen overboeking na de gestelde bezwaartermijn","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"068","Verklaring van geen bezwaar binnen de gegeven bezwaartermijn","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"069","Stuk n.a.v. niet indienen van bezwaarschrift binnen de gegeven bezwaartermijn","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"070","Opgave % water t.b.v. domeinen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"071","Beheersoverdracht i.o.v. de domeinbeheerder","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"072","Beheersoverdracht i.o.v. de direkteur van het Staatsbosbeheer","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"073","Opgave wijziging RVK-rente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"074","Opgave wijziging HVK-rente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"075","Opgave vervallen RVK-rente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"076","Opgave vervallen HVK-rente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"077","Beschikking dat percelen onder de Natuurschoonwet vallen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"078","Beschikking dat percelen onder de Natuurschoonwet vallen en voor publiek zijn opengesteld","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"079","Verklaring dat geen nieuwe beschikking van de Natuurschoonwet nodig is","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"080","Besluit dat nieuwe beschikking van de Natuurschoonwet nodig is","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"081","Stuk indien géén verzoek is ingediend binnen één jaar om de percelen onder de Natuurschoonwet 1928 te brengen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"082","Verzoek nieuwe beschikking om plaatsing onder de Natuurschoonwet 1928 afgewezen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"083","Besluit dat percelen niet langer onder de Natuurschoonwet 1928 vallen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"084","Mededeling dir. der Rijksbelastingen dat percelen niet meer onder de Natuurschoonwet 1928 vallen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"085","Verzoekschrift wijziging primitieve tenaamstelling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"086","Verzoekschrift om percelen op naam van de vrouw te plaatsen i.v.m. boeking verricht voor 1-1-1957","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"087","Verzoekschrift om percelen op naam van de andere echtgenoot te plaatsen i.v.m. overgang bestuursbevoegdheid","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"088","Verzoekschrift het bestaan van huwelijkse voorwaarden aan te tekenen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"089","Verzoekschrift verandering geslachtsnaam","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"090","Verzoekschrift verandering voornaam","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"091","Mededeling omtrent tenaamstelling onroerend goed van de Staat","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"092","Stuk m.b.t. ingeven subjekt NNP overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"093","Mededeling m.b.t. (aandringen op) rektifikatie","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"094","Interne opgave nav grensregeling of dading dat de rechtstoestand niet is gewijzigd, geen meting vereist","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"095","Interne opgave nav grensregeling of dading dat de rechtstoestand is gewijzigd, geen meting vereist","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"096","Interne opgave nav van grensregeling of dading dat de perceelstoestand is gewijzigd, meting vereist.","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"097","Stuk aanbrengen beperkende bepaling op perceel overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"098","Stuk doorhaling beperkende bepaling op perceel overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"099","Aantekening Verzekeringskamer (model II)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"100","Aantekening machtiging Verzekeringskamer om te vervreemden (model III)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"101","Aantekening machtiging Verzekeringskamer om te bezwaren (model III)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"102","Aantekening machtiging Verzekeringskamer om te verhuren met beding (model III)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"103","Aantekening machtiging Verzekeringskamer om te verhuren met tijdslimiet (model III)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"104","Aantekening machtiging Verzekeringskamer om te verpachten met beding (model III)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"105","Aantekening Verzekeringskamer vervalt (model IV)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"106","Mededeling L.B.D. dat t.a.v. in één reg. 9 post voorkomende percelen géén meting is vereist","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"107","Metingstaat KAD 75 m.b.t. vernummering (matrix)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"108","Aantekening tot vastlegging vordering huurkoopovereenkomst","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"109","Stuk aanbrengen zakelijk recht op perceel overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"110","Mededeling L.B.D. tot wijziging tenaamstelling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"111","Mededeling invoeren bijzondere belastingplichtige","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"112","Stuk adreswijziging G.B.21A","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"113","Stuk adreswijziging overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"114","Opgave wijziging grootte","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"115","Opgave wijziging blad, letter en ruit","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"116","Stuk aanbrengen perceelsgegeven overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"117","Stuk wijziging perceelsgegeven overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"118","Stuk vervallen perceelsgegeven overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"119","Stuk aanbrengen subjektgegeven overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"120","Stuk wijziging subjektgegeven overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"121","Stuk vervallen subjektgegeven overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"122","Stuk splitsen zakelijk recht op perceel","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"123","Stuk verenigen zakelijk recht op perceel","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"124","Appartementsstaat mbt voorgenomen splitsing in appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"125","Appartementsstaat mbt aanbrengen cq doorhalen wijziging voorgenomen splitsing in app rechten vwb grondperceel","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"126","Appartementsstaat mbt aanbrengen cq doorhalen wijziging voorgenomen splitsing in app rechten vwb appartementen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"127","Appartementsstaat mbt voorgenomen ondersplitsing in appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"128","Appartementsstaat m.b.t. aanbrengen c.q. doorhalen wijziging voorgenomen ondersplitsing in appt. rechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"129","Appartementsstaat m.b.t. voorgenomen wijziging v.w.b. de appartementsindeling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"130","Appartementsstaat mbt aanbrengen cq doorhalen wijziging voorgenomen wijziging vwb de appartementsindeling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"131","Register Registratie nr. 51","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"132","Verklaring van Erfrecht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"133","Stuk vervallen erfdienstbaarheden","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"134","Appartementsstaat m.b.t. doorhalen voorgenomen splitsing","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"135","Appartementsstaat m.b.t. doorhalen voorgenomen ondersplitsing","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"136","Appartementsstaat m.b.t. doorhalen voorgenomen wijziging","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"137","Akte van rektifikatie","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"138","Stuk eindigen tijdelijk verleend zakelijk recht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"139","Stuk vervallen tijdelijk opgelegde gedogensverplichting","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"140","Opgave van opnieuw berekende RVK-rente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"141","Opgave van opnieuw berekende HVK-rente","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"142","Vonnis of arrest houdende schriftelijke vastlegging van de huurkoopovereenkomst","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"143","Stuk verlening goedkeuring G.S. aan vermogensrechtelijke besluiten van gemeentebesturen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"144","Stuk géén verlening goedkeuring G.S. aan vermogensrechtelijke besluiten van gemeentebesturen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"145","Redresstuk","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"146","Stuk welk niet c.q. nog niet toepasbaar is","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"147","Ambtelijk stuk overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"148","Stuk inhoudende een overgeschreven losse tekening","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"149","Akte Afgifte Legaat","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"150","Akte de Command","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"151","Stuk aanbrengen/doorhalen stuk relatie overig","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"152","Stuk inhoudende een verplichting tot aanbrengen van verbeteringen aan de woning (woningwet)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"153","Mededeling dat aan verplichtingen tot aanbrengen van verbeteringen aan de woning (Woningwet) is voldaan","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"154","Besluit dat verplichting tot aanbrengen van verbeteringen aan betreffende woning (Woningwet) vervalt","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"155","Besluit inzake een ingesteld beroep tegen een aanschrijving, bedoeld in art.28, lid 1 en art.46E (Woningwet)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"156","Stuk m.b.t. vereniging van subjekten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"157","Stuk m.b.t. splitsing van subjekten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"158","Stuk m.b.t. wijziging schaprelatie","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"159","Stuk inhoudende een bouwvergunning","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"160","Aanvraag voorlopige oude stand","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"161","Akte van overdracht om niet","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"162","Leggerartikelkonversie","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"163","Akte van aanvulling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"164","Akte van wijziging beperkt zakelijk recht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"165","Besluit of voorstel dat percelen zijn aangewezen als gronden conform Wet Voorkeursrecht Gemeenten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"166","Mededeling van het vervallen van de aanwijzing konform Wet Voorkeursrecht Gemeenten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"167","Akte van toedeling van ruilverkaveling c.q. kavelruil","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"168","Akte van toedeling van ruilverkaveling c.q. kavelruil (uitsluitend t.b.v. batchverwerking)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"169","Akte van verkrijging door een NNP in oprichting","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"170","Akte van wijziging erfpachtscanon","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"171","Stuk uit- en/of toetreden groepslid","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"172","Aanbr/doorh recht van opstal mbt het leggen/ houden van leidingen cq recht van BP ingev art. 5, lid 3 letter B","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"173","Beklemrelaties","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"174","Metingstaat KAD75 m.b.t. vernummering (matrix) uitsluitend t.b.v. batchverwerking.","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"175","Onroerend goed onder bewind gesteld","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"176","Toepassing stuk Hyp.nr. 2Bis","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"177","Aanbrengen/doorhalen aantekening bij perceel t.b.v. VRL","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"179","Toevoegen titels met behulp van Tr. 34","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"180","Faillietverklaring","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"181","Toestemming bedoeld in de art 42 en 50 Boek 5 BW, om een boom, venster, enz. binnen verboden afstand te hebben","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"182","Afwijkende regeling betreffende onderhoud van niet bevaarbare sloot, gracht enz, bedoeld in art 59, boek 5, BW","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"183","Stuk betreffende bedingen inzake een kwalitatieve verbintenis (iets dulden of iets niet doen)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"184","Instelling rechtsvordering of de indiening van een verzoekschr ter verkrijging van een rechterlijke uitspraak","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"185","Instelling van een rechtsmiddel tegen een rechterlijke uitspraak","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"186","Gedoogverpl.tbv het bepalen van luchtverontreiniging bedoeld in art 60 wet inzake luchtverontreiniging","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"187","Gedoogverplichting als bedoeld in art. 164 van de Wet geluidhinder ten behoeve van geluidmetingen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"188","Verbod als bedoeld in art 38, Luchtvaartwet, inzake opstallen e.d. binnen een verboden afstand of hoogte","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"189","Schuldplichtigheid als bedoeld in art. 7, achtste lid, van de Deltawet","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"190","Bevel inzake beschikbaar blijven goederen in buitengewone omstandigheden (art. 2, lid 6, Wet van 10 juli 1952)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"191","Verzoek om algehele vergoeding in geld, bedoeld in art. 18, lid 1( reconstructiewet midden-delfland)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"192","Afwijkingen tussen de lijst van rechthebbenden (o.m. bedoeld in art. 188 LI-wet) en de kad registratie","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"193","Stuk mbt een rechterlijke uitspraak die de bevoegdheid om te beschikken over onroerende goederen betreft","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"194","Uiterste wilsbeschikking","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"195","Stuk betreffende afstand van een huwelijksgemeenschap","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"196","Verschijning onzeker tijdstip, aangeduid in de aan een ingeschreven rechtshande- ling verbonden tijdsbepaling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"197","Verklaring waardeloosheid/Verklaring tenietgaan of afstand beperkte rechten/Vernietiging rechtshandeling","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"198","Stuk betreffende de bestemming van een onroerend goed tot gemeenschapp nut ivm mandeligheid (art. 1, Boek 5, BW)","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"199","Afstand van verjaring door een bezitter te kwader trouw","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"200","Regeling rechter, inhoudende verdeling van de onderhoudskosten van werken/instal-  laties bij appartementsrechten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"201","Stuk betreffende een fusie/splitsing van rechtspersonen","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"202","Vernieuwing","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"203","stuk betreffende aanvaarding nalatenschap onder voorrecht van boedelbeschrijving of de verwerping nalatenschap","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"204","Stuk, waarin woonplaats is gekozen, dan wel een stuk waarin een gekozen woonplaats is veranderd opf opgeheven","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"205","Voorlopige aantekening","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"206","Stuk betreffende Milieuwetgeving","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"207","Conversie Maat- en Vennootschappen naar Maten en Vennoten","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"208","Aanbrengen/doorhalen aantekening bij perceel t.b.v. WKPB","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"209","Stuk aanbrengen koopovereenkomst BW en WVG","2014-03-01","2018-09-01","tbv migratie/conversie AKR"
+"210","Stuk aanbrengen koop, zie art. 7:3 BW","2014-03-01","2018-09-01","tbv migratie/conversie AKR"
+"211","Stuk Koop of voorovereenkomst zie art. 10 WVG","2014-03-01","2018-09-01","tbv migratie/conversie AKR"
+"301","Overdracht onder voorbehoud zakelijk recht","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"400","Vestiging bij","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"401","Vervallen bij","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"402","Niet toepassing","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"403","Raadpleeg brondocument","2011-01-01","2018-09-01","tbv migratie/conversie AKR"
+"404","Perceelsvlakmutatie","2011-01-01","2018-09-01",
+"405","Perceelsvorming","2011-01-01","2018-09-01",
+"501","overig aan te tekenen stuk (beëindigen)","2015-12-26",,"Wordt 636, 640"
+"502","afbouw schip (verklaring van)","2016-01-01",,
+"503","afstand huwelijksgemeenschap","2016-01-01",,
+"504","algemene voorwaarden","2016-01-01",,"Algemene voorwaarden (ontstaan)"
+"505","appartementsrechtsplitsing (ontstaan)","2016-01-01","2018-09-01","Splitsing, afkoop erfpacht, wordt 616, 617"
+"506","appartementsrechtsplitsing (opheffing)","2016-01-01","2018-09-01","Wordt 620, 621"
+"507","appartementsrechtsplitsing (wijzigen)","2016-01-01","2016-05-01",
+"508","beheeroverdracht","2016-01-01",,
+"509","bekrachtiging","2016-01-01",,
+"510","beperking op basis van een overheidsbesluit (doorhaling)","2016-01-01",,
+"511","beperking op basis van een overheidsbesluit (handhaving)","2016-01-01",,
+"512","beperking op basis van een overheidsbesluit (vestiging)","2016-01-01",,"Incl. bevel beschikbaar blijven van goederen in buitengewone omstandigheden (Wet beschikbaarheid goederen,  artikel 2 lid 6)"
+"513","beperking op basis van een overheidsbesluit (wijziging)","2016-01-01",,
+"514","beperkt recht (beëindiging)","2016-01-01","2018-09-01","Wordt 629, 632, 633, 634"
+"515","beperkt recht (vestiging)","2016-01-01","2018-09-01","Wordt 609, 610, 611, 612, 613, 614, 644"
+"516","beperkt recht (wijziging voorwaarden)","2016-01-01",,
+"517","beslag","2016-01-01",,
+"518","beslag (doorhaling)","2016-01-01",,
+"519","beslag (omzetting)","2016-01-01",,
+"520","bevel beschikbaar blijven van goederen in buitengewone omstandigheden (Wet beschikbaarheid goederen,  artikel 2 lid 6)","2016-01-01","2016-05-01",
+"521","bewaardersverklaring","2016-01-01",,
+"522","bewijs van doorhaling buitenland","2016-01-01",,
+"523","burenrecht","2016-01-01","2018-09-01","Wordt 647, 648"
+"524","cessie","2016-01-01",,
+"525","conversie","2016-01-01","2017-10-02","Conversie kadasterstuk"
+"526","herstel BRK","2016-01-01",,
+"527","erfpachtcanon (wijziging)","2016-01-01",,
+"528","faillietverklaring","2016-01-01","2016-05-01",
+"529","fusie","2016-01-01",,
+"530","gekozen woonplaats (wijziging)","2016-01-01",,
+"531","gemeentelijke herindeling","2016-01-01",,
+"532","aanvullende akte","2016-01-01",,
+"533","herverkaveling (wettelijk)","2016-01-01",,
+"534","huurkoop","2016-01-01",,
+"535","huurkoop (overeenkomst)","2016-01-01",,
+"536","huwelijkse voorwaarden","2016-01-01",,
+"537","hypotheek","2016-01-01",,
+"538","hypotheek (doorhaling)","2016-01-01",,"Gehele of Gedeeltelijke doorhaling"
+"539","hypotheek (wijziging)","2016-01-01",,"Ged. doorhaling hoofdsom, hypotheekhouder of  hypotheekgever"
+"540","kavelruil","2016-01-01",,
+"541","kavelruil overeenkomst","2016-01-01",,
+"542","kavelruil overeenkomst (beëindiging)","2016-01-01",,
+"543","koopovereenkomst (beëindiging)","2016-01-01",,
+"544","koopovereenkomst (opvoeren)","2016-01-01","2018-09-01","Wordt 651, 652, 653"
+"545","stuk betreffende kwalitatieve verplichting","2016-01-01",,"Ontstaan of Beëindiging"
+"546","mandeligheid (beëindiging)","2016-01-01",,
+"547","mandeligheid (ontstaan)","2016-01-01",,
+"548","melding authentieke gegevens","2016-01-01",,
+"549","naamswijziging persoon","2016-01-01","2018-09-01","Wordt 635, 637, 638"
+"550","onderbewindstelling (algeheel)","2016-01-01","2016-05-01",
+"551","onderbewindstelling (beperkt)","2016-01-01","2016-05-01",
+"552","onder curatelestelling","2016-01-01","2016-05-01",
+"553","overdracht naar aanleiding van ontbinding rechtspersoon","2016-01-01",,
+"554","onteigening","2016-01-01",,
+"555","overdracht (eigendom en/of beperkt recht)","2016-01-01","2018-09-01","Wordt 606, 607, 608, 641, 642"
+"556","overdracht (eigendom en/of beperkt recht) onder voorbehoud zakelijk recht","2016-01-01",,
+"557","POS (Intern stuk)","2016-01-01","2018-09-01",
+"558","perceelsplitsing","2016-01-01",,
+"559","perceelvereniging","2016-01-01",,
+"560","rangwisseling","2016-01-01",,
+"561","rechterlijke uitspraak","2016-01-01",,
+"562","instelling rechtsmiddel","2016-01-01",,
+"563","instelling rechtsvordering","2016-01-01",,
+"564","verbetering","2016-01-01",,
+"565","inbreng in of ontbinding van personenvennootschap","2016-01-01",,
+"566","registratie eigendom netwerk","2016-01-01",,
+"567","registratie eigendom netwerk (beëindiging)","2016-01-01",,
+"568","registreren oud vaderlands recht","2016-01-01",,
+"569","reglement mede-eigenaren","2016-01-01",,
+"570","relaas van branding","2016-01-01",,
+"571","schuldsanering natuurlijke personen","2016-01-01","2016-05-01",
+"572","stuk betreffende erfdienstbaarheden","2016-01-01",,
+"573","subrogatie","2016-01-01",,
+"574","surseance van betaling","2016-01-01","2016-05-01",
+"575","teboekstelling","2016-01-01",,
+"576","teboekstelling (doorhaling)","2016-01-01",,
+"577","teboekstelling (wijziging)","2016-01-01",,
+"578","uittreksel boedelregister (wijze van aanvaarding/ verwerping)","2016-01-01",,
+"579","verdeling van gemeenschap (erfgenamen)","2016-01-01",,
+"580","verdeling van gemeenschap (gezamenlijk rechthebbenden)","2016-01-01",,
+"581","verdeling van gemeenschap (huwelijk / geregistreerd partnerschap)","2016-01-01",,
+"582","verdeling van gemeenschap (huwelijk)","2016-01-01","2016-05-01",
+"583","openbare verkoop (onvrijwillig)","2016-01-01",,
+"584","verjaring","2016-01-01","2018-09-01","Eigendom of bestaande beperkt recht; nieuwe erfdienstbaarheid, wordt 630, 631"
+"585","verklaring van erfrecht","2016-01-01",,
+"586","verkrijging onder ontbindende voorwaarde","2016-01-01","2018-09-01",
+"587","vernieuwing","2016-01-01",,
+"588","vaststellingsovereenkomst","2016-01-01",,
+"589","voorovereenkomst tot koop art 10 WVG","2016-01-01","2018-09-01","Wordt 651, 652, 653"
+"590","voorwaarde vervulling / tijdsbepaling","2016-01-01","2018-09-01","Vervulling opschortende voorwaarde / opschortende tijdsbepaling; vervulling ontbindende voorwaarde / ontbindende tijdsbepaling, wordt 625, 626, 627, 628, 650"
+"591","waardeloosheid (verklaring van)","2016-01-01",,
+"592","wijziging persoonsgegevens","2016-01-01",,
+"593","overig bij object aan te tekenen stuk (ontstaan)","2016-01-01",,
+"594","beperking beschikkingsbevoegdheid","2016-01-01","2018-09-01","Algeheel; beperkt tot registergoederen, wordt 645, 646, 649"
+"595","beperking beschikkingsbevoegdheid opheffen","2016-01-01",,"Algeheel of beperkt tot registergoederen"
+"596","dwaling omtrent grensaanwijs","2016-01-01",,
+"597","omzetting rechtspersoon","2016-01-01",,
+"598","splitsen rechtspersoon","2016-01-01",,
+"599","appartementsrechtsplitsing (wijzigen grondperceel)","2016-01-01","2018-09-01","Wordt 622, 623"
+"600","appartementsrechtsplitsing (wijzigen appartementindices)","2016-01-01","2018-09-01","Wordt 618, 619"
+"601","appartementsrechtsplitsing (wijzigen reglement / voorwaarden)","2016-01-01",,
+"602","verkrijging onder opschortende voorwaarde","2016-01-01","2018-09-01","Wordt 624, 643"
+"603","herstel Openbare registers","2016-01-01",,
+"604","mandeligheid (wijziging)","2016-01-01",,
+"605","kadastrale meetpost","2016-01-01",,
+"606","overdracht (eigendom en/of beperkt recht)","2016-01-01",,
+"607","ruiling","2016-01-01",,
+"608","schenking","2016-01-01",,
+"609","vestiging zakelijk recht van erfpacht","2016-01-01",,
+"610","vestiging zakelijk recht van opstal","2016-01-01",,
+"611","vestiging zakelijk recht van vruchtgebruik","2016-01-01",,
+"613","vestiging zakelijk recht van gebruik en bewoning","2016-01-01",,
+"614","vestiging zakelijk recht overig","2016-01-01",,
+"616","splitsing in appartementsrechten","2016-01-01",," "
+"617","ondersplitsing in appartementsrechten","2016-01-01",,
+"618","wijziging splitsing m.b.t. appartementindices","2016-01-01",,
+"619","wijziging ondersplitsing m.b.t. appartementindices","2016-01-01",,
+"620","opheffing splitsing in appartementsrechten","2016-01-01",,
+"621","opheffing ondersplitsing in appartementsrechten","2016-01-01",,
+"622","wijziging splitsing m.b.t. onttrekken grondperceel","2016-01-01",,
+"623","wijziging splitsing m.b.t. toevoegen grondperceel","2016-01-01",,
+"625","vervulling opschortende voorwaarde","2016-01-01",,
+"626","vervulling ontbindende voorwaarde (overdracht)","2016-01-01",,
+"627","stuk vervallen opschortende voorwaarde","2016-01-01",,
+"628","stuk vervallen ontbindende voorwaarde","2016-01-01",,
+"629","afkoop grondrente","2016-01-01",,
+"630","verjaring (betwist)","2016-01-01",,
+"631","verjaring (niet betwist)","2016-01-01",,
+"632","opzegging beperkt zakelijk recht","2016-01-01",,
+"633","vervallen verklaring beperkt zakelijk recht","2016-01-01",,
+"634","afstand beperkt zakelijk recht","2016-01-01",,
+"635","naamswijziging rechtspersoon","2016-01-01",,
+"636","doorhaling overig aan te tekenen stuk","2016-01-01",,
+"637","verandering geslachtsnaam","2016-01-01",,
+"638","verandering voornaam","2016-01-01",,
+"641","afgifte legaat","2016-01-01",,
+"642","overdracht om niet","2016-01-01",,
+"643","verkrijging door een rechtspersoon in oprichting","2016-01-01",,
+"644","vestiging zakelijk recht van opstal nutsvoorzieningen","2016-01-01",,
+"645","beperking beschikkingsbevoegdheid m.b.t. onroerend goed","2016-01-01",,
+"646","faillietverklaring","2016-01-01",,
+"647","toestemming voor een boom, venster, enz. binnen verboden afstand","2016-01-01",,
+"648","afwijkende regeling onderhoud niet bevaarbare sloot, gracht, enz.","2016-01-01",,
+"649","stuk m.b.t. beperking beschikkingsbevoegdheid","2016-01-01",,
+"650","verschijning onzeker tijdstip (art. 30 KW)","2016-01-01","2018-03-19",
+"651","koopovereenkomst, art. 7:3 BW en 10 WVG","2016-01-01",,
+"652","koopovereenkomst, art. 7:3 BW","2016-01-01",,
+"653","koopovereenkomst of voorovereenkomst koop, art. 10 WVG","2016-01-01",,
+"654","stuk betreffende landinrichtingsrente","2016-01-01",,
+"655","spiegelsplitsing t.b.v. afkoop erfpacht","2016-01-01",," "
+"656","overig bij tenaamstelling aan te tekenen stuk (ontstaan)","2016-01-01",,
+"657","overig bij zekerheidsstelling aan te tekenen stuk (ontstaan)","2016-01-01",,
+"658","vervulling ontbindende voorwaarde (vestiging beperkt recht)","2016-01-01",,
+"659","openbare verkoop (vrijwillig)","2016-01-01",,
+"660","beslag (wijziging)","2016-01-01",,
+"661","registratie eigendom netwerk (wijziging)","2016-01-01",,
+"662","verticale splitsing erfpacht","2016-01-01",,
+"663","beperkt recht (wijziging einddatum)","2016-01-01",,
+"664","inschrijving gemeenschap van goederen","2016-01-01",,
+"665","privatieve last","2016-01-01",,
+"666","wijziging burgerlijke staat","2016-01-01",,
+"667","uitoefening retentierecht","2016-01-01",,
+"668","wet geluidshinder","2016-01-01",,
+"669","afstand of vermenging na afkoop erfpachtrecht","2016-01-01",,
+"670","dwaling (overig)","2016-01-01",,
+"671","vermenging","2016-01-01",,
+"672","attendering verwerkt stuk","2016-01-01",,
+"673","migratie Koers","2016-01-01","2017-10-02","Generiek stukdeel voor migratie van AKR-mutatiesoort"
+"674","vereniging erfpacht","2016-01-01",,
+"675","verklaring van waardeloosheid van een gedeelte van een inschrijving","2016-01-01",,
+"676","toelichting bewaarder","2016-01-01",,
+"677","schenking onder voorbehoud van","2016-01-01",,
+"678","verdeling van gemeenschap onder voorbehoud van","2016-01-01",,
+"679","onderzoek publiekrechtelijke beperking beëindigen","2016-01-01",,
+"680","wijzigen objectadressen","2016-01-01",,
+"681","echtscheiding","2016-01-01",,
+"682","heruitgifte beperkt recht","2016-01-01",,
+"683","overgang i.v.m. gemeentelijke herindeling","2018-11-15",,
+"684","claim op netwerk","2018-11-15",,
+"685","ambtshalve wijziging einddatum publiekrechtelijke beperking","2019-11-11","2019-11-11","voor BRK-PB wijzigingen die zonder tia-stuk worden uitgevoerd. Deze code is onnodig gebleken."
+"686","ambtshalve wijziging werkingsgebied publiekrechtelijke beperking","2019-11-11",,"voor BRK-PB wijzigingen die door het bevoegd gezag zonder tia-stuk worden uitgevoerd."
+"687","correctie publiekrechtelijke beperking ","2019-11-11",,"voor correcties in de BRK-PB die zonder tia-stuk worden uitgevoerd."
+"688","verenigen personen","2020-04-06",,
+"689","externe wijziging werkingsgebied publiekrechtelijke beperking","2020-08-01",,"voor BRK-PB wijzigingen die automatisch door wijzigingen in de basisregistraties op het werkingsgebied zonder tia-stuk worden doorgevoerd."
+"690","beperking op basis van een overheidsbesluit (herroeping)","2020-08-01",,"omvat ook vernietigen en intrekken van een beperkingsbesluit. Zie voor de andere varianten codes 510 t/m 513."
+"691","aanpassing meettarief verschuldigd","2020-12-16",,

@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:r="http://www.kadaster.nl/schemas/imkad/imkad-recht/v20190701"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:h="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+           xmlns:s-ref="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+           xmlns:r-ref="http://www.kadaster.nl/schemas/imkad/imkad-recht-ref/v20160901"
+           xmlns:ko-ref="http://www.kadaster.nl/schemas/imkad/imkad-kadastraalobject-ref/v20190201"
+           xmlns:oz-ref="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+           xmlns:tz-ref="http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak-ref/v20120508"
+           xmlns:p-ref="http://www.kadaster.nl/schemas/imkad/imkad-persoon-ref/v20120508"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/imkad-recht/v20190701"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.1-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/imkad-recht</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190701</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/imkad-recht/v20190701/IMKAD_Recht_v2_2_1.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit package bevat alle klassen die behoren bij de representatie van zakelijke rechten.</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="../../../gml/3.2.1/gml.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-historie/v20190201"
+              schemaLocation="../../../imkad/imkad-historie/v20190201/IMKAD_Historie_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-stuk-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-stuk-ref/v20120508/IMKAD_StukRef_v1_6_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-recht-ref/v20160901"
+              schemaLocation="../../../imkad/imkad-recht-ref/v20160901/IMKAD_RechtRef_v1_6_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-kadastraalobject-ref/v20190201"
+              schemaLocation="../../../imkad/imkad-kadastraalobject-ref/v20190201/IMKAD_KadastraalObjectRef_v2_2_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-onroerendezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-onroerendezaak-ref/v20120508/IMKAD_OnroerendeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-teboekgesteldezaak-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-teboekgesteldezaak-ref/v20120508/IMKAD_TeboekgesteldeZaakRef_v1_5_0.xsd"/>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-persoon-ref/v20120508"
+              schemaLocation="../../../imkad/imkad-persoon-ref/v20120508/IMKAD_PersoonRef_v1_5_0.xsd"/>
+   <xs:element name="Erfpachtcanon" type="r:Erfpachtcanon" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Erfpachtcanon is een geldsom die de erfpachter verplicht is om aan de eigenaar te betalen, op al dan niet regelmatig terugkerende tijdstippen. ( https://tax.kadaster.nl/doc/begrip/Erfpachtcanon) </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Erfpachtcanon" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="soort"
+                     type="r:SoortErfpachtcanon"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Erfpachtcanon.Soort is een nadere aanduiding van de erfpachtcanon. We onderkennen de volgende soorten erfpachtcanon * Eeuwigdurend afgekocht* Afgekocht tot* Variabel bedrag* Jaarlijks bedrag</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="jaarlijksBedrag"
+                     type="r:JaarlijksBedrag"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Jaarlijksbedrag is het bedrag dat jaarlijks als erpachtcanon moet worden betaald.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einddatumAfkoop"
+                     type="xs:date"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation"> Dit is niet hetzelfde als de historievelden in Voorkomen. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="indicatieOudeOnroerendeZaakBetrokken"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Met deze indicatie wordt aangegeven dat de erfpacht oorspronkelijk gevestigd is bij een perceel dat later is verenigd met een ander perceel. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="betreft" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:ZakelijkRechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="_Zekerheidsstelling"
+               type="r:_Zekerheidsstelling"
+               abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een zekerheidsstelling is een hypotheek of een beslagEen zekerheidsstelling betreft een:* hypothecaire zekerheid, ter zekerheid van een geldlening of krediet.* maatregel ter zekerheid van een geldvordering.De zekerheidsstelling geeft aan op welk kadastraal object de zekerheidsstelling rust en welke tenaamstelling (het tenaamgestelde zakelijk recht) van dat kadastraal object wordt bezwaard. Ook wordt verwezen naar de betrokken hypotheekhouders c.q. beslagleggers.Indicatie omvang:Initieel 4.600.000</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_Zekerheidsstelling" abstract="true">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door het Kadaster toegekend landelijk uniek nummer aan een object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="omschrijvingBetrokkenRecht"
+                     type="r:BetrokkenRecht"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="aandeelInBetrokkenRecht"
+                     type="r:TypeBreuk"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Aandeel in betrokken recht geeft aan dat het zekerheidsrecht betrekking op een aandeel in het betrokken recht, waaraan wordt gerefereerd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gedeeltelijkeBezwaringOudObject"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gedeeltelijke bezwaring oud object is een indicator dat een zekerheidsstelling gedeeltelijk op een inmiddels vervallen Kadastraal Object rust. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="toelichtingBewaarder" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Toelichting bewaarder is een toelichtende tekst die de bewaarder vermeld wil hebben bij de zekerheidsstelling.De toelichting bewaarder wordt alleen in zeer uitzonderlijke gevallen gebruikt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S[\s\S.]*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="bezwaart" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:TenaamstellingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="rustOpObject" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="ko-ref:_KadastraalObjectRef"/>
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+                  <xs:element ref="tz-ref:_TeboekgesteldeZaakRef"/>
+                  <xs:element ref="tz-ref:SchipRef"/>
+                  <xs:element ref="tz-ref:LuchtvaartuigRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Hoofdsplitsing" type="r:Hoofdsplitsing" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Hoofdsplitsing is het gesplitste Zakelijk recht van 1 of meer Percelen.De eigendom, het recht van erfpacht en/of het recht van opstal van 1 of enkele percelen (de zogenaamde grondpercelen) is gesplitst. De bij de hoofdsplitsing ontstane eigendom van de appartemenstrechten (de zogenaamde hoofd appartementsrechten) is tenaam van de gerechtigden (van het gesplitste zakelijke recht) gesteld. Het gesplitste zakelijk recht van de grondpercelen is niet tenaam gesteld.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Hoofdsplitsing" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:_AppartementsrechtSplitsing"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="TenaamstellingFiliatie"
+               type="r:TenaamstellingFiliatie"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">TenaamstellingFiliatie geeft aan uit welke inmiddels vervallen Tenaamstellingen de Tenaamstelling is ontstaan .TenaamstellingFiliatie wordt gebruikt om aan te geven hoe een recht (historisch) tot stand gekomen is. Het geeft aan waarom de ene Tenaamstelling gerelateerd is aan de andere. Dit doet zicht voor bij het ambtshalve samenvoegen van Rechten, bij vererving, naamswijziging etc.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TenaamstellingFiliatie" abstract="false">
+      <xs:sequence>
+         <xs:element name="aard"
+                     type="r:TenaamstellingFiliatieAard"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Aanduiding voor de aard van de filiatie.Tenaamstellingfiliatie wordt gebruikt om aan te geven hoe een recht (historisch) tot stand gekomen is. Het geeft aan waarom de ene tenaamstelling gerelateerd is aan het andere.Aard kan zijn Samengevoegd of Vervangen op grond van een nieuw rechtsfeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="betreftTenaamstelling" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:TenaamstellingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="_AppartementsrechtSplitsing"
+               type="r:_AppartementsrechtSplitsing"
+               abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een appartementsrechtsplitsing is het in appartementsrechten gesplitste Zakelijk recht van 1 of meer kadastrale objecten. Zie ook: https://tax.kadaster.nl/doc/begrip/Splitsing_eigendom_in_appartementsrechtenDoor splitsing wordt het zakelijk recht van 1 of meer kadastrale objecten getransformeerd in nieuwe zakelijke rechten, waarbij het gesplitste zakelijk recht zelf tenietgaat. Na splitsing zijn de appartementsrechten in de BRK zelfstandige kadastrale objecten geworden, terwijl als keerzijde de zakelijke rechten die in de splitsing betrokken zijn, niet meer vatbaar zijn voor overdracht, ed. Het eigendom van de appartementsrechten is in de BRK na splitsing tename van de betrokken gerechtigden gesteld. De appartementsrechten ontstaan door het opmaken van de authentieke notariële akte van splitsing inclusief reglement en splitsingtekening en door inschrijving van deze akte in de openbare registers van het Kadaster. De splitsingstekening en de akte duiden de gedeelten van het gebouw aan die blijkens hun inrichting bestemd zijn of worden om als afzonderlijk geheel te worden gebruikt. Alle appartementseigenaren zijn verplicht lid zijn van de vereniging van eigenaren (VvE). Een vereniging van eigenaren is een vereniging met als doel het behartigen van de gemeenschappelijke belangen van de appartementseigenaren, en de statuten van de vereniging (art 112 BW Boek 5). Deze rechtspersoon VvE is niet de rechthebbende van de gesplitste zakelijke rechten of de afzonderlijke appartementsrechten. Alle appartementseigenaren zijn gezamenlijk eigenaar van het geheel en vormen de gemeenschap van appartementseigenaren. Een Appartementsrechtsplitsing betreft een hoofdsplitsing, een ondersplitsing of een splitsing afkoop erfpacht:* Hoofdsplitsing: Ingeval het het gesplitste zakelijk recht van een of meer percelen betreft spreken we van een hoofdsplitsing* Ondersplitsing: Na de hoofdsplitsing kan een zakelijk recht van een appartementsrecht zijn ondergesplitst in nieuwe appartementsrechten.* Splitsing afkoop erfpacht: In uitzonderlijke gevallen is na splitsing van de erfpacht van een perceel ook de eigendom aan de splitsing toegevoegd.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="_AppartementsrechtSplitsing" abstract="true">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door het Kadaster toegekend landelijk uniek nummer aan een object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="heeftVerenigingVanEigenaren" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="ZakelijkRecht" type="r:ZakelijkRecht" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">In afwijking van de definitie van het juridisch begrip Zakelijk recht is in de BRK een zakelijk recht een recht dat samenhangt met een kadastraal object.Bovendien worden de volgende rechten afwijkend geregistreerd:* het Recht van hypotheek (samen met een beslag) vermeld als een Zekerheidstelling bij een kadastraal object. * Een erfdienstbaarheid vermeld als een Aantekening bij kadastrale objecten * Een appartementsrecht opgenomen als een Kadastraal object.Een zakelijk recht in de BRK betreft:* eigendom* Beperkte rechten: Recht van erfpacht, Recht van opstal, Recht van vruchtgebruik, Recht van gebruik en bewoning), * rechten van voor 1992 (beklemrecht en zakelijk recht als bedoeld in de Belemmeringenwet privaatrecht)* oud vaderlandse rechten (bijv. visrechten, grondrente enz)* Zakelijk optierecht bij luchtvaartuigen</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ZakelijkRecht" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatie is een door het Kadaster toegekend landelijk uniek nummer aan een object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aard"
+                     type="r:AardZakelijkRecht"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een aanduiding voor de aard van het recht. De waarden zijn opgenomen in een waardelijst.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="toelichtingBewaarder" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Toelichting bewaarder is een toelichtende tekst die de bewaarder vermeld wil hebben bij het Zakelijk Recht.De toelichting bewaarder wordt alleen in zeer uitzonderlijke gevallen gebruikt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S[\s\S.]*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="isBelastMet" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:ZakelijkRechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="rustOp" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="ko-ref:_KadastraalObjectRef"/>
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+                  <xs:element ref="tz-ref:_TeboekgesteldeZaakRef"/>
+                  <xs:element ref="tz-ref:SchipRef"/>
+                  <xs:element ref="tz-ref:LuchtvaartuigRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isOntstaanUit" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:_AppartementsrechtSplitsingRef"/>
+                  <xs:element ref="r-ref:HoofdsplitsingRef"/>
+                  <xs:element ref="r-ref:OndersplitsingRef"/>
+                  <xs:element ref="r-ref:SpiegelsplitsingOndersplitsingRef"/>
+                  <xs:element ref="r-ref:SpiegelsplitsingAfkoopErfpachtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isBestemdTot" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:MandeligheidRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isBetrokkenBij" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:_AppartementsrechtSplitsingRef"/>
+                  <xs:element ref="r-ref:HoofdsplitsingRef"/>
+                  <xs:element ref="r-ref:OndersplitsingRef"/>
+                  <xs:element ref="r-ref:SpiegelsplitsingOndersplitsingRef"/>
+                  <xs:element ref="r-ref:SpiegelsplitsingAfkoopErfpachtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isBeperktTot" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:TenaamstellingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="ZekerheidsstellingInzakeBeslag"
+               type="r:ZekerheidsstellingInzakeBeslag"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Beslag is een voorlopige maatregel waarbij de overheid, al dan niet op vordering van een belanghebbende, bepaalde zaken aan iemands vrije beschikking onttrekt, of wel deze onder zich neemt. (https://tax.kadaster.nl/doc/begrip/Beslag)Het betreft een maatregel om ingeval van een vordering zekerheid te verkrijgen dat er iets te halen valt bij de wederpartij. Het bedrag van de desbetreffende vordering is vermeld bij het Rechtsfeit (stukdeel) waarop de zekerheidstelling is gebaseerd.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ZekerheidsstellingInzakeBeslag" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:_Zekerheidsstelling">
+            <xs:sequence>
+               <xs:element name="aard" type="r:AardBeslag" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="heeftBeslaglegger" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De belanghebbende die kan vorderen tot leggen van beslag op goederen.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="p-ref:_PersoonRef"/>
+                        <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+                        <xs:element ref="p-ref:NatuurlijkPersoonRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="ZekerheidsstellingHypothecair"
+               type="r:ZekerheidsstellingHypothecair"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het betreft een hypothecaire zekerheid, waarbij een tenaamgesteld Zakelijk recht als onderpand dient voor een geldlening of krediet. De hypothecaire hoofdsom is vermeld bij het Rechtsfeit (stukdeel) waarop de zekerheidstelling is gebaseerd.Synoniemen:* Recht van Hypotheek* Hypothecair krediet* Hypothecaire lening</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ZekerheidsstellingHypothecair" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:_Zekerheidsstelling">
+            <xs:sequence>
+               <xs:element name="betreftGedeelteVanPerceel"
+                           type="xs:boolean"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">BetreftGedeelteVanPerceel is een indicatie om aan te geven dat de ZekerheidsstellingHypothecair betrekking heeft op een gedeelte van het perceel, al dan niet op basis van een ingeschreven tekening. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="heeftHypotheeknemer" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Hypotheeknemer is degene die een recht van hypotheek heeft op het registergoed van de hypotheekgever.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="p-ref:_PersoonRef"/>
+                        <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+                        <xs:element ref="p-ref:NatuurlijkPersoonRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="GezamenlijkAandeel"
+               type="r:GezamenlijkAandeel"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">GezamenlijkAandeel is wanneer twee of meer personen een gezamenlijk aandeel hebben in een zakelijk recht, waarbij het afzonderlijke aandeel in het gezamenlijk aandeel niet bekend is (als gezamenlijkAandeel bekend is dan is het individuele aandeel niet bekend en omgekeerd).GezamenlijkAandeel wordt alleen gebruikt indien het individuele aandeel in de tenaamstelling niet bekend is.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GezamenlijkAandeel" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aandeel" type="r:TypeBreuk" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Waarde van het aandeel, bijv. 1/2.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Mandeligheid" type="r:Mandeligheid" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gerechtigden van 1 of meer onroerende zaken (de hoofdzaken) hebben gezamenlijk recht op een andere onroerende zaak (de mandelige zaak), waarbij:* Zakelijke rechten op 1 of meer onroerende zaken bestemd zijn tot mandeligheid (tot algemeen nut) verklaard.* Andere onroerende zaken (de hoofdzaken) een aandeel in die mandeligheid omvat.Indicatie omvangInitieel 114.500</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Mandeligheid" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="heeftHoofdzaak" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Hoofdzaak is een onroerende zaak die een (aandeel in) een mandeligheid omvat.Wanneer een Hoofzaak uit een mandeligheid overgedragen wordt dan wordt ook de afhankelijke Mandelige zaak overgedragen. Mandeligheid komt vaak voor bij gemeenschappelijke achterpaden, parkeerplaatsen en dergelijke.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Aantekening" type="r:Aantekening" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een aantekening betreft een verwijzing naar een ter inschrijving aangeboden stuk. Een aantekening kan betrekking hebben op een Kadastraal object, op een specifieke Tenaamstelling van een zakelijk recht op een kadastraal object en/of op een specifieke Zekerheidsstelling op een kadastraal object.Het betreft o.m. een verwijzing naar:* Besluiten en vervallen verklaringen van een publiekrechtelijke beperking (WKPB)* Stukken inzake vestiging of beëindiging van erfdienstbaarheden of kwalitatieve verplichtingen* Privatieve lasten* Gerechtelijke uitspraken* Koop of huurovereenkomsten* Verkrijging van een aandeel in een zakelijk recht onder opschortende voorwaarde* Onderbewindstellingen* Rangwisseling Hypotheek* Stukken die ter inschrijving in de openbare registers worden aangeboden krachtens de wet Wilg, Overgangswet NBW, wet geluidshinder, Boswet, Flora- en Faunawet, Woningwet 1988, etc.Om "vervuiling" bij het samenvoegen c.q. splitsen van percelen te voorkomen wordt:* de door het bestuursorgaan aangeleverde begrenzing van een publiekrechtelijke beperking in de BRK als begrenzing van de Aantekening opgenomen . * de buitenomtrek van de begrenzing van de percelen, waarop de aantekening betrekking heeft, in de BRK als begrenzing van de Aantekening opgenomen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Aantekening" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aard"
+                     type="r:AardAantekening"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Aard is een aanduiding voor de soort van de aantekening.De soorten aantekeningen zijn opgenomen in een waardelijst</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="omschrijving" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation"> Omschrijving is de nadere beschrijving van de aantekening.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S[\s\S.]*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="begrenzing"
+                     type="gml:SurfacePropertyType"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Begrenzing beschrijft de omtrek van het gebied waarop de aantekening betrekking heeft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="begrenzingDienendErf"
+                     type="gml:SurfacePropertyType"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Begrenzing beschrijft de omtrek van het dienend erf waarop de aantekening betrekking heeft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="begrenzingHeersendErf"
+                     type="gml:SurfacePropertyType"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Begrenzing beschrijft de omtrek van het heersend erf waarop de aantekening betrekking heeft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einddatum" type="xs:date" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Einddatum is de datum waarop de geldigheid van de aantekening eindigt. Dit is niet hetzelfde als de historievelden in Voorkomen. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einddatumRecht"
+                     type="xs:date"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">EinddatumRecht is de datum waarop een recht eindigt. De einddatum van een recht is in de BRK opgenomen als aantekening om de volgende redenen:* Einddatum van een tenaamstelling is niet meer dan een aantekening (een verwijzing naar een stuk waarin iets is vermeld over een (mogelijke) einddatum). Het Kadaster acteert niet als dit tijdstip is aangebroken, dwz een tenaamstelling vervalt niet automatisch door tijdsverloop. De tenaamstelling in BRK vervalt enkel nadat er een nieuwe akte van levering is ingeschreven.* Ook kan in een later stuk een andere einddatum zijn vermeld. Alle stukken betreffende een einddatum worden als aantekening bij de tenaamstelling vermeld.* Eenmalig vastgelegd, ten tijde van ontvangst van een akte. Hierna wijzigt dit gegeven niet meer. * Dit is niet hetzelfde als de historievelden in Voorkomen. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="betreftGedeelteVanPerceel"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Betreft gedeelte van perceel is een indicatie om aan te geven dat de Aantekening betrekking heeft op een gedeelte van het perceel, al dan niet op basis van een ingeschreven tekening. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="aantekeningZekerheidsstelling" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:_ZekerheidsstellingRef"/>
+                  <xs:element ref="r-ref:ZekerheidsstellingInzakeBeslagRef"/>
+                  <xs:element ref="r-ref:ZekerheidsstellingHypothecairRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="aantekeningKadastraalObject" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="ko-ref:_KadastraalObjectRef"/>
+                  <xs:element ref="oz-ref:_OnroerendeZaakRef"/>
+                  <xs:element ref="oz-ref:LeidingnetwerkRef"/>
+                  <xs:element ref="oz-ref:PerceelRef"/>
+                  <xs:element ref="oz-ref:AppartementsrechtRef"/>
+                  <xs:element ref="tz-ref:_TeboekgesteldeZaakRef"/>
+                  <xs:element ref="tz-ref:SchipRef"/>
+                  <xs:element ref="tz-ref:LuchtvaartuigRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="aantekeningRecht" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">AantekeningRecht is een aantekening bij een tenaamstelling van een recht.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="r-ref:TenaamstellingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="betrokkenPersoon" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="p-ref:_PersoonRef"/>
+                  <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+                  <xs:element ref="p-ref:NatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Ondersplitsing" type="r:Ondersplitsing" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een ondersplitsing is het ondergesplitste zakelijk recht van een appartementsrecht. Zie ook: https://brk.basisregistraties.overheid.nl/doc/begrip/Splitsing_appartementsrecht_in_appartementsrechtenHet eigendom, het recht van erfpacht en/of het recht van opstal van een appartementsrecht is ondergesplitst. De bij de ondersplitsing ontstane eigendom van de nieuwe appartemenstrechten is tenaam van de gerechtigden (van het gesplitste zakelijke recht) gesteld. Het ondergesplitste zakelijk recht is niet tenaam gesteld.Zowel hoofd appartementsrechten als eerder ondergesplitste appartementsrechten kunnen bij een (nieuwe) ondersplitsing betrokken zijn.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Ondersplitsing" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:_AppartementsrechtSplitsing"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="SpiegelsplitsingOndersplitsing"
+               type="r:SpiegelsplitsingOndersplitsing"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">SpiegelsplitsingOndersplitsing is een spiegelsplitsing afkoop erfpacht van een ondersplitsing.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="SpiegelsplitsingOndersplitsing" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:_AppartementsrechtSplitsing"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Tenaamstelling" type="r:Tenaamstelling" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een tenaamstelling is een registratie van (een aandeel in) een zakelijk recht dat een persoon heeft, dat rust op een kadastraal object.Een tenaamstelling vormt de relatie tussen een Recht en een Persoon en geeft aan welk recht, met uitzondering van hypotheek en beslag, door een Persoon wordt uitgeoefend op een Kadastraal object. Een tenaamstelling heeft betrekking op het recht van eigendom of op een beperkt recht dat rust op één Kadastraal object. Met een beperkt recht op een Kadastraal object wordt erfpacht, opstal, ed. bedoeld, maar ook bijvoorbeeld huur en lease (van Luchtvaartuigen). Een zakelijk (beperkt) recht kan in de BRK onder een voorwaarde tenaamgesteld zijn:* onder ontbindende voorwaarde: de tenaamstelling eindigt na het plaatsvinden van een gebeurtenis* onder tijdsverloop: de tenaamstelling eindigt op een vooraf overeengekomen tijdstip.De voorwaarde wordt als een aantekening vermeld bij de desbetreffende tenaamstelling onder verwijzing naar het stuk waarin de voorwaarde is omschreven.Een tenaamstelling onder een opschortende voorwaarde is feitelijk geen tenaamstelling. Het zakelijk recht wordt in de BRK pas tenaamgesteld nadat uit een in de openbare registers ingeschreven stuk blijkt dat de opschortende voorwaarde is vervuld.Indicatie omvang: Initieel 25.500.000</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Tenaamstelling" abstract="false">
+      <xs:sequence>
+         <xs:element name="historie" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Gegevens omtrent de historie van een voorkomen van dit type.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="h:KadasterHistorieOR" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="identificatie"
+                     type="t:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aandeel" type="r:TypeBreuk" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Aandeel in Recht is het aandeel waarvoor een persoon deelneemt in het Recht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="burgerlijkeStaatTenTijdeVanVerkrijging"
+                     type="r:BurgerlijkeStaat"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Burgerlijke staat tijdens verkrijging is een aanduiding voor de leefvorm van een persoon, zoals deze volgens het brondocument ten tijde van de verkrijging van het recht bestond.Leefvorm van een persoon heeft betrekking op huwelijk c.q. geregistreerd partnerschap.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="omschrijving" minOccurs="0" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S[\s\S.]*"/>
+                  <xs:maxLength value="50"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="verklaringInzakeDerdenBescherming"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verklaring inzake derdenbescherming is een verklaring van de bewaarder dat de vermelding van het persoonsrecht conform de openbare registers is dan wel conform waarneming van de bewaarder is.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S[\s\S.]*"/>
+                  <xs:maxLength value="50"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="verkregenNamensSamenwerkingsverband"
+                     type="r:Samenwerkingsverband"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verkregen namens samenwerkingsverband is de aard van het samenwerkingsverband (zoals Maatschap, VOF of CV) namens welke een natuurlijk persoon deze tenaamstelling heeft verkregen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="betrokkenGorzenEnAanwassen" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="geldtVoor" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:GezamenlijkAandeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="betrokkenPartner" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="p-ref:NatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="ontstaanVanuit" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="r:TenaamstellingFiliatie" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="van" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="r-ref:ZakelijkRechtRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="betrokkenSamenwerkingsverband" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isGebaseerdOp" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="isVermeldIn" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="s-ref:StukdeelRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="tenNameVan" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="p-ref:_PersoonRef"/>
+                  <xs:element ref="p-ref:NietNatuurlijkPersoonRef"/>
+                  <xs:element ref="p-ref:NatuurlijkPersoonRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="SpiegelsplitsingAfkoopErfpacht"
+               type="r:SpiegelsplitsingAfkoopErfpacht"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een SpiegelSplitsingAfkoopErfpacht is het gesplitste recht van eigendom van 1 of meer percelen, waarvan het recht van erfpacht al eerder in appartementsrechten is gesplitst. Een SplitsingAfkoopErfpacht is een Appartementsrechtsplitsing en vormt het geheel van de bloot-eigendom van 1 of meer percelen, dat is gesplitst in appartementsrechten. In grote steden is in het verleden beleid geweest dat de grond niet in eigendom was te verkrijgen maar dat men alleen erfpacht kon verwerven. In veel gevallen is bij splitsing in appartementsrechten de erfpacht gesplitst. De bloot-eigendom van het grondperceel in niet in de splitsing betrokken en is in de BRK tenaam van de gemeente gesteld. In Rotterdam is het beleid enkel jaren geleden gewijzigd. Daar is het mogelijk geworden dat de erfpachter op zijn/haar wens de erfpacht mag afkopen (ook de bloot-eigendom verkrijgen) zodat hij/zij een volledig recht van eigendom heeft. In het geval 1 of meer eigenaren van een appartementsrecht de erfpacht willen afkopen wordt de bloot-eigendom van het grondperceel eveneens gesplitst in appartementsrechten. De bloot-eigendom wordt gesplitst in even zoveel appartementsrechten als er aanwezig zijn bij de splitsing van de erfpacht. Splitsing van de bloot-eigendom vindt plaats onder dezelfde complexaanduiding als de splitsing erfpacht, er is geen nieuwe tekening nodig. De spiegelsplitsingafkooperfpacht kent een 'eigen' Vereniging van eigenaren </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="SpiegelsplitsingAfkoopErfpacht" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:_AppartementsrechtSplitsing"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AardAantekening" type="r:AardAantekening" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardAantekening</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AardAantekening" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AardBeslag" type="r:AardBeslag" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardBeslag</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AardBeslag" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AardZakelijkRecht"
+               type="r:AardZakelijkRecht"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AardZakelijkRecht</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AardZakelijkRecht" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="BetrokkenRecht" type="r:BetrokkenRecht" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BetrokkenRecht</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="BetrokkenRecht" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="BurgerlijkeStaat" type="r:BurgerlijkeStaat" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BurgerlijkeStaat</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="BurgerlijkeStaat" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Samenwerkingsverband"
+               type="r:Samenwerkingsverband"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/Samenwerkingsverband</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Samenwerkingsverband" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="SoortErfpachtcanon"
+               type="r:SoortErfpachtcanon"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/SoortErfpachtcanon</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="SoortErfpachtcanon" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="TenaamstellingFiliatieAard"
+               type="r:TenaamstellingFiliatieAard"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/TenaamstellingFiliatieAard</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TenaamstellingFiliatieAard" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="JaarlijksBedrag" type="r:JaarlijksBedrag" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">JaarlijksBedrag is een samengesteld datatype waamee aangegeven kan worden wat de hoogte is van een erfpachtcanon en of dat bedrag betrekking heeft op meerdere onroerende zaken. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="JaarlijksBedrag" abstract="false">
+      <xs:sequence>
+         <xs:element name="bedrag" type="t:Bedrag" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Bedrag is het bedrag in euros van het jaarlijks bedrag.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="betreftMeerOnroerendeZaken"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Betreft meer onroerende zaken is een indicatie waarmee wordt aangegeven dat het jaarlijks bedrag meerdere onroerende zaken betreft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TypeBreuk" type="r:TypeBreuk" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een deling van twee gehele getallen</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="TypeBreuk" abstract="false">
+      <xs:sequence>
+         <xs:element name="teller" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het aantal delen. De teller is altijd lager dan de noemer.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="32"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="noemer" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De noemer van het deel.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="32"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

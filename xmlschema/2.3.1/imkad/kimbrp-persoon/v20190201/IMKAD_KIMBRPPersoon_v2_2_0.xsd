@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:kimbrpp="http://www.kadaster.nl/schemas/imkad/kimbrp-persoon/v20190201"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:t="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+           targetNamespace="http://www.kadaster.nl/schemas/imkad/kimbrp-persoon/v20190201"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.2.0-2">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.kadaster.nl/schemas/imkad/kimbrp-persoon</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">2.2.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190201</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-01-30T14:18:01Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">imkad/kimbrp-persoon/v20190201/IMKAD_KIMBRPPersoon_v2_2_0.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Dit package bevat alle klassen die behoren bij de representatie van binnen BRP geregistreerde personen.Voor meer informatie over. BRP: http://www.moderniseringgba.nl/nederlands/Basisregistratie_Personen_BRP</xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.kadaster.nl/schemas/imkad/imkad-typen/v20190201"
+              schemaLocation="../../../imkad/imkad-typen/v20190201/IMKAD_Typen_v2_2_0.xsd"/>
+   <xs:element name="Partnerschap" type="kimbrpp:Partnerschap" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Partnerschap is een groep gegevens over de huwelijkse- of partnerschapstatus van een persoon. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Partnerschap" abstract="false">
+      <xs:sequence>
+         <xs:element name="datumSluiting"
+                     type="t:TypeOnvolledigeDatum"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">datumSluiting is de datum waarop het huwelijk is voltrokken of het partnerschap is aangegaan.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datumOntbinding"
+                     type="t:TypeOnvolledigeDatum"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">datumOntbinding is de datum waarop het huwelijk/geregistreerd partnerschap is ontbonden of nietig verklaard.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="naamPartner" minOccurs="1" maxOccurs="1" nillable="true">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Naam" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GeregistreerdPersoon"
+               type="kimbrpp:GeregistreerdPersoon"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een GeregistreerdPersoon is natuurlijk persoon die is geregistreerd in de Basisregistatie Kadaster. Het betreft of een ingezetene of een niet ingezetene.Een Geregistreerd persoon heeft in principe een BSN. Dit is zo wanneer de persoon in de BRP bekend is. Geregistreerde personen zonder BSN zijn niet geregistreerd in de BRP c.q. worden alleen in de BRK geregisteerd. Voor het Kadaster is het verschil tussen ingezetene en niet-ingezetene niet relevant, behalve voor de inschrijvingseis dat een niet ingezetene domicilie moet kiezen in Nederland. Een geregistreerd persoon is een niet ingezetene in de BRP als deze een AdresBuitenland heeft als woonlocatie.(In de Registratie Niet-Ingezetenen (RNI) staan de persoonsgegevens van mensen die niet in Nederland wonen, maar wel een relatie met Nederland hebben. Daarbij gaat het bijvoorbeeld om mensen die in het buitenland wonen, maar een pensioen uit Nederland ontvangen. Ook mensen die korter dan vier maanden in Nederland verblijven, kunnen zich inschrijven in deze registratie. De Rijksdienst voor Identiteitsgegevens (RvIG) beheert de RNI. ) </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GeregistreerdPersoon" abstract="false">
+      <xs:sequence>
+         <xs:element name="bSN" minOccurs="1" maxOccurs="1" nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het BSN is het burgerservicenummer van de persoon.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="([0][0-9]{8})|([1-9][0-9]{7,8})"/>
+                  <xs:maxLength value="9"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="adellijkeTitelOfPredikaat"
+                     type="kimbrpp:AdellijkeTitelOfPredikaat"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">adellijkeTitelOfPredikaat is de adellijke titel of het predikaat dat behoort tot de naam van de persoon (bij adellijke titel geslachtsnaam, bij predikaat voornaam).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aanduidingNaamgebruik"
+                     type="kimbrpp:BRPAanduidingNaamgebruik"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">aanduidingNaamgebruik is een aanduiding voor de wijze van aanschrijving van de ingeschrevene.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="inOnderzoek" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Procedure" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="landWaarnaarVertrokken"
+                     type="kimbrpp:BRPLand"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">landWaarnaarVertrokken is het land dat de ingeschrevene opgeeft bij vertrek naar het buitenland. Als we van BRP een mutatiemelding krijgen met enkel een land dat wordt dat geregistreerd als landWaarnaarVertrokken. Worden ook andere adresgegevens ontvangen, minimaal woonplaats, dan wordt dit als buitenlandsadres geregistreerd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="naam" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Naam" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="geslacht" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Geslacht" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="geboorte" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Geboorte" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="indicatieGeheim"
+                     type="xs:boolean"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">indicatieGeheim is een aanduiding die aangeeft dat gegevens van een persoon wel of niet verstrekt mogen worden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="overlijden" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Overlijden" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="heeftPartnerschap" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="kimbrpp:Partnerschap" minOccurs="1" maxOccurs="1"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Geboorte" type="kimbrpp:Geboorte" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Geboorte is een groep gegevens over de geboorte van een GeregisteerdPersoon.De gegevensgroep Geboorte bevat de volgende gegevens- Geboortedatum- Geboorteplaats- Geboorteland</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Geboorte" abstract="false">
+      <xs:sequence>
+         <xs:element name="geboortedatum"
+                     type="t:TypeOnvolledigeDatum"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De geboortedatum is de datum waarop de persoon is geboren. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geboorteplaats" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De geboorteplaats is de plaats of een plaatsbepaling, die aangeeft waar de persoon is geboren</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="80"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="geboorteland"
+                     type="kimbrpp:BRPLand"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het geboorteland is de naam, die het land aangeeft waar de persoon is geboren.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Geslacht" type="kimbrpp:Geslacht" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Geslacht is een groep gegevens die waarmee het geslacht van de persoon wordt aangeduid.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Geslacht" abstract="false">
+      <xs:sequence>
+         <xs:element name="geslachtsaanduiding"
+                     type="kimbrpp:AanduidingGeslacht"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De geslachtsaanduiding is een gegeven over het geslacht van de persoon (man, vrouw, of onbekend). </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Procedure" type="kimbrpp:Procedure" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Procedure is een groep gegevens waarmee wordt aangegeven of de juistheid van een gegeven bij de BRP in onderzoek is. Indien bij GBA twijfel bestaat omtrent de juistheid van de geregistreerde gegevens worden deze in onderzoek geplaatst ("Procedure").</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Procedure" abstract="false">
+      <xs:sequence>
+         <xs:element name="datumEinde" type="xs:date" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">datumEinde is de datum waarop een onderzoek inzake de onjuistheid of de strijdigheid met de openbare orde is beëindigd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aanduidingGegevensInOnderzoek" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">aanduidingGegevensInOnderzoek is een uit de registratie afgeleide indicatie dat het daadwerkelijk geleverde BRP-gegeven in het product 'in onderzoek' is.Geeft aan welke gegevens in onderzoek zijn: - Indien voor één gegeven een onderzoek loopt, wordt het elementnummer ingevuld.- Indien bij meerdere gegevens uit een groep een onderzoek loopt, wordt het betreffende categorienummer, aangevuld met 0000 ingevuld.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:integer">
+                  <xs:totalDigits value="6"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="datumIngang" type="xs:date" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">datumIngang (onderzoek) is de datum waarop een onderzoek inzake de onjuistheid of de strijdigheid met de openbare orde is gestart.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Naam" type="kimbrpp:Naam" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Naam is een groep gegevens met de geslachtsnaam, voorletters en voornamen die men wil gebruiken bij aanschrijving. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Naam" abstract="false">
+      <xs:sequence>
+         <xs:element name="geslachtsnaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De geslachtsnaam is de (geslachts)naam waarvan de eventueel aanwezige voorvoegsels en [adellijke titel](https://www.amsterdam.nl/stelselpedia/brp-index/catalogus-brp/objectklasse-4/tabel-38-adellijke/) zijn afgesplitst.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="voornamen" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De voornamen zijn de verzameling namen die, gescheiden door spaties, aan de geslachtsnaam voorafgaat. Indien aanwezig, wordt het predikaat afgesplitst.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="200"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="voorvoegselsgeslachtsnaam" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Voorvoegselsgeslachtsnaam zijn dat deel van de geslachtsnaam dat voorkomt in Tabel 36, Voorvoegseltabel en, gescheiden door een spatie, vooraf gaat aan de rest van de geslachtsnaam.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Overlijden" type="kimbrpp:Overlijden" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Overlijden is een groep gegevens over het overlijden van een persoon.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Overlijden" abstract="false">
+      <xs:sequence>
+         <xs:element name="datumOverlijden"
+                     type="t:TypeOnvolledigeDatum"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">datumOverlijden is de datum waarop de persoon overleden is. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="BRPAanduidingNaamgebruik"
+               type="kimbrpp:BRPAanduidingNaamgebruik"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPAanduidingNaamgebruik</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="BRPAanduidingNaamgebruik" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AdellijkeTitelOfPredikaat"
+               type="kimbrpp:AdellijkeTitelOfPredikaat"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AdellijkeTitelOfPredikaat</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AdellijkeTitelOfPredikaat" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="AanduidingGeslacht"
+               type="kimbrpp:AanduidingGeslacht"
+               abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/AanduidingGeslacht</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AanduidingGeslacht" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="BRPLand" type="kimbrpp:BRPLand" abstract="false">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://www.kadaster.nl/schemas/waardelijsten/BRPLand</xs:appinfo>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="BRPLand" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="t:Waardelijst"/>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

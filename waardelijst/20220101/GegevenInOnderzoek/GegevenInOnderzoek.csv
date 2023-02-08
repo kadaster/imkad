@@ -1,0 +1,33 @@
+"Code","Waarde","DatumVanaf","DatumTot","Toelichting"
+"1","Begrenzing","2011-01-01","2020-10-06",
+"2","Grootte","2011-01-01","2020-10-06",
+"3","Kadastrale aanduiding","2011-01-01","2020-10-06",
+"4","Verwijzing naar brondocument","2011-01-01","2020-10-06",
+"5","Algemeen","2011-01-01","2020-10-06",
+"6","Zakelijk recht","2012-03-21","2015-07-29",
+"7","Tenaamstelling ","2012-03-21","2015-07-29",
+"8","Kwalitatieve verplichting","2015-07-29","2020-10-06",
+"9","Erfdienstbaarheid","2015-07-29","2020-10-06",
+"10","Aandeel in Recht","2015-07-29","2020-10-06",
+"11","Onderbewindstelling","2015-07-29","2020-10-06",
+"12","Afbeelding van de kadastrale grenzen","2020-07-01",,
+"13","De rijksgrens, de grens van de provincie of de gemeentegrens","2020-07-01",,
+"14","Kadastrale grootte","2020-07-01",,
+"15","Kadastrale aanduiding","2020-07-01",,
+"16","Benaming beperkte rechten en beslagen","2020-07-01",,"Bij tenaamstelling als de aard van het recht niet klopt, of als het opstal is ipv onderopstal; Bij zekerheidsstelling als het onjuiste recht bezwaard is"
+"17","Tenaamstelling ","2020-07-01",,"Voor het geval de tenaamgestelden niet kloppen"
+"18","Onderbewindstelling","2020-07-01",,
+"19","Zekerheidsstelling","2020-07-01",,"Voor het geval een hypotheek of beslag ontbreekt"
+"20","Aanwezigheid kwalitatieve verplichting","2020-07-01",,
+"21","Naam gerechtigde","2020-07-01",,"Voornamen, achternamen, naam NNP; Hypotheekhouder is ook gerechtigde"
+"22","Adres gerechtigde","2020-07-01",,
+"23","Woonplaats/zetel gerechtigde","2020-07-01",,
+"24","Rechtsvorm gerechtigde","2020-07-01",,"alleen bij NNP"
+"25","Burgerlijke staat gerechtigde","2020-07-01",,"alleen bij NP"
+"26","Geboortedatum gerechtigde","2020-07-01",,
+"27","Naam beslaglegger","2020-07-01",,
+"28","Adres beslaglegger","2020-07-01",,
+"29","Woonplaats/zetel beslaglegger","2020-07-01",,
+"30","Rechtsvorm beslaglegger","2020-07-01",,"alleen bij NNP"
+"31","Geboortedatum beslaglegger","2020-07-01",,"alleen bij NP"
+"32","Aanwezigheid zakelijk recht","2021-07-05",,

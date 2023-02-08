@@ -1,0 +1,46 @@
+Change log 20210408:
+===================
+- SoortStukProcesInformatie:
+	* 2021-04-08: IM-752: kolommen Onroerende zaken, Schepen en Luchtvaartuigen toegevoegd;codes 6, 7, 8 en 42 verwijderd omdat ze niet van toepassing zijn voor NotarisProtocolhouders
+
+
+Change log 20210301:
+===================
+- DigestMethod:
+	* 2021-02-10: IM-746: initiële versie
+- SoortDepostuk:
+	* 2021-02-11: IM-746: initiële versie
+- SoortMededeling:
+	* 2021-02-11: IM-746: initiële versie
+- SoortStuk:
+	* 2021-02-10: IM-746: Aanpassing pad als gevolg van de nieuwe onderverdeling van de IMAST-waardelijsten
+- SoortStukProcesInformatie:
+	* 2021-02-22: IM-748: initiële versie, dit is een koppeltabel adhv SoortStuk met extra toelichtingen
+- StatusMededeling:
+	* 2021-02-11: IM-746: initiële versie
+- StatusOpTeHalenMededelingen:
+	* 2021-01-21: IM-746: initiële versie
+- TypeVerzoek:
+	* 2021-02-02: IM-746: initiële versie
+
+
+Change log 20210101:
+===================
+Bugfix 2020-12-07:
+- SoortStuk:
+	* 2020-12-07: IM-734: ivm vervroegde beschikbaarheid de DatumVanaf van alle codes aangepast
+
+Reguliere release:
+- BeroepOndertekenaar:
+	* 2020-11-19: IM-740: De waardenlijst BeroepOndertekenaar houdt per 1-1-2021 op te bestaan. Het veld beroep is vervallen uit de metagegevens van verzoek tot inschrijving en daardoor is de waardenlijst ook niet meer relevant
+
+- SoortRechtsfeit:
+	* 2020-11-19: IM-734: De waardenlijst SoortRechtsfeit houdt per 1-1-2021 op te bestaan. De waardenlijst SoortStuk komt daarvoor in de plaats
+
+- SoortStuk:
+	* 2020-11-19: IM-734: Initiële versie, met als basis de vervallen waardenlijst SoortRechtsfeit (oude benaming)
+
+Change log 20200706:
+===================
+- BeroepOndertekenaar:
+	* 2020-05-18: IM-706: niet relevante erkende beroepen voor aanleveren van verzoeken verwijderd en de lijst hernummerd.
