@@ -1,0 +1,4 @@
+"Code","Waarde","DatumVanaf","DatumTot","Toelichting"
+"1","Beschikbaar","2021-01-01",,"alle beschikbare mededelingen die voldoen aan de overige selectiecriteria worden opgehaald"
+"2","Bevestigd","2021-01-01",,"alle bevestigde mededelingen die voldoen aan de overige selectiecriteria worden opgehaald"
+"3","Beschikbaar en bevestigd","2021-01-01",,"alle mededelingen die voldoen aan de overige selectiecriteria worden opgehaald"

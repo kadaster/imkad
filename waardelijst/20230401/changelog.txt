@@ -1,0 +1,619 @@
+﻿Change log 20230410:
+===================
+Externe waardelijsten:
+-AardAppartementsrechtSplitsing: 
+	* IM-831: Vaststelling initiële versie
+
+-AardKadasterverzoek:
+	* IM-832: Toelichting gewijzigd van 7 - Verzoek tot verbetering na aanwijs
+
+-AardStukdeel:
+	* IM-833: De aardstukdeel waardelijst van Elan toegevoegd aan de reeds bestaande waardelijst (als codes 310 t/m 328) vanwege de ontwikkeling van de datahub/het GeoDataPlein
+
+IMAST waardelijsten:
+-SoortDepotstukProcesInformatie:
+	* IM-830: DatumVanaf en DatumTot kolommen toegevoegd en gevuld
+
+-SoortStukProcesInformatie:
+	* IM-830: DatumVanaf en DatumTot kolommen toegevoegd en gevuld
+
+BRK-Notificaties waardelijsten:
+-AardOverheidsbesluit:
+	* IM-826: Initiële versie
+
+-Gebeurtenissoort:
+	* IM-826: Initiële versie
+	
+
+Change log 20230102:
+===================
+Externe waardelijsten:
+-AardAantekening:
+	* IM-820: 461 en 462 retroactief opgevoerd, begin- en einddatums geactualiseerd en OW-codes en waardes gewijzigd op basis van OW of AWBOW artikelen
+	* IM-819: correctie toelichting 460 - Omgevingswet voorkeursrecht
+
+-AardKadasterverzoek:
+	* IM-825: "Verzoeken tot verbetering achteraf" gewijzigd naar "Verzoek tot verbetering na aanwijs" overeenkomstig het gebruik in de praktijk
+
+-BurgemKadSectie:
+	* IM-822: Gemeentelijke herindeling per 20230101 verwerkt
+
+-GrondslagBRK-PB:
+	* IM-823: GWE retroactief opgevoerd, onterechte einddatum GU verwijderd, begin- en einddatums geactualiseerd en prefix codes en waardes gewijzigd op basis van OW of AWBOW artikelen
+	
+Change log 20221010:
+===================
+Externe waardelijsten:
+-AardAantekening:
+	* 2022-08-26: IM-815: Definitieve wijzigingen als gevolg van invoering Omgevingswet
+
+-AardStukdeel:
+	* 2022-08-04: IM-808: Stukdeel 695-"wijziging grondslag a.g.v. overgangsrecht" toegevoegd
+
+-BurgemKadgemSectie:
+	* 2022-08-04: IM-810: 8 nieuwe secties voor Fra-Ha
+
+-GrondslagBRK-PB:
+	* 2022-08-26: IM-814: Definitieve wijzigingen als gevolg van invoering Omgevingswet; Bij AWC en AWD ampersand op de achtergrond gewijzigd om technische redenen
+
+-Kadgem1832:
+	* 2022-08-04: IM-812: 662-"Nieuw Tonge" gecorrigeert naar "Nieuwe Tonge"
+
+	
+Change log 20220404:
+===================
+Externe waardelijsten:
+-AardStukdeel:
+	* 2022-01-21: IM-794: De omschrijving van 668 - "wet geluidshinder" is gecorrigeerd naar 668 - "wet geluidhinder".
+	* 2022-01-21: IM-796: Nieuwe code 693 - "toewijzing op grond van art. 34 Wilg" toegevoegd.
+	* 2022-02-01: IM-804: Stukdeel 694 - "registreren herverkavelingsgebied" toegevoegd.
+
+-BurgemKadgemSectie:
+	* 2022-01-20: IM-790: Gemeentelijke herindeling per 20220324 verwerkt. Let op: Deze wijziging treedt per 24-03-2022 in werking.
+
+-CultuurBebouwd:
+	* 2022-01-28: IM-803: Overbodige spatie bij 34-"Parkeren " verwijderd.
+
+-CultuurOnbebouwd:
+	* 2022-01-28: IM-803: Overbodige spatie bij 34-"Parkeren " verwijderd.
+
+-ElementAanduiding:
+	* 2022-01-24: IM-800: De waardelijsten Kwaliteitsklasse en ElementAanduiding zijn toegevoegd voor het meeleveren van de kwaliteit van de grenslijn in het KadastraleKaart product (model).
+
+-GrondslagBRK-PB:
+	* 2022-01-20: IM-795: wijziging van omschrijving WBA van "...noodzaak spoedige sanering" naar "…mogelijk noodzaak spoedige sanering".
+
+-Kwaliteitsklasse:
+	* 2022-02-15: IM-800: De waardelijsten Kwaliteitsklasse en ElementAanduiding zijn toegevoegd voor het meeleveren van de kwaliteit van de grenslijn in het KadastraleKaart product (model).
+
+Change log 20220103:
+===================
+Externe waardelijsten:
+- AardAantekening:
+	* 2021-10-18: IM-784: Een correctie van de toelichting van codes 10 en 39. 
+	
+- AardStukdeel:
+	* 2021-11-02: IM-787: De omschrijving van 536-Huwelijkse voorwaarden wordt gewijzigd naar "huwelijkse voorwaarden" naar "huwelijkse en/of partnerschapsvoorwaarden".
+	* 2021-11-02: IM-791: De omschrijvingen van 591 en 675-verklaringen van waardeloosheid worden gewijzigd.
+
+- BurgemKadgemSectie:
+	* 2021-11-18: IM-789: De burgerlijke herindeling per 1 januari zijn verwerkt.
+
+- Kadgem1832:
+	* 2021-11-12: IM-792: Groningen sectie G ontbrak onterecht, deze is weer toegevoegd.
+
+- RedenVerzoek:
+	* 2021-10-18: IM-786: Het beheer van deze lijst wordt beëindigd omdat deze in functioneel opzicht niet meer wordt gebruikt.
+
+Change log 20211004:
+===================
+Externe waardelijsten:
+- AardAantekening:
+	* 2021-07-20: IM-762: Correctie in de toelichtingen van 10,11 en 39.
+	* 2021-07-20: IM-750: Nieuwe (historische) code tbv terugvertaling in legacy-systemen.
+
+- AardStukdeel:
+	* 2021-07-29: IM-765: Stukdeel 687 "correctie publiekrechtelijke beperking " is gecorrigeerd naar "correctie publiekrechtelijke beperking".
+
+- AdellijkeTitelOfPredikaat:
+	*2021-07-29: IM-755: Omdat “predikaat” voortaan geschreven moet worden als “predicaat” wijzigt de naam van de waardelijst. Daarnaast wordt de beginletter van alle omschrijvingen gewijzigd van een uppercase naar een lowercase.
+
+- AKRKadastraleGemeenteCode:
+	* 2021-07-22: IM-760: Noordzee VII heeft onterecht een einddatum, deze is verwijderd.
+
+- GrondslagBRK-PB:
+	* 2021-07-20: IM-764: Wijzigingen van omschrijvingen grondslagen erfgoedwet. Namen van legacy-codes overgenomen uit bronnen (BRK & LV-WKPB) voor waarde & toelichting. WA-code omgezet > Wet agrarisch omgezet naar Woningwet; codes bestaan zowel in de BRK als in de LV-WKPB, maar hebben niet dezelfde waarde WA komt alleen voor als PB in de LV-WKPB, daarom die opgenomen.
+
+- Kadgem1832:
+	* 2021-07-29: IM-761: Bij “Waarder” werd een verkeerde code gebruikt; 1054 gecorrigeerd naar 1056.
+	* 2021-07-29: IM-766: Bij code 151 week de schrijfwijze van de KGM naam af van de waarde. De KGM naam "Borssele" is gecorrigeerd naar "Borsele".
+
+- PlaatsBrandmerk:
+	* 2021-07-29: IM-758: "BRIELLE " is gecorrigeerd naar "BRIELLE".
+
+- SoortRegister:
+	*2021-07-29: IM-759: De naamgeving van de lijst is bij enkele van de metagegevens gecorrigeerd. Inhoudelijk verandert er niets.
+	
+Change log 20210701:
+===================
+Externe waardelijsten:
+- AardStukdeel:
+	* 2021-05-07: IM-753: Stukdeel 508 gewijzigd van "beheeroverdracht" naar "beheeroverdracht wegens bestuurlijke herindeling"
+	* 2021-05-07: IM-754: Stukdeel 692 - "conversie publiekrechtelijke beperking" toegevoegd. Dit is een stukdeel voor bij een kadasterstuk en treed direct in werking
+
+- BAGAdresseerbaarObject:
+	* 2021-05-07: IM-747: Publicatie van deze lijst binnen de IMKAD-waardelijsten houdt op en zou beter direct van de BAG afgenomen kunnen worden. In IMKAD in de package IMBAG is het gemodelleerd als CharacterString en niet als Referentielijst
+
+- BAGOpenbareruimte:
+	* 2021-05-07: IM-747: Publicatie van deze lijst binnen de IMKAD-waardelijsten houdt op en zou beter direct van de BAG afgenomen kunnen worden. In IMKAD in de package IMBAG is het gemodelleerd als CharacterString en niet als Referentielijst
+
+- BAGWoonplaats:
+	* 2021-05-07: IM-747: Publicatie van deze lijst binnen de IMKAD-waardelijsten houdt op en zou beter direct van de BAG afgenomen kunnen worden. In IMKAD in de package IMBAG is het gemodelleerd als CharacterString en niet als Referentielijst
+
+- GegevenInOnderzoek:
+	* 2021-05-07: IM-745: IM-745: Code 32 - "Aanwezigheid zakelijk recht" toegevoegd
+
+- StatusStukOR:
+	* 2021-05-07: IM-744: Bij codes 5, 9 en 10 een einddatum toegevoegd. Code 5 was in gebruik identiek aan code 4. Code 9 en 10 zijn overbodig geworden
+
+- StatusHerverkavelingsproject:
+	* 2021-05-07: IM-750: Code 4 - "Ruilakte is gepasseerd" toegevoegd
+
+Change log 20210101:
+===================
+Bugfix 2020-12-07:
+IMAST waardelijsten:
+- SoortStuk:
+	* 2020-12-07: IM-734: ivm vervroegde beschikbaarheid de DatumVanaf van alle codes aangepast
+
+Externe waardelijsten:
+- AardAantekening:
+	* 2020-11-05: IM-733: Ivm consistentie met de StatusHerverkaveling-lijst zijn van de omschrijvingen van codes 126 en 273 aangepast
+	* 2020-11-05: IM-735: Van code 11 de toelichting uitgebreid overeenkomstig het gebruik
+
+- AardKadasterverzoek:
+	* 2020-11-19: IM-728: Code 8 "Verzoek tot verbetering registratie" en verschillende toelichtingen toegevoegd
+
+- AardStukdeel:
+	* 2020-11-05: IM-736: Stukdeel 691 "aanpassing meettarief verschuldigd" toegevoegd
+
+- AKRKadastraleGemeenteCode:
+	* 2020-11-19: IM-739: Problematische spatie verwijderd uit "BSG00 " en gecorrigeerd naar "BSG00"
+
+- BurgemKadgemSectie:
+	* 2020-11-09: IM-732: Gemeentelijke herindeling per 20210101 verwerkt
+
+- KadastraleGemeente:
+	* 2020-11-05: IM-737: Problematische spatie verwijderd uit de toelichting van 1115-"Wildervank"
+
+- Kadgem1832:
+	* 2020-11-19: IM-739: Problematische spatie verwijderd uit "PSM99 " en gecorrigeerd naar "PSM99"
+
+IMAST waardelijsten:
+- BeroepOndertekenaar:
+	* 2020-11-19: IM-740: De waardenlijst BeroepOndertekenaar houdt per 1-1-2021 op te bestaan. Het veld beroep is vervallen uit de metagegevens van verzoek tot inschrijving en daardoor is de waardenlijst ook niet meer relevant
+
+- SoortRechtsfeit:
+	* 2020-11-19: IM-734: De waardenlijst SoortRechtsfeit houdt per 1-1-2021 op te bestaan. De waardenlijst SoortStuk komt daarvoor in de plaats
+
+- SoortStuk:
+	* 2020-11-19: IM-734: Initiële versie, met als basis de vervallen waardenlijst SoortRechtsfeit (oude benaming)
+
+Change log 20201005:
+===================
+Bugfix 2020-09-02:
+- InOnderzoek en AuthenthiekGegeven:
+	* 2020-09-02: IM-724: Bij onze eigen implementatie van de waardelijstwijzigingen per 6 oktober, is gebleken dat het aanpassen van de waardelijst GegevenInOnderzoek veel eenvoudiger is dan het implementeren van de nieuwe lijst AuthentiekGegeven. Daarom is besloten om de nieuwe waarden op te nemen in de bestaande waardelijst GegevenInOnderzoek. De wijzigingen voor de waardelijst GegevenInOnderzoek zijn nu als volgt, de waarden 1 tot en met 11 zijn beeindigd en de waarden 12 tot en met 31 zijn nieuw toegevoegd. De nieuwe waardelijst AuthentiekGegeven komt dus te vervallen en de oude waardelijst GegevenInOnderzoek blijft in gewijzigde vorm in stand.
+
+Externe waardelijsten:
+- AardStukdeel:
+	* 2020-08-06: IM-722: Stukdelen 689 en 690 toegevoegd, Schrijfwijze 686 en 687 gewijzigd tbv juistheid en consistentie
+- InOnderzoek en AuthenthiekGegeven:
+	* 2020-08-06: IM-724: Na herontwerp van InOnderzoek in KOERS is de waardelijst GegevenInOnderzoek vervangen door de waardelijst AuthenthiekGegeven
+
+Change log 20200706:
+===================
+Bugfix 2020-06-15:
+- BurgemKadgemSectie:
+	* 2020-06-15: IM-711: 114 Emmen Schoonebeek X Toegevoegd
+- TypeGrens:
+	* 2020-06-15: IM-712: volgorde van codes en waardes aangepast naar de huidige volgorde in het gebruik
+
+Externe waardelijsten:
+- AardAantekening:
+	* 2020-05-11: IM-605: 44 Ongebruikte codes verwijderd.
+
+- AardStukdeel:
+	* 2020-05-04: IM-702: 685 "ambtshalve wijziging einddatum publiekrechtelijke beperking" retroactief beëindigd.
+
+- Betrokkenrecht:
+	* 2020-05-04: IM-705: 14 "Opstal Nutsvoorzieningen" toegevoegd.
+
+- StatusHerverkavelingsproject:
+	* 2020-05-18: IM-707: Waarde 3 aangepast van "Ruilakte binnen 3 weken" naar "Passeren ruilakte is aanstaande".
+
+IMAST waardelijsten:
+- BeroepOndertekenaar:
+	* 2020-05-18: IM-706: niet relevante erkende beroepen voor aanleveren van verzoeken verwijderd en de lijst hernummerd.
+
+Change log 20200406:
+===================
+Bugfix 2020-03-05:
+- BRPLand:
+	* 2020-03-05: IM-693: 9036 Swaziland beëindigd en 9038 Eswatini opgevoerd, overgenomen van BRP tabel tabel 34, zoals geldig op 2020-04-01
+
+Externe lijsten:
+- AardAantekening:
+	* 2020-02-03: IM-685: lijst uitgebreid met BRK-PB codes 339 t/m 458
+
+- AardStukdeel:
+	* 2020-01-30: IM-684: Stukdeel toegevoegd voor verenigen personen (688)
+	* 2020-02-04: IM-686: Hoofdletters van codes 685, 686 en 687 gecorrigeerd naar kleine letters
+
+- CultuurcodeOnbebouwd:
+	* 2020-02-06: IM-661: code 60 "Terrein (overige agrarisch)" toegevoegd
+
+- Kadgem1832:
+	* 2020-01-30: IM-668: Historische kadgem GVK99 en PTG99 gecreëerd, Historische kadgem AMF99, AMR99, BMR99, BRO97, BWW99, DTN99, DVT99, EDE97, EDE98, GLE99, GNP99, GSL99, HKD99, HLD99, HMN99, HRN99, HVL99, HVR99, IPD99, KMR99, LIE99, LLS99, MDT99, MGT99, MKM99, MLD99, NKK98, NKP99, NOP99, NWD99, OFT99, OST99, OTW99, PMR99, PPK99, RTD95, RVD99, UDH99, URK98, URK99, WCR99, WDE98, WDE99, WDN99, WDR98, WDR99, WMR99, WNS99, WTL98, WZV99, ZWD99 toegevoegd
+
+- BeroepOndertekenaar:
+	* 2020-02-06: IM-688: nieuwe waardelijst ten behoeve van het Systeem Voor Aanbieden Stukken (SYVAS), dat het systeem Web-Elan gaat vervangen
+
+- SoortRechtsfeit:
+	* 2020-02-06: IM-688: nieuwe waardelijst ten behoeve van het Systeem Voor Aanbieden Stukken (SYVAS), dat het systeem Web-Elan gaat vervangen
+
+- BAGWoonplaats:
+	* 2020-02-21: IM-675: 2339-Boerakker retroactief beëindigd, 2107-Tienhoven gecorrigeerd naar Tienhoven aan de Lek en 1891-Ursem gem. S gecorrigeerd naar Ursem
+
+Change log 20200107:
+===================
+- AardStukdeel:
+	* 2019-10-13: IM-670: Stukdelen toegevoegd voor BRK-PB (685, 686, 687)
+- BetrokkenRecht: 
+	* 2019-11-07: IM-673: 8 "Eigendom belast met opstal nutsvoorzieningen" weer activeren (einddatum weer verwijderd)
+- GrondslagBRK-PB:  
+	* 2019-09-10: Initiële versie
+- Kadgem1832: 
+	*  2019-11-06: IM-668: Historische kadgem  AML99, BLT99, ETN99, GDH99, HTM99, ISM99, KSG99, MKW99, NHN99, PLK99, SDW99, VND99, ZTW99 en hun secties toegevoegd.
+
+Change log 20191007:
+===================
+- AardKadasterVerzoek:
+	* 2019-06-07: IM-653: Rectificatie verzoek beëindigd, 7 VVA toegevoegd
+- AardZakelijkRecht
+	* 2019-07-05: IM-654: Referentie naar nieuwe aard in de toelichting opgenomen (documentatie, niet inhoudelijk) 
+- BRPLand:
+	* 2019-08-05: IM-656: 5100 Macedonië beëindigd, einddatum 7060 Palestina gewijzigd, 5112 Gazastrook en Westelijke Jordaanoever en 5113 Republiek Noord-Macedonië toegevoegd
+- BurgemKadgemSectie:
+	* 2019-04-02: IM-650: Bugfix Hoofdletter IJ voor Nieuwerkerk aan den Ijssel
+	* 2019-08-14: IM-662: Hoofdletters de(n) bij den Bommel, den Dungen, den Ham, de Bilt, de Lier, de Rijp, Graft-de Rijp
+- KadastraleGemeente: 
+	* 2019-04-02: IM-650: Bugfix Hoofdletter IJ voor Nieuwerkerk aan den Ijssel
+	* 2019-08-14: IM-662: Hoofdletters de(n) bij den Bommel, den Dungen, den Ham, de Bilt, de Lier, de Rijp, Graft-de Rijp
+- Kadgem1832:
+	* 2019-04-02: IM-650: Bugfix Hoofdletter IJ voor Nieuwerkerk aan den Ijssel
+	* 2019-08-14: IM-662: Hoofdletters de(n) bij den Bommel, den Dungen, den Ham, de Bilt, de Lier, de Rijp, Graft-de Rijp
+- AardVerbeteringEnHerstel: vervallen in release, wordt alleen intern gebruikt.
+- ClassificatiePerceel: vervallen in release, wordt alleen intern gebruikt.
+- NummerreserveringAppartementsrechtStatus: vervallen in release, wordt alleen intern gebruikt.
+- NummerreserveringSplitsingStatus: vervallen in release, wordt alleen intern gebruikt.
+- RedenNietInschrijving is vervangen door RedenVerzoek ten behoeve van overgang redirect opgenomen.
+
+Change log 20190407:
+===================
+-BetrokkenRecht:
+	* IM-649: Verwijderd: einddatum bij 4 "Vruchtgebruik"; Toegevoegd: 11 "Erfpacht en opstal", 12 "Eigendom belast met vruchtgebruik", 13 "Eigendom belast met erfpacht en opstal"; Beeindigd: 8 "Eigendom belast met opstal nutsvoorzieningen", 9 "Eigendom belast met bp-recht".
+
+
+Change log 20190227:
+===================
+- Kadgem1832:
+	* Verschillende fouten hersteld zie ..\Kadgem1832\verschillen.html
+
+Change log 20190115:
+===================
+- BurgemKadgemSectie:
+	* Bugfix van "oude gemeentelijkeherindeling was weggevallen", dit hersteld.
+
+Change log 20190101:
+===================
+- AardAangebodenStuk:
+	* Waarden Overdracht/Vestiging en Teboekstelling zijn beëindigd
+- AardAantekening:
+	* "Oude waarden zijn beëindigd
+'Leidingnetwerk ambsthalve geregistreerd' is toegevoegd"
+- AardFiliatie:
+	* "Oude waarden zijn beëindigd
+Enkele nieuwe waarden toegevoegd
+Toelichtingen toegevoegd
+Hoofdlettergebruik gecorrigeerd"
+- AardStukdeel:
+	* "Oude waarden zijn beëindigd
+nieuwe waarden toegevoegd"
+- AardZakelijkRecht:
+	* Oude waarden zijn beëindigd
+- Beschikkingsbevoegdheid:
+	* Oude waarde is beëindigd
+- BetrokkenRecht:
+	* Oude waarden zijn beëindigd
+- BurgerlijkeStaat:
+	* Oude waarde is beëindigd
+- CultuurcodeBebouwd:
+	* Waarde 'Perceel bebouwd - gebruik onbekend' toegevoegd1
+- CultuurcodeOnbebouwd:
+	* Waarde 'Perceel grond - gebruik onbekend' toegevoegd
+- Rechtsvorm:
+	* Oude waarden zijn beëindigd
+- Registercode:
+	* Oude waarde is beëindigd
+- SoortGrootte:
+	* "Oude waarde is beëindigd
+Einddata gecorrigeerd"
+- Kadgem1832:
+	* Toegevoegd voor de conversie van oude Kadastrale gemeentenamen 
+- RedenVerzoek:
+	* Toegevoegd voor een overzicht voor redenen van het versturen van een verzoek tot verbetering
+- AKRKadastraleGemeenteCode:
+	* Vervallen omdat deze is vervangen door de waardelijst Kadgem1832, die gebruikt kan worden voor de conversie van oude Kadastrale gemeentenamen 
+- CultuurBebouwd:
+	* Geschoond omdat de naamgeving is gecorrigeerd naar CultuurcodeBebouwd
+- NHRRechtsvorm:
+	* Vervallen omdat deze is vervangen door Rechtsvorm
+- TenaamstellingFiliatieAard:
+	* Vervallen omdat deze is opgenomen in AardFiliatie
+- AanduidingGeslacht:	
+	- *.gc bestanden: Metadata gecorrigeerd
+- AanduidingNaamgebruik:
+	- *.gc bestanden: Metadata gecorrigeerd
+- AardBijlage:
+	- *.gc bestanden: Metadata gecorrigeerd
+- AardDomiciliekeuze:
+	- *.gc bestanden: Metadata gecorrigeerd
+- AdellijkeTitelOfPredikaat:
+	- *.gc bestanden: Metadata gecorrigeerd
+- BAGAdresseerbaarObject:
+	- *.gc bestanden: Metadata gecorrigeerd
+- BAGOpenbareruimte:
+	- *.gc bestanden: Metadata gecorrigeerd
+- BRPAanduidelingGeslacht:
+	- *.gc bestanden: Metadata gecorrigeerd
+- BRPAanduidingNaamgebruik:
+	- *.gc bestanden: Metadata gecorrigeerd
+- BRPIndicatieGeheim:
+	- *.gc bestanden: Metadata gecorrigeerd
+- PlaatsBrandmerk:
+	- *.gc bestanden: Metadata gecorrigeerd
+- RedenDoorhalingTeboekstelling:
+	- *.gc bestanden: Metadata gecorrigeerd
+- RubriekBrandmerk:
+	- *.gc bestanden: Metadata gecorrigeerd
+- SoortRegister:
+	- *.gc bestanden: Metadata gecorrigeerd
+- SoortSchip:
+	- *.gc bestanden: Metadata gecorrigeerd
+- StatusBrandmerk:
+	- *.gc bestanden: Metadata gecorrigeerd
+- StatusHistorie:
+	- *.gc bestanden: Metadata gecorrigeerd
+- StatusSchip:
+	- *.gc bestanden: Metadata gecorrigeerd
+- Valuta:
+	- *.gc bestanden: Metadata gecorrigeerd
+- BurggemKadgemSectie:
+	- Bijgewerkt ivm gemeentelijkeherindeling per 01-01-2019
+
+
+
+
+Change log 20181007:
+===================
+- AardAangebodenStuk:
+	* Toelichting kolom toegevoegd
+- AardAantekening:
+	* Naamswijzigingen van aantekeningen
+	* Beeindiging Aantekeningen die met de introductie van het nieuwe systeem gaan vervallen
+	* Toevoeging nieuwe aantekeningensoorten
+	* Opschoning van (gemeentelijke) WKPB aantekeningen die nooit gebruikt zijn
+	* Beeindiging van WKPB aantekeningen die niet (meer) aangetekend kunnen worden"
+- AardFiliatie:
+	* Nieuwe waarden opgevoerd
+- AardStukdeel:
+	* Nieuwe stukdelen > 602  toegevoegd en enkele namen en toelichtingen gewijzigd
+	* Stukdelen > 500 met begin hoofdletter.
+- AardZakelijkRecht:
+	* Toelichting gewijzigd
+- Beschikkingsbevoegdheid:
+	* Schuldsanering natuurlijk personen toegevoegd
+- BurgerlijkeStaat:
+	* Waarde gewijzigd
+- KadastraleGemeente:
+	* Waarde gewijzigd
+- Rechtsvorm:
+	* Gorzen en aanwassen toegevoegd
+	* Toeliching gewijzigd
+- Samenwerkingsverband:
+	* Zie akte(n) toegevoegd
+- SoortGrootte:
+	* Waarden gewijzigd
+	* Toelichting toegevoegd
+- NHRRechtsvorm:	
+	* Waardelijst verwijderd wordt niet meer gebruikt, vervangen door Rechtsvorm
+- CultuurcodeBebouwd:
+	* Mapnaam aangepast van Cultuurbebouwd naar CultuurcodeBebouwd
+
+
+Change log 20180701:
+===================
+- AardAantekening: 
+	* “Besluit op basis van Monumentenwet 1988 is onterecht beëindigd en heeft verkeerde code.” Dit is hersteld.;
+	* “Typering niet goed bij Gedoogplicht archeologisch onderzoek, Erfgoedwet” (aantekening Object ipv aantekening PB);
+	* Aantekeningen tbv gemeentelijke PB’s die niet gebruikt gaan worden, einddatum gezet, nog niet verwijderd uit de lijst.; 
+	* “Code 110, Raadpleeg brondokument” veranderd in Raadpleeg brondocument;
+	* “Voorlopige Kadastrale grens en oppervlake” moet wijzigen (al eerder (Einddatum 2016-05-31) gedaan? maar stond nog open);
+	* “Kwalitatieve verbintenis vervangen door kwalitatieve verplichting” (al eerder (Einddatum 2016-04-30) gedaan? maar stond nog open);
+	* Einddatums 2017-07-01 verwijderd;
+	* AardAantekening #112 koppelstreepje weg gehaald.
+- AardKadasterverzoek: AardKadasterverzoek twee nieuwe waarden toegevoegd ("Herstel ten onrechte ingeschreven stuk" en "Bericht van weigering")
+- AardLeidingnetwerk: R Riool toegevoegd
+- AardStukdeel: Spatie teveel in 581 verwijderd
+- AardZakelijkRecht: 
+	* Omschrijving AardZakelijkRecht 10 “Privaatrechtelijke belemmering (als bedoeld in artikel 5, lid 3, onder b, Belemmeringenwet Privaatrecht)” wordt “Zakelijk recht als bedoeld in artikel 5, lid 3, onder b, van de Belemmeringenwet Privaatrecht op gedeelte van perceel” 
+	* 18 Overige zakelijke rechten vervangen door Raadpleeg brondocument 
+	* IM-440: 22 BP recht afgesloten (wordt na conversie 10); Datum notatie aangepast aan iso standaard (JJJJMMDD)
+	* "17, Vruchtgebruik Telecommunicatienetwerk" was al per 20120101 geschoond; Omschrijving  van 10 moet zijn "Zakelijk recht als bedoeld in artikel 5, lid 3, onder b, van de Belemmeringenwet Privaatrecht"
+- Waardelijst opnieuw gemaakt op 19-02-2018 op basis van een download vanuit de BAG, gebaseerd op een sparql query. Hierdoor ook de URI van de woonplaats kunnen toevoegen. Er is een beschrijving beschikbaar om dit zelf te kunnen doen.
+- Beschikkingsbevoegdheid: Toegevoegd: Bewind
+- Betrokkenrecht: Toegevoegd: 
+	* 6 Eigendom belast met erfpacht
+	* 7 Eigendom belast met opstal
+	* 8 Eigendom belast met opstal nutsvoorzieningen
+	* 9 Eigendom belast met bp-recht
+	* 10 Raadpleeg brondocument
+	* verkeerde links gecorrigeerd
+- BRPLand: Landenlijst overgenomen van BRP tabel 34, zoals geldig op 2018-01-01
+- CodeAndereRegistratie:Overlappende data van geldigheid als gevolg van typfout hersteld 
+- InhoudEenheid Ton gewijzigd in ton
+- KadastraleGemeente: In de lijst staat "Waarder" per abuis twee keer opgenomen. De einddatum van #1054 was weggevallen. Deze is nu weer toegevoegd.
+- Koppelingswijze: Koppelingswijze: 'Omschrijving' moet 'Waarde' zijn Kolomnaam aangepast)
+- Registercode: Einddatums 2017-07-01 verwijderd
+- Samenwerkingsverband: Waardelijst AardSamenwerkingsverband bevat afkortingen CV en VOF, deze voluit geschreven en Vereniging van eigenaren beëindigd
+- SoortGrootte: Einddatums 2017-07-01 verwijderd; Toevoeging van waarde 13 "Vastgesteld, aanwijs niet conform akte"
+- StatusStukOR: Einddatums 2017-07-01 verwijderd
+- VoormaligeBewaring: spaties voor bewaringscodes in toelichting verwijderd
+
+- Overal waar afwijkend het datumformaat naar de iso standaard yyyy-mm-dd omgezet (ipv  dd-mm-yyyy)
+- BurgemKadgemSectie: Aangepast nav gemeentelijke herindeling van Januari 2018
+
+Change log 20171023:
+===================
+-KadastaleGemeente: Bugfix, bij waarde Apeldoorn had een van de codes in de toelichting een typ-fout (APSD ipv APD)
+-Index.html gelijk gemaakt met www.kadaster.nl/schemas/waardelijsten (layout)
+-redirect voor Betrokkenrecht hersteld
+
+Change log 20170315:
+===================
+In deze release toevoegingen tbv KOL 5.0/5.1 release, verder een bugfix op AardZakelijkRecht en BRPLand gesynchroniseerd met lijst van BRP (verbetering van de omschrijvingen).
+- BurgerlijkeStaat: Waarde "5, Zie akte" toegevoegd.
+- StatusStukOR: Waarde "9 In bewerking" en waarde "10 Onbekend" opgevoerd
+- Registercode: Waarde "3 4D" opgevoerd
+- Soortgrootte: Aangepast wegens bevinding #155 op 13-02-17 "De waarden soort Grootte 5 t/m 12 zijn pas geldig van 1-7-2017 en ze worden nu al in de producten 5.0 en 5.1 uitgeleverd."
+- AardZakelijkRecht: Bugfix Code voor "Zakelijk recht als bedoeld in artikel 5, lid 3, onder b, ...." was 25 en moest 24 zijn.
+- BRPLand:  Verbetering van de landnamen, codes zijn gelijkgebleven. 
+
+
+Change log 20170101:
+===================
+- in aangepaste bestanden formaat van CSV file gewijzigd van ";" gescheiden naar "," gescheiden ivm mooiere weergave in github.
+- AardAantekening: WKPB aantekeningen 141, 142, 143 overgegaan naar 307, 308, 309 en 176, 177 en 178 overgegaan naar 310, 311, 312; Toegevoegd: “Besluit op basis van artikel 2.1 Wet Natuurbescherming”; “Besluit op basis van artikel 2.11 Wet Natuurbescherming”; “Besluit op basis van artikel 4.2 Wet Natuurbescherming” en (per 20170701) 3 "Koopovereenkomst, art. 10 WVG" gewijzigd in "Koopovereenkomst of voorovereenkomst koop, art. 10 WVG" ivm systeemvernieuwing
+- AardLeidingnetwerk: Spatie achter code "D " verwijderd.
+- InhoudEenheid: Bugfix metadata (*gc file) bevatte IndicatieGeheim als naam van de waardelijst. 
+- KadstraleGemeente: Bugfix: apostrof bij 's gravenhage was weggevallen in csv bestand. Bugfix: Nes Ameland had geen eigen code. Laren (Noord-Holland) heeft toevoeging Noord-Holland gekregen.
+- SoortGrootte: Waardelijst (per 01-07-2017) uitgebreid ivm aansluiting BRK-Geo en systeemvernieuwing.
+- VoormaligeBewaring: nieuwe waardelijst ivm systeemvernieuwing.
+
+Change log 20160701:
+===================
+- AardZakelijkeRecht:  2016-05-12: Bugfix "14 Opstalrecht nutsvoorzieningen" had onterecht een einddatum gekregen, deze weer verwijderd. Toegevoegd: "25  Zakelijk recht als bedoeld in artikel 5, lid 3, onder b, van de Belemmeringenwet Privaatrecht op gedeelte van perceel"
+- AardAantekening: Aantekeningen mbt "Vordering tot woonruimte, Huisvestingswet" zijn beeindigd (werd al niet meer geleverd sinds 05-2015); Aantekeningen mbt "Gedoogplicht archeologisch onderzoek, Erfgoedwet" toegevoegd.; Bug fix ivm Dubbele voorkomens. Op basis van de datums kunnen afleiden dat code 234-236 en 261-263 betrekking hebben op gemeentelijke aantekeningen met X code.;  Object Aantekeningen mbt perceelvorming toegevoegd ivm toekomstige systeemvernieuwing (299-301).
+- AardStukdeel: Waarden 501-590 codes ivm systeem vernieuwing, vervangen voor nieuwe codes 501-602.
+
+Change log 20160310:
+===================
+- AardZakelijkeRecht: Opstal Netwerken gedeelte van een perceel toegevoegd.
+- AardAantekening: SD:2556528 Nieuwe Object belemmering: 294 Object betrokken bij 3D complexaanduiding; Nieuwe ZR belemmering: 295  3D weergave aanwezig
+
+Change log 20151103:
+===================
+- AardAantekening: Waarde toegevoegd: 293 "Meettarief verschuldigd" ingaande per 01-12-2015
+- AanduidingGeslacht: wijziging mbt waarde "Onbekend" teruggedraaid, einddatum weer weggehaald.
+
+Change log 20150801:
+===================
+- AanduidingGeslacht: Waarde onbekend wordt vanuit de akte niet meer geregistreerd na de vernieuwing, daarom einddatum.
+- AardStukdeel: Waarden toegevoegd voor het converteren van de niet-toepassingsstukken als een vermeld-in stuk bij een object of bij een persoon.
+- InOnderzoek: Waarden "Tenaamstelling" en "Zakelijk recht" laten vervallen en "Kwalitatieve verplichting", "Erfdienstbaarheid", "Aandeel in Recht" en "Onderbewindstelling" toegevoegd. 
+
+Change log 20150401:
+===================
+- AardStuk is Vervallen
+- Waardelijsten in subdirectories geplaats
+- Toegevoegd voor intern gebruik (CDMKAD): akrRegistercode, VermogenEenheid, Zekerheidsrecht (wijst naar betrokkenrecht), Land (wijst naar BRPLand).
+- Toegevoegd voor LokatieKadastraalObject: Koppelingswijze
+
+Change log 20141009: 
+===================
+- In CSV bestanden de regeleinden zat alleen een cr (carriage return) dit vervangen door crlf (carriage return, Line feed)
+- AardStukdeel: Request 2108437: Twee missende waarden in aardStukdeel toevoegen: 404 "Perceelsvlakmutatie" en 405 "Perceelsvorming"
+
+
+Change log 20140512:
+===================
+- NHRRechtsvorm: bugfix: Begindatum bij "Besloten vennootschap met beperkte aansprakelijkheid" stond op 22-05-2014 ipv 23-05-2014.
+
+
+Change log 20140512:
+===================
+- Rechtsvorm: 20140506 Correctie: wijziging "Besloten vennootschap" naar "Besloten vennootschap met beperkte aansprakelijkheid" ongedaan gemaakt
+- NHRRechtsvorm: inhoudelijk identiek gemaakt met rechtsvorm, omdat Kadaster en NHR nu dezelfde rechtsvormen hanteren.
+
+
+Change log 20140226:
+===================
+- Toegevoegd in waardelijst AardStukdeel: "209";"Stuk aanbrengen koopovereenkomst BW en WVG";"2014-03-01";;"tbv migratie/conversie AKR"
+"210";"Stuk aanbrengen koop, zie art. 7:3 BW";"2014-03-01";;"tbv migratie/conversie AKR"
+"211";"Stuk Koop of voorovereenkomst zie art. 10 WVG";"2014-03-01";;"tbv migratie/conversie AKR" 
+- Vervallen: "063";"Stuk aanbrengen beperkende bepaling op zakelijk recht overig";"2011-01-01";"2014-03-01";"tbv migratie/conversie AKR"
+- 55331: Wijzigingen in rechtsvorm: Diverse codes vervallen en hernoemd.
+ 
+
+
+Change log 20140115:
+===================
+- 56736 - Toegevoegd in waardelijst AardAantekening:  Code: 273 "Ruilakte passeert binnen 3 wkn, neem contact op met het Klantcontactcenter" Omschrijvng: 2014-02-01 (Aantekening Object)
+
+
+
+Change log 20121030:
+===================
+1779967 - In CSV bestanden de regeleinden alleen een cr (carriage return) vervangen door crlf (carriage return, Line feed)
+1768386 - TypeGrens herzien, en waarde 'Fictief' gewijzigd in 'Administratief' (Wl nog niet in gebruik dus gewijzigd zonder oude waarde af te sluiten)
+1768398 - Verzoek waarde "voorlopig" in waardelijst SoortGrootte te wijzigen in "Niet vastgesteld" (Wl nog niet in gebruik dus gewijzigd zonder oude waarde af te sluiten)
+1776643 - Aardstukdeel.gc, AKRKadastraleGemeenteCode.gc, KadastraleGemeente.gc ColumnRef "DatumVanaf DatumTot" hersteld. Vervangen door "DatumVanaf" en "DatumTot".
+1779298 - Foutieve opmaak van datumveld (YYYY-DD-MM),  hersteld naar YYYY-MM-DD (ISO-Date)
+1779350 - Waardelijst woonplaats heeft geen unieke codering (een deel van de sleutel ontbrak). Waardelijst Woonplaats vervangen door waardelijst "BagWoonplaats" met daarin woonplaatsen zoals die in de BAG voorkomen (met Bagcodering) .
+1739367 - AardStukdeel: Kolomnamen "Datum Vanaf" en "Datum Tot" bevatten een spatie (1e regel).-> spaties verwijderd 
+1739369 - "404";"Perceelsvlakmutatie";"2011-01-01";;"tbv BRK Levering" en "405";"Perceelsvorming";"2011-01-01";;"tbv BRK Levering" toegevoegd 
+1739281 - AardAantekening: Spaties aan het einde van de waarden verwijderd. 
+1737645 – AardAantekening: VA, VK en WM zijn weg gevallen in de laatste oplevering. Toegevoegd als 270, 271 en 272 
+
+
+change log 20120718:
+====================
+
+Alle waardelijsten
+"http://" toegevoegd aan de uri in de *.gc bestanden.
+
+CodeAndereRegistratie
+20120712: SD Request 1720716 Aanpast aan wijziging in Voer*: - Nummering aangepast naar nummering GSK, vorige binnenlandse registratie toegevoegd tbv migratie (doorgehaalde schepen worden niet naar BRK gemigreerd).
+
+CultuurcodeBebouwd
+20120717: SD Request 1727249: Nummering aangepast n.a.v. wijziging in Voer: - Codes aangepast naar de codes zoals opgenomen in 15_Kultuurkodes AKR.
+
+CultuurcodeOnbebouwd
+20120717: SD Request 1727249: Aangepast n.a.v. wijziging in Voer: -Codes aangepast naar de codes zoals opgenomen in 15_Kultuurkodes AKR.
+
+AardStukdeel
+20120717: SD Request 1721656 Lijst overgenomen van Voer: - Mutatiesoortkodes uit AKR toegevoegd voor de migratie/synchronisatie van AKR gegevens waarbij dezelfde code is gehanteerd als in de AKR lijst, hierdoor beginnen de al onderkende codes nu met 501 ipv 1. - Code 573 Hypotheek (gedeeltelijke doorhaling hoofdsom), toevoegd tbv informatieproducten.
+
+AardAantekening
+20120717: SD Request 1721662 - Geschoonde waarden bij aantekening toegevoegd met einddatum ivbm historie in ISPS - PBCodes deze ontbraken=> Codes en waarden overgenomen van Voer -Standaard begindatum van 2010 naar 2000 gewijzigd
+
+BRPLand
+20120712: Zuid-Soedan toegevoegd
+
+AardZakelijkRecht
+20120704 BP-recht toegevoegd nav req 1720678 nav wijzigingen bij Voer.
+
+-------------------------------------------
+* Voer is het project ten behoeve van de vernieuweing van het bronsysteem voor de Basis Registratie Kadaster
+-------------------------------------------

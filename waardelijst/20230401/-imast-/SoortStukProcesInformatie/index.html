@@ -1,0 +1,962 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Enumeration:
+            ShortName=SoortStukProcesInformatie</title>
+	</head>
+	<body>
+		<h2><a name="idelem3x3">List: SoortStukProcesInformatie</a></h2>
+		<p> 2021-02-22: initiële versie<br/>2021-04-08: IM-752: kolommen Onroerende zaken, Schepen en Luchtvaartuigen toegevoegd;codes 6, 7, 8 en 42 verwijderd omdat ze niet van toepassing zijn voor NotarisProtocolhouders<br/>2021-05-20: IM-757: Kolom "tijd ondertekening NIET verplicht" is komen te vervallen (voor alle SoortStuk is Datum ondertekening verplicht en Tijdstip ondertekening optioneel)<br/>2022-01-25: IM-802: Diverse soorten stuk ook toegestaan voor Schepen en Luchtvaartuigen. Kolom 'UI-cluster' verwijderd. Kolom 'Synoniemen / Zoektermen' toegevoegd. Verjaring ook mogelijk bij Schepen en Luchtvaartuigen<br/>2022-05-30: IM-806: Waarden 55 t/m 60 toegevoegd. Kolom 'OCR gescand stuk toegestaan' toegevoegd. Waarde '14'  OCR gescand stuk toegestaan<br/>2023-01-25: IM-830: DatumVanaf en DatumTot kolommen toegevoegd en gevuld</p>
+		<h4>Gebruik van SoortStukProcesInformatie</h4>
+		<p>De codes 6, 7 en 8 en de code 42 zijn niet van toepassing voor NotarisProtocolhouders. Dit is alleen van toepassing in de metadata als het verzoek een verzoek tot inschrijving stuk (VTIS) is:<br/>-Kolommen Code en Waarde: corresponderen met de codes en waardes in de SoortStuk waardelijst<br/>-Kolommen Hyp3 en Hyp4 i.c.m. OnroerendeZaken, Schepen en Luchtvaartuigen: Door Hyp3 en Hyp4 te combineren met de andere kolommen ontstaat de Registeraanduiding waarvoor de code/waarde SoortStuk toegestaan is: Onroerende Zaken Hyp3, Onroerende Zaken Hyp4, Schepen Hyp3, Schepen Hyp4,  Luchtvaartuigen Hyp3 en Luchtvaartuigen Hyp4<br/>-Kolom TekeningVerplicht: Indien in deze kolom een 'Ja' staat, dan is een tekening als bijlage verplicht bij dit SoortStuk<br/>-Kolom OCRGescandStukToegestaan:Indien in deze kolom een 'Ja' staat, dan mag de pdf van het stuk een OCR gescand stuk zijn<br/>-Kolom SynoniemenOfZoektermen: Synoniemen bieden ondersteuning voor notarissen om gemakkelijk het Soort Stuk te kunnen kiezen<br/>-Kolom Toelichting: een toelichting over hoe een beslag wordt doorgehaald door een notaris (bij Soort Stuk 54 waardeloosheid (verklaring van)</p>
+		<blockquote>
+			<table>
+				<tr>
+					<td valign="top"><samp>ShortName</samp></td>
+					<td valign="top"><samp>=</samp></td>
+					<td valign="top"><samp>SoortStukProcesInformatie</samp></td>
+				</tr>
+				<tr>
+					<td valign="top"><samp>LongName</samp></td>
+					<td valign="top"><samp>=</samp></td>
+					<td valign="top"><samp>SoortStukProcesInformatie</samp></td>
+				</tr>
+				<tr>
+					<td valign="top"><samp>Version</samp></td>
+					<td valign="top"><samp>=</samp></td>
+					<td valign="top"><samp>2023-01-25</samp></td>
+				</tr>
+				<tr>
+					<td valign="top"><samp>CanonicalUri</samp></td>
+					<td valign="top"><samp>=</samp></td>
+					<td valign="top"><samp>SoortStukProcesInformatie</samp></td>
+				</tr>
+				<tr>
+					<td valign="top"><samp>CanonicalVersionUri</samp></td>
+					<td valign="top"><samp>=</samp></td>
+					<td valign="top"><samp>SoortStukProcesInformatie20230125</samp></td>
+				</tr>
+				<tr>
+					<td valign="top"><samp>LocationUri</samp></td>
+					<td valign="top"><samp>=</samp></td>
+					<td valign="top"><samp><a href="http://developer.kadaster.nl/schemas/waardelijsten/-imast-/SoortStukProcesInformatie">developer.kadaster.nl/schemas/waardelijsten/-imast-/SoortStukProcesInformatie</a></samp></td>
+				</tr>
+			</table>
+		</blockquote>
+		<table border="1">
+			<tr>
+				<th align="center" valign="top">Code<br/><samp><small><i>Id="Code"</i><br/>(required)<br/>Type="String"<br/>[Key Id="CodeKey": key for column 'Code']</small></samp></th>
+				<th align="center" valign="top">Waarde<br/><samp><small><i>Id="Waarde"</i><br/>(required)<br/>Type="String"<br/>[Key Id="WaardeKey": key for column 'Waarde']</small></samp></th>
+				<th align="center" valign="top">DatumVanaf<br/><samp><small><i>Id="DatumVanaf"</i><br/>(optional)<br/>Type="date"</small></samp></th>
+				<th align="center" valign="top">DatumTot<br/><samp><small><i>Id="DatumTot"</i><br/>(optional)<br/>Type="date"</small></samp></th>
+				<th align="center" valign="top">Hyp3<br/><samp><small><i>Id="Hyp3"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">Hyp4<br/><samp><small><i>Id="Hyp4"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">OnroerendeZaken<br/><samp><small><i>Id="OnroerendeZaken"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">Schepen<br/><samp><small><i>Id="Schepen"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">Luchtvaartuigen<br/><samp><small><i>Id="Luchtvaartuigen"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">TekeningVerplicht<br/><samp><small><i>Id="TekeningVerplicht"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">OCRGescandStukToegestaan<br/><samp><small><i>Id="OCRGescandStukToegestaan"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">SynoniemenOfZoektermen<br/><samp><small><i>Id="SynoniemenOfZoektermen"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">KIKCategorie<br/><samp><small><i>Id="KIKCategorie"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+				<th align="center" valign="top">Toelichting<br/><samp><small><i>Id="Toelichting"</i><br/>(optional)<br/>Type="String"</small></samp></th>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">1</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Appartementsrechtsplitsing (hoofdsplitsing of ondersplitsing)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Appartementsrechtsplitsing (spiegelsplitsing)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">3</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Appartementsrechtsplitsing opheffing</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">4</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Appartementsrechtsplitsing wijziging met tekening</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">5</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Appartementsrechtsplitsing wijziging zonder tekening</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">9</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Cessie</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">10</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Hypotheek (doorhaling)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Royement</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Doorhaling hypotheek</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">11</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Hypotheek (vestiging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Bijverband</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Hypotheek</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">12</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Hypotheek (wijziging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Hoofdsom, Voorwaarden</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">13</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Rangwisseling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">14</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Bewind</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Onderbewindstelling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">15</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Faillietverklaring</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Faillissement</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">16</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Huwelijk of geregistreerd partnerschap</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">17</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Fusie</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">18</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Naamswijziging</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">19</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Omzetting rechtspersoon</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">20</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Splitsen rechtspersoon</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">21</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Inbreng in of ontbinding van personenvennootschap</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">VOF, CV, Maatschap</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">22</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Koopovereenkomst (beëindiging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Koopovereenkomst (doorhaling), Waardeloosheid koopovereenkomst</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">23</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Koopovereenkomst (inschrijving)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vormerkung</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Notariële verklaring</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">24</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Aanvullende akte</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">25</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Algemene voorwaarden</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">26</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Reglement mede-eigenaren</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">27</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Burenrecht</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">28</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Erfdienstbaarheid</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">29</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Kwalitatieve verplichting</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">30</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Overheidsbesluit</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">31</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Privatieve last</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">32</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Retentierecht</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Inroepen retentierecht</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">33</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vaststellingsovereenkomst</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">34</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Beperkt recht (beëindiging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Afstand, Opzegging, Tenietgaan, Vermenging, Vervallen verklaring</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">35</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Beperkt recht (vestiging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Erfpacht, Gebruik en bewoning, Opstal, Vruchtgebruik</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">36</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Beperkt recht (wijziging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Canon, Erfpacht, Voorwaarden</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">37</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vererving</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Erfrecht, Executele, Verklaring</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">38</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Afgifte legaat</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">39</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Verdeling (erfgenamen)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Erfrecht</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">40</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Verdeling (gezamenlijk rechthebbenden)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Akte van verdeling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">41</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Verdeling (huwelijk / geregistreerd partnerschap)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Akte van verdeling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">43</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Dwaling omtrent grensaanwijs</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">44</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Herverkaveling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Kavelruil, Ruilverkaveling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">45</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Instelling rechtsvordering / rechtsmiddel</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Dagvaarding, Verzoekschrift rechtbank</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">46</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Mandeligheid</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">47</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Netwerken</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">48</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Onteigening</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vonnis van onteigening</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">49</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Overdracht</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Huurkoop, Inbreng, Levering, Openbare verkoop, Ruiling, Schenking, Veiling, Executieveiling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Akte van levering</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">50</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Rechterlijke uitspraak</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vonnis, Arrest</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">51</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Verjaring</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Registerverklaring van verjaring</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">52</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vervulling/vervallen voorwaarde</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Kwijting, Ontbindende voorwaarde, Opschortende voorwaarde</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">53</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Vernietiging</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Buitengerechtelijke vernietiging, Gerechtelijke vernietiging</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">54</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Waardeloosheid (verklaring van)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2020-12-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Als een notaris een beslag doorhaalt, dan doet hij dat met een verklaring van waardeloosheid</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">55</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Afbouw</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">56</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Teboekstelling</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">57</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Teboekstelling (doorhaling)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">58</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Teboekstelling (wijziging)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">59</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Rederij (ontstaan, wijziging of doorhaling)</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">60</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Afschrift van derden</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">2022-04-01</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">X</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Ja</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px">Europese verklaring van erfrecht, Rechterlijke uitspraak, Vonnis, Arrest, Dagvaarding</td>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+				<td align="left" valign="top" style="padding-left:3px;padding-right:3px"/>
+			</tr>
+		</table>
+		<p align="right"><small>Report created by <samp>Crane-gc2html.xsl</samp> $Revision: 1.17 $ <a href="http://www.CraneSoftwrights.com/links/res-dev.htm">Crane Softwrights Ltd.</a></small></p>
+	</body>
+</html>

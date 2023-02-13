@@ -1,0 +1,8 @@
+"Code","Waarde","DatumVanaf","DatumTot","Toelichting"
+"1","A","2022-04-04",,"Terrestrisch lokaal (Standaard afwijking 2 cm; lokale vastlegging grenzen)"
+"2","B","2022-04-04",,"Terrestrisch stedelijk gebied (Standaard afwijking 5 cm)"
+"3","C","2022-04-04",,"Terrestrisch landelijk gebied (Standaard afwijking 10 cm)"
+"4","D","2022-04-04",,"Grafisch stedelijk gebied (Standaard afwijking 20 cm)"
+"5","E","2022-04-04",,"Grafisch landelijk gebied (Standaard afwijking 40 cm)"
+"6","F","2022-04-04",,"Historisch (Standaard afwijking 80 cm; Minuutgrenzen)"
+"7","G","2022-04-04",,"Grove fouten of onbekend (Standaard afwijking 250 cm)"
